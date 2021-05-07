@@ -1,13 +1,16 @@
 {
-  "name": "nextjs",
+  "name": "fukuoka_jc2022",
   "version": "0.1.0",
+  "description": "Fukuoka Beachball JapanCup 2022",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_OPTIONS='--inspect' next src",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
     "next": "10.0.5",
     "react": "17.0.1",
     "react-dom": "17.0.1"
