@@ -2,6 +2,10 @@ import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import {Box, Container, Grid} from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
 
 import Link from '~/components/Link';
 import Header from '~/components/Header';
@@ -9,33 +13,37 @@ import Footer from '~/components/Footer';
 import Parallax from "~/components/Parallax";
 import SnsBox from '~/components/SnsBox';
 import H1 from '~/components/H1';
+import VsCard from '~/components/VsCard';
 
-import {Description, Map, Domain} from '@material-ui/icons';
+import {Description, Map, Domain, BorderColor} from '@material-ui/icons';
 
 const containerFluid = {
-  paddingRight: "15px",
-  paddingLeft: "15px",
-  marginRight: "auto",
-  marginLeft: "auto",
-  width: "100%"
+  padding: "0",
+  margin: "0",
+  width: "100vw"
 };
 const container = {
   ...containerFluid,
-  "@media (min-width: 576px)": {
-    maxWidth: "540px"
-  },
-  "@media (min-width: 768px)": {
-    maxWidth: "720px"
-  },
-  "@media (min-width: 992px)": {
-    maxWidth: "960px"
-  },
-  "@media (min-width: 1200px)": {
-    maxWidth: "1140px"
-  }
+  // "@media (min-width: 576px)": {
+  //   maxWidth: "540px"
+  // },
+  // "@media (min-width: 768px)": {
+  //   maxWidth: "720px"
+  // },
+  // "@media (min-width: 992px)": {
+  //   maxWidth: "960px"
+  // },
+  // "@media (min-width: 1200px)": {
+  //   maxWidth: "1140px"
+  // }
 };
 const componentsStyle = {
-  container,
+  // container,
+  root: {
+    padding: "0",
+    margin: "0",
+    width: "100vw"
+  },
   brand: {
     color: "#FFFFFF",
     textAlign: "left"
@@ -90,20 +98,66 @@ const componentsStyle = {
     display: "inline-grid",
     textAlign: "center",
     color: "#333",
+  },
+  "@media (min-width: 300px)": {
+    quickResult: {
+      width: "350px"
+    }
+  },
+  "@media (min-width: 1200px)": {
+    quickResult: {
+      width: "500px",
+      borderColor: '#C6C6C6',
+      border: 1,
+      borderStyle: "solid",
+      borderRadius: "5px",
+      padding: "12px"
+    }
+  },
+  sexPanel: {
+    margin: "auto",
+  },
+  maleTitle: {
+    margin: "auto",
+    color: "#3261AB"
+  },
+  femaleTitle: {
+    margin: "auto",
+    color: "#C7243A"
   }
 };
 const useStyles = makeStyles(componentsStyle);
 
 export default function Index() {
   const classes = useStyles();
+
   return (
-    <Container>
+    <Container className={classes.root} maxWidth={false}>
       <Header />
       <Parallax image={"https://dummyimage.com/1920x1080/000/fff"} />
       <SnsBox />
 
       <Box my={4} py={5}>
         <H1 title="大会速報結果" />
+
+        <Box display="flex">
+          <div className={classes.sexPanel}>
+            <h3 className={classes.femaleTitle}>女子</h3>
+            <Box display="flex" overflow="scroll" className={classes.quickResult}>
+              <VsCard />
+              <VsCard />
+              <VsCard />
+            </Box>
+          </div>
+          <div className={classes.sexPanel}>
+            <h3　className={classes.maleTitle}>男子</h3>
+            <Box display="flex" overflow="scroll" className={classes.quickResult}>
+              <VsCard />
+              <VsCard />
+              <VsCard />
+            </Box>
+          </div>
+        </Box>
       </Box>
 
       <Box my={4} py={5} bgcolor="#E3E3E3">
@@ -138,34 +192,58 @@ export default function Index() {
 
         <Grid container direction="row" justify="space-around" alignItems="center">
             <Grid item xl={4} style={{textAlign: 'center'}}>
-              <img src="https://dummyimage.com/250x100/000/fff"/>
+              <img src="https://dummyimage.com/300x100/000/fff"/>
             </Grid>
             <Grid item xl={4} style={{textAlign: 'center'}}>
-              <img src="https://dummyimage.com/250x100/000/fff"/>
+              <img src="https://dummyimage.com/300x100/000/fff"/>
             </Grid>
             <Grid item xl={4} style={{textAlign: 'center'}}>
-              <img src="https://dummyimage.com/250x100/000/fff"/>
+              <img src="https://dummyimage.com/300x100/000/fff"/>
             </Grid>
         </Grid>
         <Grid container direction="row" justify="space-around" alignItems="center">
             <Grid item xl={4} style={{textAlign: 'center'}}>
-              <img src="https://dummyimage.com/250x100/000/fff"/>
+              <img src="https://dummyimage.com/300x100/000/fff"/>
             </Grid>
             <Grid item xl={4} style={{textAlign: 'center'}}>
-              <img src="https://dummyimage.com/250x100/000/fff"/>
+              <img src="https://dummyimage.com/300x100/000/fff"/>
             </Grid>
             <Grid item xl={4} style={{textAlign: 'center'}}>
-              <img src="https://dummyimage.com/250x100/000/fff"/>
+              <img src="https://dummyimage.com/300x100/000/fff"/>
             </Grid>
         </Grid>
       </Box>
 
       <Box my={4} py={5} bgcolor="#E3E3E3">
         <H1 title="組み合わせ・進行表" />
+
+        <Grid container direction="row" justify="space-around" alignItems="center">
+          <Link href="." className={classes.inlineGrid}>
+            <img src="https://dummyimage.com/300x300/000/fff"/>
+            <p>{"女子"}</p>
+          </Link>
+
+          <Link href="." className={classes.inlineGrid}>
+            <img src="https://dummyimage.com/300x300/000/fff"/>
+            <p>{"男子"}</p>
+          </Link>
+        </Grid>
       </Box>
 
       <Box my={4} py={5}>
-        <H1 title="大会結果（リアルタイム）" />
+        <H1 title="大会結果" />
+
+        <Grid container direction="row" justify="space-around" alignItems="center">
+          <Link href="." className={classes.inlineGrid}>
+            <img src="https://dummyimage.com/300x300/000/fff"/>
+            <p>{"予選"}</p>
+          </Link>
+
+          <Link href="." className={classes.inlineGrid}>
+            <img src="https://dummyimage.com/300x300/000/fff"/>
+            <p>{"トーナメント"}</p>
+          </Link>
+        </Grid>
       </Box>
 
       <Footer />

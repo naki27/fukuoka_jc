@@ -108,7 +108,7 @@ export default function ButtonAppBar() {
             <img src="https://dummyimage.com/200x100/000/fff" className={classes.logo}/>
           </Link>
           <Typography variant="h6" className={classes.title}>
-            ビーチボールジャパンカップ2022 IN 福岡(仮)
+            {/* ビーチボールジャパンカップ2022 IN 福岡(仮) */}
           </Typography>
           <IconButton edge="end" className={classes.menuButton} color="inherit"
                 aria-label="menu" onClick={handleDrawerOpen} className={clsx(open && classes.hide)}>
