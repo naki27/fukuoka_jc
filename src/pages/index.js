@@ -15,7 +15,7 @@ import SnsBox from '~/components/SnsBox';
 import H1 from '~/components/H1';
 import VsCard from '~/components/VsCard';
 
-import {Description, Map, Domain, BorderColor} from '@material-ui/icons';
+import {Description, Map, Domain, BorderColor, FullscreenExit} from '@material-ui/icons';
 
 const containerFluid = {
   padding: "0",
@@ -99,23 +99,20 @@ const componentsStyle = {
     textAlign: "center",
     color: "#333",
   },
-  "@media (min-width: 300px)": {
-    quickResult: {
-      width: "350px"
-    }
-  },
-  "@media (min-width: 1200px)": {
-    quickResult: {
-      width: "500px",
-      borderColor: '#C6C6C6',
-      border: 1,
-      borderStyle: "solid",
-      borderRadius: "5px",
-      padding: "12px"
-    }
+  quickResult: {
+    display: "flex",
+    borderColor: '#C6C6C6',
+    border: 1,
+    borderStyle: "solid",
+    borderRadius: "5px",
+    padding: "12px"
   },
   sexPanel: {
     margin: "auto",
+    padding: "0 16px"
+  },
+  sexPanelContainer: {
+    display: "flex"
   },
   maleTitle: {
     margin: "auto",
@@ -124,6 +121,45 @@ const componentsStyle = {
   femaleTitle: {
     margin: "auto",
     color: "#C7243A"
+  },
+  "@media (max-width: 420px)": {
+    sexPanelContainer: {
+      display: "block"
+    },
+    sexPanel: {
+      margin: "16px 0",
+    },
+    quickResult: {
+      width: "350px"
+    }
+  },
+  "@media (max-width: 400px)": {
+    sexPanel: {
+      margin: "16px 0",
+    },
+    quickResult: {
+      width: "380px"
+    }
+  },
+  "@media (min-width: 576px)": {
+    quickResult: {
+      width: "400px"
+    }
+  },
+  "@media (min-width: 768px)": {
+    quickResult: {
+      width: "400px"
+    }
+  },
+  "@media (min-width: 992px)": {
+    quickResult: {
+      width: "500px"
+    }
+  },
+  "@media (min-width: 1200px)": {
+    quickResult: {
+      width: "600px"
+    }
   }
 };
 const useStyles = makeStyles(componentsStyle);
@@ -140,10 +176,10 @@ export default function Index() {
       <Box my={4} py={5}>
         <H1 title="大会速報結果" />
 
-        <Box display="flex">
+        <Box className={classes.sexPanelContainer}>
           <div className={classes.sexPanel}>
             <h3 className={classes.femaleTitle}>女子</h3>
-            <Box display="flex" overflow="scroll" className={classes.quickResult}>
+            <Box overflow="scroll" className={classes.quickResult}>
               <VsCard />
               <VsCard />
               <VsCard />
@@ -151,7 +187,7 @@ export default function Index() {
           </div>
           <div className={classes.sexPanel}>
             <h3　className={classes.maleTitle}>男子</h3>
-            <Box display="flex" overflow="scroll" className={classes.quickResult}>
+            <Box overflow="scroll" className={classes.quickResult}>
               <VsCard />
               <VsCard />
               <VsCard />
