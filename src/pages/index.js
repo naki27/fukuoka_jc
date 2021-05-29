@@ -122,7 +122,7 @@ const componentsStyle = {
     margin: "auto",
     color: "#C7243A"
   },
-  "@media (max-width: 420px)": {
+  "@media (max-width: 575px)": {
     sexPanelContainer: {
       display: "block"
     },
@@ -130,15 +130,18 @@ const componentsStyle = {
       margin: "16px 0",
     },
     quickResult: {
-      width: "350px"
+      width: "100%"
     }
   },
-  "@media (max-width: 400px)": {
+  "@media (max-width: 399px)": {
+    sexPanelContainer: {
+      display: "block"
+    },
     sexPanel: {
       margin: "16px 0",
     },
     quickResult: {
-      width: "380px"
+      width: "100%"
     }
   },
   "@media (min-width: 576px)": {
