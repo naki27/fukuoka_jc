@@ -1,7 +1,7 @@
 import {useFetch} from '../../libs/apiHelper'
 
-const getAllQuery = `query GetdepertmentAll {
-  fukuokajc2022_Depertment {
+const getAllQuery = `query GetDepartmentAll {
+  fukuokajc2022_Department {
     age
     id
     name
@@ -9,8 +9,8 @@ const getAllQuery = `query GetdepertmentAll {
   }
 }`
 
-const getBySexQuery = `query GetdepertmentBySex($sex: String) {
-  fukuokajc2022_Depertment(where: {sex: {_eq: $sex}}) {
+const getBySexQuery = `query GetDepartmentBySex($sex: String) {
+  fukuokajc2022_Department(where: {sex: {_eq: $sex}}) {
     name
     id
     age
@@ -26,12 +26,12 @@ export default async (req, res) => {
     query, { sex }
   ).then((results) => {
     if (results.error) {
-      console.log("in then responce error -> " + JSON.stringify(results.error))  
+      console.log("in then response error -> " + JSON.stringify(results.error))
       return;
     }
     res.statusCode = 200
     res.json({
-      data: results.data, 
+      data: results.data,
       error: results.error
     })
   }).catch((e) => {

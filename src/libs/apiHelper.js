@@ -17,7 +17,7 @@ export async function useFetch(query, variables) {
     body: JSON.stringify({
       query,
       variables: variables,
-    }),    
+    }),
   }
 
   const fetchData = async () => {
@@ -25,7 +25,7 @@ export async function useFetch(query, variables) {
       console.log("request to -> " + endpoint)
       const res = await fetch(endpoint, options)
       const json = await res.json()
-      console.log("responce by -> " + JSON.stringify(json))
+      console.log("response by -> " + JSON.stringify(json))
 
       data = getData(json)
       error = getErrorMessage(undefined, json)

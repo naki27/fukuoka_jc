@@ -2,16 +2,16 @@ import {useFetch} from '../../libs/apiHelper'
 
 const getAllQuery = `query GetTeamAll {
   fukuokajc2022_Team {
-    depertmentId
+    departmentId
     id
     name
     prefectures
   }
 }`
 
-const getByDepertmentIdQuery = `query GetTeamByDepertment($depertmentId: Int) {
-  fukuokajc2022_Team(where: {depertmentId: {_eq: $depertmentId}}) {
-    depertmentId
+const getByDepartmentIdQuery = `query GetTeamByDepartment($departmentId: Int) {
+  fukuokajc2022_Team(where: {departmentId: {_eq: $departmentId}}) {
+    departmentId
     id
     name
     prefectures
@@ -19,19 +19,19 @@ const getByDepertmentIdQuery = `query GetTeamByDepertment($depertmentId: Int) {
 }`
 
 export default async (req, res) => {
-  let depertmentId = req.query.depertmentId;
-  let query = depertmentId ? getByDepertmentIdQuery : getAllQuery;
+  let departmentId = req.query.departmentId;
+  let query = departmentId ? getByDepartmentIdQuery : getAllQuery;
 
   useFetch(
-    query, { depertmentId }
+    query, { departmentId }
   ).then((results) => {
     if (results.error) {
-      console.log("in then responce error -> " + JSON.stringify(results.error))  
+      console.log("in then responce error -> " + JSON.stringify(results.error))
       return;
     }
     res.statusCode = 200
     res.json({
-      data: results.data, 
+      data: results.data,
       error: results.error
     })
   }).catch((e) => {

@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "8px 0",
     textAlign: "right"
   },
-  iconbox: {
+  iconBox: {
     margin: "0 8px"
   }
 }));
@@ -20,13 +20,13 @@ export default function SnsBox() {
   const classes = useStyles();
   return (
     <Typography className={classes.root} color="textSecondary">
-      <Link className={classes.iconbox} href="https://www.instagram.com/fukuoka.beach/">
+      <Link className={classes.iconBox} href="https://www.instagram.com/fukuoka.beach/">
           <InstagramIcon fontSize="large"/>
       </Link>
-      <Link className={classes.iconbox} href="https://twitter.com/fukuokabeach/">
+      <Link className={classes.iconBox} href="https://twitter.com/fukuokabeach/">
           <TwitterIcon fontSize="large"/>
       </Link>
-      <Link className={classes.iconbox} href="https://www.facebook.com/fukuoka.beach/">
+      <Link className={classes.iconBox} href="https://www.facebook.com/fukuoka.beach/">
           <FacebookIcon fontSize="large"/>
       </Link>
     </Typography>

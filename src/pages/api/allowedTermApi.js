@@ -20,12 +20,12 @@ export default async (req, res) => {
     query, {ip, ua}
   ).then((results) => {
     if (results.error) {
-      console.log("in then responce error -> " + JSON.stringify(results.error))  
+      console.log("in then response error -> " + JSON.stringify(results.error))
       return;
     }
     res.statusCode = 200
     res.json({
-      data: results.data, 
+      data: results.data,
       error: results.error
     })
   }).catch((e) => {

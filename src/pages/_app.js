@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '~/components/theme';
 
+// for apollo client
+import { ApolloProvider } from "@apollo/react-hooks";
+import { ApolloClient, HttpLink, InMemoryCache } from "apollo-boost";
+
 export default function MyApp(props) {
   const { Component, pageProps } = props;
 
-  React.useEffect(() => {
+  useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {
@@ -16,8 +20,21 @@ export default function MyApp(props) {
     }
   }, []);
 
+  // for apollo client
+  const httpLink = new HttpLink({
+    uri: "https://fukuokajc2022.hasura.app/v1/graphql",
+    headers: {
+      'x-hasura-admin-secret': "EHtoYLe5QfSaoPd51YAcONiWwXagS3KVC9Iti2opsFR6YEbclLWEaCdkgm5u5uWp"
+    }
+  });
+
+  const client = new ApolloClient({
+    link: httpLink,
+    cache: new InMemoryCache()
+  });
+
   return (
-    <React.Fragment>
+    <ApolloProvider client={client}>
       <Head>
         <title>福岡ビーチボールバレージャパンカップ2022公式サイト</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
@@ -27,7 +44,7 @@ export default function MyApp(props) {
         <CssBaseline />
         <Component {...pageProps} />
       </ThemeProvider>
-    </React.Fragment>
+    </ApolloProvider>
   );
 }
 

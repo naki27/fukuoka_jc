@@ -19,7 +19,7 @@ export default function ButtonAppBar() {
   return (
     <div className={classes.root}>
       <Box bgcolor="#ECACB5" p={2}>
-      <Typography variant="body2" color="#fff" align="center">
+      <Typography variant="body2" align="center">
         {'Copyright © '}
         <MuiLink color="inherit" href="https://fukuoka-beachball.jimdofree.com/">
             福岡県ビーチボール協会
