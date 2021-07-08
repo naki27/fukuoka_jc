@@ -123,10 +123,12 @@ const componentsStyle = {
   maleTitle: {
     margin: "auto",
     color: "#3261AB",
+    fontSize: "x-large",
   },
   femaleTitle: {
     margin: "auto",
     color: "#C7243A",
+    fontSize: "x-large",
   },
   "@media (max-width: 575px)": {
     sexPanelContainer: {
