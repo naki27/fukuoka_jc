@@ -76,9 +76,28 @@ const useStyles = makeStyles({
     background: "#6EB7DB",
     borderColor: "#6EB7DB",
   },
+  age30: {
+    background: "#009250",
+    borderColor: "#009250",
+    color: "#fff",
+  },
+  age40: {
+    background: "#EDAD0B",
+    borderColor: "#EDAD0B",
+  },
+  age50: {
+    background: "#A52175",
+    borderColor: "#A52175",
+    color: "#fff",
+  },
+  age60: {
+    background: "#333",
+    borderColor: "#333",
+    color: "#fff",
+  },
 });
 
-const VsCard = ({ resultMatch }) => {
+const VsCard = ({ resultMatch, showCreatedBy }) => {
     if (!resultMatch) return;
 
     const classes = useStyles();
@@ -105,11 +124,30 @@ const VsCard = ({ resultMatch }) => {
     const team1WinOrLose3rd = thirdSet.team1 > thirdSet.team2 ? classes.win : "";
     const team2WinOrLose3rd = thirdSet.team1 < thirdSet.team2 ? classes.win : "";
 
+    let sealColor;
+    switch (resultMatch.Department.age) {
+        case 18:
+            sealColor = classes.age18;
+            break;
+        case 30:
+            sealColor = classes.age30;
+            break;
+        case 40:
+            sealColor = classes.age40;
+            break;
+        case 50:
+            sealColor = classes.age50;
+            break;
+        case 60:
+            sealColor = classes.age60;
+            break;
+    }
+
     return (
         <Card className={classes.root}>
             <CardContent>
                 <div className={classes.cardHeader}>
-                    <span className={classes.seal + " " + classes.age18}>{resultMatch.Department.age}歳以上</span>
+                    <span className={classes.seal + " " + sealColor}>{resultMatch.Department.age}歳以上</span>
                     <span className={classes.seal}>{battleFormat}</span>
                 </div>
                 <div className={classes.vsTitle}>
@@ -132,7 +170,7 @@ const VsCard = ({ resultMatch }) => {
                     <div className={classes.vsRow}>
                         <span className={team1WinOrLose3rd}>{thirdSet.team1}</span>
                         −
-                        <span lassName={team2WinOrLose3rd}>{thirdSet.team2}</span>
+                        <span className={team2WinOrLose3rd}>{thirdSet.team2}</span>
                     </div> : ""}
                     <div className={classes.vsResult}>
                         <span className={team1WinOrLose}>{summary.team1}</span>
@@ -140,7 +178,10 @@ const VsCard = ({ resultMatch }) => {
                         <span className={team2WinOrLose}>{summary.team2}</span>
                     </div>
                 </Box>
-                <div className={classes.cardFooter}>{DateTime.fromISO(resultMatch.createdAt).toFormat('yyyy/MM/dd HH:mm:ss')}</div>
+                <div className={classes.cardFooter}>
+                    {DateTime.fromISO(resultMatch.createdAt).toFormat('yyyy/MM/dd HH:mm:ss')}
+                    {(showCreatedBy === true) ? <p>by {resultMatch.createdBy}</p> : ""}
+                </div>
             </CardContent>
         </Card>
     );

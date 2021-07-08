@@ -172,6 +172,8 @@ const componentsStyle = {
 };
 const useStyles = makeStyles(componentsStyle);
 
+const dummyLink = "https://www.google.co.jp/";
+
 export default function Index() {
   const classes = useStyles();
 
@@ -209,21 +211,21 @@ export default function Index() {
           justify="space-around"
           alignItems="center"
         >
-          <Link href="." className={classes.inlineGrid}>
+          <Link href={dummyLink} className={classes.inlineGrid}>
             <div className={classes.iconCircle}>
               <Description fontSize="large" className={classes.innerCircle} />
             </div>
             <p>{"大会要項"}</p>
           </Link>
 
-          <Link href="." className={classes.inlineGrid}>
+          <Link href={dummyLink} className={classes.inlineGrid}>
             <div className={classes.iconCircle}>
               <Map fontSize="large" className={classes.innerCircle} />
             </div>
             <p>{"アクセスマップ"}</p>
           </Link>
 
-          <Link href="." className={classes.inlineGrid}>
+          <Link href={dummyLink} className={classes.inlineGrid}>
             <div className={classes.iconCircle}>
               <Domain fontSize="large" className={classes.innerCircle} />
             </div>
@@ -278,12 +280,12 @@ export default function Index() {
           justify="space-around"
           alignItems="center"
         >
-          <Link href="." className={classes.inlineGrid}>
+          <Link href={dummyLink} className={classes.inlineGrid}>
             <img src="https://dummyimage.com/300x300/000/fff" />
             <p>{"女子"}</p>
           </Link>
 
-          <Link href="." className={classes.inlineGrid}>
+          <Link href={dummyLink} className={classes.inlineGrid}>
             <img src="https://dummyimage.com/300x300/000/fff" />
             <p>{"男子"}</p>
           </Link>
@@ -299,12 +301,12 @@ export default function Index() {
           justify="space-around"
           alignItems="center"
         >
-          <Link href="." className={classes.inlineGrid}>
+          <Link href={dummyLink} className={classes.inlineGrid}>
             <img src="https://dummyimage.com/300x300/000/fff" />
             <p>{"予選"}</p>
           </Link>
 
-          <Link href="." className={classes.inlineGrid}>
+          <Link href={dummyLink} className={classes.inlineGrid}>
             <img src="https://dummyimage.com/300x300/000/fff" />
             <p>{"トーナメント"}</p>
           </Link>

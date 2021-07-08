@@ -27,8 +27,9 @@ const ResultMatchCards = ({sex}) => {
     if (error) return `Error! ${error}`
 
     const vsCards = data && data.fukuokajc2022_MatchResult && data.fukuokajc2022_MatchResult.map((d, i) => {
+        const key = `resultMatch${i}`;
         return (
-            <VsCard resultMatch={d} />
+            <VsCard key={key} resultMatch={d} />
         );
     });
 

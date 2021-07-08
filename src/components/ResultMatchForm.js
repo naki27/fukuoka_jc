@@ -14,6 +14,7 @@ import RoundGameSelect from './RoundGameSelect';
 import TeamSelect from './TeamSelect';
 import PointField from './PointField';
 import SnackBar from './SnackBar';
+import VsCard from './VsCard';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -28,6 +29,16 @@ const useStyles = makeStyles((theme) => ({
         top: '50%',
         left: '50%',
     },
+    h3style: {
+        marginTop: "26px",
+        padding: "8px",
+        background: "#009250",
+        color: "#fff",
+    },
+    buttonContainer: {
+        textAlign: "right",
+        margin: "30px 51px"
+    }
 }));
 
 
@@ -75,11 +86,12 @@ const resultMatchForm = ({battleFormat}) => {
         };
         const key = "historyCard" + i;
         return (
-            <div key={key} style={historyCard}>
-                <div>{DateTime.fromISO(h.createdAt).toFormat('yyyy/MM/dd HH:mm:ss')} by {h.createdBy}</div>
-                <div>{h.Department.name} - {h.RoundGame.battleFormat === "League" ? "予選" : "トーナメント"} - {h.RoundGame.name}</div>
-                <div>{h.Team.name} vs {h.teamByTeam2id.name} - {summary.team1} : {summary.team2}</div>
-            </div>
+            <VsCard key={key} resultMatch={h} showCreatedBy={true}/>
+            // <div key={key} style={historyCard}>
+            //     <div>{DateTime.fromISO(h.createdAt).toFormat('yyyy/MM/dd HH:mm:ss')} by {h.createdBy}</div>
+            //     <div>{h.Department.name} - {h.RoundGame.battleFormat === "League" ? "予選" : "トーナメント"} - {h.RoundGame.name}</div>
+            //     <div>{h.Team.name} vs {h.teamByTeam2id.name} - {summary.team1} : {summary.team2}</div>
+            // </div>
         );
     });
 
@@ -123,6 +135,7 @@ console.log("displayed now");
     return (
         <form className={classes.root} onSubmit={handleSubmit(submit)}>
             <div>
+                <h3 className={classes.h3style}>対戦内容</h3>
                 <DepartmentSelect name="department" onChange={handleChangeDepartment} register={register} errors={errors}/>
                 <RoundGameSelect name="roundGame" battleFormat={battleFormat} register={register} errors={errors}/>
             </div>
@@ -133,43 +146,47 @@ console.log("displayed now");
             </div>
 
             <div>
-                <h3>1set</h3>
+                <h3 className={classes.h3style}>1set</h3>
                 <PointField name="leftPoint1" max="9" register={register} errors={errors} />
                 <PointField name="rightPoint1" max="9" register={register} errors={errors} />
             </div>
 
             <div>
-                <h3>2set</h3>
+                <h3 className={classes.h3style}>2set</h3>
                 <PointField name="leftPoint2" max="9" register={register} errors={errors} />
                 <PointField name="rightPoint2" max="9" register={register} errors={errors} />
             </div>
 
             <div>
-                <h3>3set</h3>
+                <h3 className={classes.h3style}>3set</h3>
                 <PointField name="leftPoint3" max="15" required={false} register={register} errors={errors} />
                 <PointField name="rightPoint3" max="15" required={false} register={register} errors={errors} />
             </div>
 
             <div>
-                <h3>結果</h3>
+                <h3 className={classes.h3style}>結果</h3>
                 <PointField name="leftSetCount" max="2" label="セット数" register={register} errors={errors} />
                 <PointField name="rightSetCount" max="2" label="セット数" register={register} errors={errors} />
             </div>
 
-            <Button
-                type="submit"
-                disabled={pageLoading}
-                variant="contained"
-                color="primary"
-                startIcon={<SaveIcon />}>
-                    登録する
-            </Button>
+            <div className={classes.buttonContainer}>
+                <Button
+                    type="submit"
+                    disabled={pageLoading}
+                    variant="contained"
+                    color="primary"
+                    startIcon={<SaveIcon />}>
+                        登録する
+                </Button>
+            </div>
 
             {pageLoading && <CircularProgress size={128} className={classes.buttonProgress} />}
             {success && <SnackBar isOpen={true} message="登録が完了しました。"/>}
 
-            <h3>登録の履歴（最新を5件ほど表示しています。）</h3>
-            {histories}
+            <h3 className={classes.h3style}>登録の履歴（最新を10件ほど表示しています。）</h3>
+            <div>
+                {histories}
+            </div>
         </form>
     );
 };
