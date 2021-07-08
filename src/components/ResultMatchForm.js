@@ -24,18 +24,18 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     buttonProgress: {
-        color: '#009250',
         position: 'absolute',
-        top: '50%',
+        top: '-200px',
         left: '50%',
     },
     h3style: {
         marginTop: "26px",
         padding: "8px",
-        background: "#009250",
+        background: "#3261AB",
         color: "#fff",
     },
     buttonContainer: {
+        position: "relative",
         textAlign: "right",
         margin: "30px 51px"
     }
@@ -178,12 +178,12 @@ console.log("displayed now");
                     startIcon={<SaveIcon />}>
                         登録する
                 </Button>
+                {pageLoading && <CircularProgress size={128} className={classes.buttonProgress} />}
             </div>
 
-            {pageLoading && <CircularProgress size={128} className={classes.buttonProgress} />}
             {success && <SnackBar isOpen={true} message="登録が完了しました。"/>}
 
-            <h3 className={classes.h3style}>登録の履歴（最新を10件ほど表示しています。）</h3>
+            <h3 className={classes.h3style}>登録の履歴（最新を5件ほど表示しています。）</h3>
             <div>
                 {histories}
             </div>

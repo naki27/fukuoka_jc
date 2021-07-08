@@ -111,6 +111,7 @@ const componentsStyle = {
     borderStyle: "solid",
     borderRadius: "5px",
     padding: "12px",
+    position: "relative"
   },
   sexPanel: {
     margin: "auto",

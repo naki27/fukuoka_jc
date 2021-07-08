@@ -9,10 +9,10 @@ import VsCard from './VsCard';
 
 const useStyles = makeStyles((theme) => ({
     buttonProgress: {
-        color: '#009250',
         position: 'absolute',
         top: '50%',
         left: '50%',
+        zIndex: "9999",
     },
 }));
 
