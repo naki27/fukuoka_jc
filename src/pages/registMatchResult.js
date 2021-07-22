@@ -15,7 +15,7 @@ const registMatchResult = () => {
             <H1 title={title} />
             <ResultMatchForm battleFormat={battleFormat}/>
         </>
-    );
+      );
 }
 
 export default registMatchResult;

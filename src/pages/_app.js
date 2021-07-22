@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '~/components/theme';
+import "~/../public/theme.css";
 
 // for apollo client
 import { ApolloProvider } from "@apollo/react-hooks";

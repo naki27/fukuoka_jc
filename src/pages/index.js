@@ -214,14 +214,14 @@ export default function Index() {
           justify="space-around"
           alignItems="center"
         >
-          <Link href={dummyLink} className={classes.inlineGrid}>
+          <Link href="/tournamentGuidelines" className={classes.inlineGrid}>
             <div className={classes.iconCircle}>
               <Description fontSize="large" className={classes.innerCircle} />
             </div>
             <p>{"大会要項"}</p>
           </Link>
 
-          <Link href={dummyLink} className={classes.inlineGrid}>
+          <Link href="/accessMap" className={classes.inlineGrid}>
             <div className={classes.iconCircle}>
               <Map fontSize="large" className={classes.innerCircle} />
             </div>

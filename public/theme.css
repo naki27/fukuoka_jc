@@ -1,0 +1,31 @@
+.guidLineTable {
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+.guidLineTable th {
+  background: #AAAAAA;
+  border: solid 1px #AAAAAA;
+  color: #fff;
+  padding: 10px;
+  width: 15vw;
+}
+.guidLineTable td {
+  border: solid 1px #AAAAAA;
+  padding: 10px;
+}
+
+@media screen and (max-width: 640px) {
+  .guidLineTable-last td:last-child {
+    border-bottom: solid 1px #AAAAAA;
+    width: 100%;
+  }
+  .guidLineTable {
+    width: 100%;
+  }
+  .guidLineTable th,
+  .guidLineTable td {
+    border-bottom: none;
+    display: block;
+    width: 100%;
+  }
+}

@@ -19,7 +19,7 @@ import VsCard from './VsCard';
 const useStyles = makeStyles((theme) => ({
     root: {
         '& .MuiTextField-root': {
-          margin: theme.spacing(1),
+          margin: '0 8px',
           width: '25ch',
         },
     },
@@ -35,10 +35,18 @@ const useStyles = makeStyles((theme) => ({
         color: "#fff",
     },
     buttonContainer: {
-        position: "relative",
         textAlign: "right",
-        margin: "30px 51px"
-    }
+        margin: "30px 8%"
+    },
+    centering: {
+        textAlign: "center",
+    },
+    histories: {
+        '& .MuiCard-root': {
+            margin: '0 auto',
+            marginBottom: '10px',
+        },
+    },
 }));
 
 
@@ -134,37 +142,37 @@ console.log(`submit => ${JSON.stringify(values)}`);
 console.log("displayed now");
     return (
         <form className={classes.root} onSubmit={handleSubmit(submit)}>
-            <div>
-                <h3 className={classes.h3style}>対戦内容</h3>
+            <h3 className={classes.h3style}>対戦内容</h3>
+            <div className={classes.centering}>
                 <DepartmentSelect name="department" onChange={handleChangeDepartment} register={register} errors={errors}/>
                 <RoundGameSelect name="roundGame" battleFormat={battleFormat} register={register} errors={errors}/>
             </div>
 
-            <div>
+            <div className={classes.centering}>
                 <TeamSelect name="team1" departmentId={departmentId} register={register} errors={errors}/>
                 <TeamSelect name="team2" departmentId={departmentId} register={register} errors={errors}/>
             </div>
 
-            <div>
-                <h3 className={classes.h3style}>1set</h3>
+            <h3 className={classes.h3style}>1set</h3>
+            <div className={classes.centering}>
                 <PointField name="leftPoint1" max="9" register={register} errors={errors} />
                 <PointField name="rightPoint1" max="9" register={register} errors={errors} />
             </div>
 
-            <div>
-                <h3 className={classes.h3style}>2set</h3>
+            <h3 className={classes.h3style}>2set</h3>
+            <div className={classes.centering}>
                 <PointField name="leftPoint2" max="9" register={register} errors={errors} />
                 <PointField name="rightPoint2" max="9" register={register} errors={errors} />
             </div>
 
-            <div>
-                <h3 className={classes.h3style}>3set</h3>
+            <h3 className={classes.h3style}>3set</h3>
+            <div className={classes.centering}>
                 <PointField name="leftPoint3" max="15" required={false} register={register} errors={errors} />
                 <PointField name="rightPoint3" max="15" required={false} register={register} errors={errors} />
             </div>
 
-            <div>
-                <h3 className={classes.h3style}>結果</h3>
+            <h3 className={classes.h3style}>結果</h3>
+            <div className={classes.centering}>
                 <PointField name="leftSetCount" max="2" label="セット数" register={register} errors={errors} />
                 <PointField name="rightSetCount" max="2" label="セット数" register={register} errors={errors} />
             </div>
@@ -184,7 +192,7 @@ console.log("displayed now");
             {success && <SnackBar isOpen={true} message="登録が完了しました。"/>}
 
             <h3 className={classes.h3style}>登録の履歴（最新を5件ほど表示しています。）</h3>
-            <div>
+            <div className={classes.histories}>
                 {histories}
             </div>
         </form>
