@@ -175,8 +175,6 @@ const componentsStyle = {
 };
 const useStyles = makeStyles(componentsStyle);
 
-const dummyLink = "https://www.google.co.jp/";
-
 export default function Index() {
   const classes = useStyles();
 
@@ -228,7 +226,7 @@ export default function Index() {
             <p>{"アクセスマップ"}</p>
           </Link>
 
-          <Link href={dummyLink} className={classes.inlineGrid}>
+          <Link href="/venueMap" className={classes.inlineGrid}>
             <div className={classes.iconCircle}>
               <Domain fontSize="large" className={classes.innerCircle} />
             </div>
@@ -272,6 +270,10 @@ export default function Index() {
             <img src="https://dummyimage.com/300x100/000/fff" />
           </Grid>
         </Grid>
+
+        <Link href="/sponsor" className={classes.inlineGrid}>
+            <p>もっとみる</p>
+        </Link>
       </Box>
 
       <Box my={4} py={5} bgcolor="#E3E3E3">
@@ -283,12 +285,12 @@ export default function Index() {
           justify="space-around"
           alignItems="center"
         >
-          <Link href={dummyLink} className={classes.inlineGrid}>
+          <Link href="/underConstruction" className={classes.inlineGrid}>
             <img src="https://dummyimage.com/300x300/000/fff" />
             <p>{"女子"}</p>
           </Link>
 
-          <Link href={dummyLink} className={classes.inlineGrid}>
+          <Link href="/underConstruction" className={classes.inlineGrid}>
             <img src="https://dummyimage.com/300x300/000/fff" />
             <p>{"男子"}</p>
           </Link>
@@ -304,12 +306,12 @@ export default function Index() {
           justify="space-around"
           alignItems="center"
         >
-          <Link href={dummyLink} className={classes.inlineGrid}>
+          <Link href="/underConstruction" className={classes.inlineGrid}>
             <img src="https://dummyimage.com/300x300/000/fff" />
             <p>{"予選"}</p>
           </Link>
 
-          <Link href={dummyLink} className={classes.inlineGrid}>
+          <Link href="/underConstruction" className={classes.inlineGrid}>
             <img src="https://dummyimage.com/300x300/000/fff" />
             <p>{"トーナメント"}</p>
           </Link>
