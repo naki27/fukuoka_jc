@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 import Link from "~/components/Link";
 import Header from "~/components/Header";
@@ -18,8 +19,6 @@ import {
   Description,
   Map,
   Domain,
-  BorderColor,
-  FullscreenExit,
 } from "@material-ui/icons";
 
 const containerFluid = {
@@ -271,9 +270,14 @@ export default function Index() {
           </Grid>
         </Grid>
 
-        <Link href="/sponsor" className={classes.inlineGrid}>
-            <p>もっとみる</p>
-        </Link>
+        <Typography>
+          <Link href="/sponsor" color="primary">
+              <span className="see-more">
+                  もっとみる
+                  <NavigateNextIcon />
+              </span>
+          </Link>
+        </Typography>
       </Box>
 
       <Box my={4} py={5} bgcolor="#E3E3E3">

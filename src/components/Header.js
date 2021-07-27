@@ -18,6 +18,14 @@ import Box from '@material-ui/core/Box';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import Link from '~/components/Link';
+import {
+  Description,
+  Map,
+  Domain,
+  SupervisorAccount,
+  EmojiEvents,
+  Subject,
+} from "@material-ui/icons";
 
 const drawerWidth = 240;
 
@@ -82,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
       marginRight: theme.spacing(3)
     },
   }));
-  
+
 
 export default function ButtonAppBar() {
   const classes = useStyles();
@@ -133,21 +141,63 @@ export default function ButtonAppBar() {
         </div>
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
+            <ListItem button key="description">
+              <ListItemIcon><Description /></ListItemIcon>
+              <Link href="/tournamentGuidelines">
+                <ListItemText primary="大会要項" className="default-color"/>
+              </Link>
             </ListItem>
-          ))}
+            <ListItem button key="accessMap">
+              <ListItemIcon><Map /></ListItemIcon>
+              <Link href="/accessMap">
+                <ListItemText primary="アクセスマップ" className="default-color"/>
+              </Link>
+            </ListItem>
+            <ListItem button key="domain">
+              <ListItemIcon><Domain /></ListItemIcon>
+              <Link href="/venueMap">
+                <ListItemText primary="会場図" className="default-color"/>
+              </Link>
+            </ListItem>
         </List>
         <Divider />
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          <ListItem button key="sponsor">
+            <ListItemIcon><SupervisorAccount /></ListItemIcon>
+            <Link href="/sponsor">
+              <ListItemText primary="スポンサー" className="default-color"/>
+            </Link>
+          </ListItem>
+        </List>
+        <Divider />
+        <List>
+          <ListItem button key="underConstruction1">
+            <ListItemIcon><Subject /></ListItemIcon>
+            <Link href="/underConstruction">
+              <ListItemText primary="組み合わせ・進行表（女子）" className="default-color"/>
+            </Link>
+          </ListItem>
+          <ListItem button key="underConstruction2">
+            <ListItemIcon><Subject /></ListItemIcon>
+            <Link href="/underConstruction">
+              <ListItemText primary="組み合わせ・進行表（男子）" className="default-color"/>
+            </Link>
+          </ListItem>
+        </List>
+        <Divider />
+        <List>
+          <ListItem button key="underConstruction3">
+            <ListItemIcon><EmojiEvents /></ListItemIcon>
+            <Link href="/underConstruction">
+              <ListItemText primary="大会結果（女子）" className="default-color"/>
+            </Link>
+          </ListItem>
+          <ListItem button key="underConstruction4">
+            <ListItemIcon><EmojiEvents /></ListItemIcon>
+            <Link href="/underConstruction">
+              <ListItemText primary="大会結果（男子）" className="default-color"/>
+            </Link>
+          </ListItem>
         </List>
       </Drawer>
     </div>

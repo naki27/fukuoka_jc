@@ -26,12 +26,17 @@ const ResultMatchCards = ({sex}) => {
     });
     if (error) return `Error! ${error}`
 
-    const vsCards = data && data.fukuokajc2022_MatchResult && data.fukuokajc2022_MatchResult.map((d, i) => {
+    let vsCards = data && data.fukuokajc2022_MatchResult && data.fukuokajc2022_MatchResult.map((d, i) => {
         const key = `resultMatch${i}`;
         return (
             <VsCard key={key} resultMatch={d} />
         );
     });
+    if (!vsCards) {
+        return (
+            <p className="no_match_description">本日の対戦はまだありません</p>
+        );
+    }
 
     return (
         <>

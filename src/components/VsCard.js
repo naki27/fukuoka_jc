@@ -99,7 +99,6 @@ const useStyles = makeStyles({
 
 const VsCard = ({ resultMatch, showCreatedBy }) => {
     if (!resultMatch) return;
-
     const classes = useStyles();
     const defaultProps = {
         borderColor: "#C6C6C6",

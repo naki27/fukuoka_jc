@@ -2,6 +2,16 @@
   display: flex;
 }
 
+.default-color {
+  color: #333;
+}
+
+.see-more {
+  display: flex;
+  justify-content: flex-end;
+  margin: 16px 8px;
+}
+
 .google-map {
   height: 0;
   overflow: hidden;
@@ -53,12 +63,16 @@
 }
 
 .sponsor-detail {
-    margin-left: 16px
-  }
+  margin-left: 16px
+}
 
 @media screen and (max-width: 640px) {
   .fixed2column {
     display: block;
+  }
+
+  .sponsor-detail {
+    margin-left: 0
   }
 
   .guidLineTable-last td:last-child {
