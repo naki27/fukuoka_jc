@@ -15,6 +15,7 @@ import SnsBox from "~/components/SnsBox";
 import H1 from "~/components/H1";
 import ResultMatchCards from "~/components/ResultMatchCards";
 import Image from 'next/image';
+import { Picture } from 'react-responsive-picture';
 import keyVisual from '../../public/keyVisual.png';
 
 import {
@@ -155,9 +156,17 @@ const componentsStyle = {
     maxWidth: "1280px",
     margin: "0 auto",
   },
+  "@media (max-width: 1280px)": {
+    keyVisualContainer: {
+      marginTop: "38px"
+    }
+  },
   "@media (max-width: 768px)": {
     keyVisualComment: {
       fontSize: "1rem",
+    },
+    keyVisual: {
+      top: "70px!important"
     },
   },
   "@media (max-width: 540px)": {
@@ -221,7 +230,29 @@ export default function Index() {
       <Header />
       {/* <Parallax image={"../../public/keyVisual.png"} /> */}
       <div className={classes.keyVisualContainer}>
-        <Image src={keyVisual} width="2644" height="1336" className={classes.keyVisual}/>
+        <Picture className={classes.keyVisual}
+            sources = {[
+                {
+                    srcSet: "https://drive.google.com/uc?id=1W1u4DarcpSK3jLTgiXwj9L1swpAfzgq5",
+                    media: "(max-width: 420px)",
+                },
+                {   // 768px https://drive.google.com/file/d/1NiMT5TyGGNQCwScjv4HmGidEGy3U2bft/view?usp=sharing
+                  srcSet: "https://drive.google.com/uc?id=1NiMT5TyGGNQCwScjv4HmGidEGy3U2bft",
+                  media: "(max-width: 768px)",
+                },
+                {   // 1024px https://drive.google.com/file/d/1PXYm-j7oRqdPOIF58ra7B5WPredGphVF/view?usp=sharing
+                  srcSet: "https://drive.google.com/uc?id=1PXYm-j7oRqdPOIF58ra7B5WPredGphVF",
+                  media: "(max-width: 1024px)",
+                },
+                {   // 1280px https://drive.google.com/file/d/1uOtYL_4l-VB4Ti957sDexBo9mX_vTH-N/view?usp=sharing
+                    srcSet: "https://drive.google.com/uc?id=1uOtYL_4l-VB4Ti957sDexBo9mX_vTH-N",
+                    media: "(max-width: 1280px)",
+                },
+                {   // 1920px
+                    srcSet: "https://drive.google.com/uc?id=1zzhRQLU_ujWI77rbO9ZMDRUBeqprg5HE",
+                },
+            ]}
+        />
         <div className={classes.keyVisualComment}>
           <p>福岡JAPANカップの公式ページへようこそ！</p>
           <p>まだ内容は少ないですが、内容が確定次第、随時公開して参ります！</p>
