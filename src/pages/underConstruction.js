@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { makeStyles } from '@material-ui/core/styles';
 import { Container, Breadcrumbs, Typography, Button } from "@material-ui/core";
 
 import H1 from '~/components/H1';
@@ -12,7 +12,15 @@ import Link from "~/components/Link";
 import Image from 'next/image';
 import keyVisual from '../../public/underConstruction.jpeg';
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+      textAlign: "center",
+      fontSize: "1.2rem",
+    },
+  }));
+
 const underConstruction = () => {
+    const classes = useStyles();
     return (
         <>
             <Header />
@@ -24,9 +32,9 @@ const underConstruction = () => {
                     </Link>
                     <Typography color="textPrimary">制作中</Typography>
                 </Breadcrumbs>
-                <H1 title="こちらは、まだ未公開ページです！！" />
+                <H1 title="こちらは未公開ページです！！" />
 
-                <div>
+                <div className={classes.root}>
                     <p>ただいま鋭意制作中です。</p>
                     <p>公開まで、今しばらくお待ちください。</p>
                     <Image src={keyVisual} width="800" height="511"/>

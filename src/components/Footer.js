@@ -18,7 +18,7 @@ export default function ButtonAppBar() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Box bgcolor="#ECACB5" p={2}>
+      <Box bgcolor="#ECACB5" p={4}>
         <Typography variant="body2" align="center">
           {'Copyright © '}
           <MuiLink color="inherit" href="https://fukuoka-beachball.jimdofree.com/">

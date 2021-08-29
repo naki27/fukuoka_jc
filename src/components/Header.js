@@ -14,6 +14,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import Image from 'next/image';
 import Box from '@material-ui/core/Box';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
@@ -26,6 +27,7 @@ import {
   EmojiEvents,
   Subject,
 } from "@material-ui/icons";
+import logo from '../../public/logo.png';
 
 const drawerWidth = 240;
 
@@ -113,7 +115,7 @@ export default function ButtonAppBar() {
         })}>
         <Toolbar>
           <Link href="/">
-            <img src="https://dummyimage.com/200x100/000/fff" className={classes.logo}/>
+            <Image src={logo} width="300" height="100" className="logo"/>
           </Link>
           <Typography variant="h6" className={classes.title}>
             {/* ビーチボールジャパンカップ2022 IN 福岡(仮) */}
@@ -149,18 +151,18 @@ export default function ButtonAppBar() {
             </ListItem>
             <ListItem button key="accessMap">
               <ListItemIcon><Map /></ListItemIcon>
-              <Link href="/accessMap">
+              <Link href="/underConstruction">
                 <ListItemText primary="アクセスマップ" className="default-color"/>
               </Link>
             </ListItem>
             <ListItem button key="domain">
               <ListItemIcon><Domain /></ListItemIcon>
-              <Link href="/venueMap">
+              <Link href="/underConstruction">
                 <ListItemText primary="会場図" className="default-color"/>
               </Link>
             </ListItem>
         </List>
-        <Divider />
+        {/* <Divider />
         <List>
           <ListItem button key="sponsor">
             <ListItemIcon><SupervisorAccount /></ListItemIcon>
@@ -198,7 +200,7 @@ export default function ButtonAppBar() {
               <ListItemText primary="大会結果（男子）" className="default-color"/>
             </Link>
           </ListItem>
-        </List>
+        </List> */}
       </Drawer>
     </div>
   );

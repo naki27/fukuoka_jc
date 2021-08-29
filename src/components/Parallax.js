@@ -5,6 +5,8 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import Image from 'next/image';
+import keyVisual from '../../public/keyVisual.png';
 
 const styles = theme => ({
   parallax: {

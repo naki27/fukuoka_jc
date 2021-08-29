@@ -27,7 +27,7 @@ const accessMap = () => {
                 <H1 title="アクセスマップ" />
 
                 <div className="fixed2column">
-                    <Image src={kasugaSportCenter} width="315" height="210"/>
+                    <Image src={kasugaSportCenter} width="384" height="256"/>
                     <table className="normalTable">
                         <tbody>
                             <tr>

@@ -17,6 +17,7 @@
   overflow: hidden;
   padding-bottom: 56.25%;
   position: relative;
+  margin: 32px 0;
 }
 .google-map iframe {
   position: absolute;
@@ -27,8 +28,8 @@
 }
 
 .normalTable {
-  margin: 0 8px;
   border-collapse: collapse;
+  width: 100%;
 }
 .normalTable th {
   background: #aaaaaa;
@@ -88,4 +89,26 @@
     display: block;
     width: 100%;
   }
+}
+
+@media (max-width: 768px) {
+  .MuiToolbar-regular {
+    max-height: 50px !important;
+  }
+  .logo {
+    min-width: 60% !important;
+    min-height: 60% !important;
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .logo {
+    min-width: 50% !important;
+    min-height: 50% !important;
+  }
+}
+
+.ml16 {
+  margin-left: 16px;
 }

@@ -12,7 +12,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "right"
   },
   iconBox: {
-    margin: "0 8px"
+    margin: "0 8px",
+    color: "#C7243A"
   }
 }));
 
