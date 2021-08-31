@@ -141,7 +141,8 @@ const componentsStyle = {
     textAlign: "center"
   },
   keyVisual: {
-    top: "80px!important"
+    top: "80px!important",
+    width: "100vw",
   },
   keyVisualComment: {
     position: "absolute",

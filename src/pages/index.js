@@ -141,7 +141,8 @@ const componentsStyle = {
     textAlign: "center"
   },
   keyVisual: {
-    top: "80px!important"
+    top: "80px!important",
+    width: "100vw",
   },
   keyVisualComment: {
     position: "absolute",
@@ -231,18 +232,19 @@ export default function Index() {
       {/* <Parallax image={"../../public/keyVisual.png"} /> */}
       <div className={classes.keyVisualContainer}>
         <Picture className={classes.keyVisual}
+            sizes="(min-width: 36em) 33.3vw, 100%"
             sources = {[
                 {
                     srcSet: "https://drive.google.com/uc?id=1W1u4DarcpSK3jLTgiXwj9L1swpAfzgq5",
-                    media: "(max-width: 420px)",
+                    media: "(max-width: 400px)",
                 },
                 {   // 768px https://drive.google.com/file/d/1NiMT5TyGGNQCwScjv4HmGidEGy3U2bft/view?usp=sharing
-                  srcSet: "https://drive.google.com/uc?id=1NiMT5TyGGNQCwScjv4HmGidEGy3U2bft",
-                  media: "(max-width: 768px)",
+                    srcSet: "https://drive.google.com/uc?id=1NiMT5TyGGNQCwScjv4HmGidEGy3U2bft",
+                    media: "(max-width: 768px)",
                 },
                 {   // 1024px https://drive.google.com/file/d/1PXYm-j7oRqdPOIF58ra7B5WPredGphVF/view?usp=sharing
-                  srcSet: "https://drive.google.com/uc?id=1PXYm-j7oRqdPOIF58ra7B5WPredGphVF",
-                  media: "(max-width: 1024px)",
+                    srcSet: "https://drive.google.com/uc?id=1PXYm-j7oRqdPOIF58ra7B5WPredGphVF",
+                    media: "(max-width: 1024px)",
                 },
                 {   // 1280px https://drive.google.com/file/d/1uOtYL_4l-VB4Ti957sDexBo9mX_vTH-N/view?usp=sharing
                     srcSet: "https://drive.google.com/uc?id=1uOtYL_4l-VB4Ti957sDexBo9mX_vTH-N",
