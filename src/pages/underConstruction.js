@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center",
       fontSize: "1.2rem",
     },
-  }));
+}));
 
 const underConstruction = () => {
     const classes = useStyles();

@@ -1,4 +1,5 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 
 import { Container, Breadcrumbs, Typography, Button } from "@material-ui/core";
 import GetAppIcon from '@material-ui/icons/GetApp';
@@ -9,10 +10,37 @@ import Gutter from "~/components/Gutter";
 import Footer from "~/components/Footer";
 import Link from "~/components/Link";
 
+const useStyles = makeStyles(() => ({
+    buttonArea: {
+        margin: "35px auto",
+        textAlign: "center",
+        display: "flow-root",
+    },
+    PdfButton: {
+        margin: "32px",
+        background: "#C7243A",
+        color:"#fff"
+    },
+    ExcelButton: {
+        margin: "32px",
+        background: "#009250",
+        color:"#fff"
+    }
+}));
+
 const tournamentGuidelines = () => {
-    const onDownload = () => {
+    const classes = useStyles();
+
+    const onGuidelineDownload = _ => {
         const link = document.createElement("a");
-        link.href = "https://docs.google.com/spreadsheets/d/1iyiolAqDPFq-2d0O1tJcRfKY76iSU_i6W3NGwUYqYQ0/export?format=xlsx";
+        // https://drive.google.com/file/d/1GVgkLv3xPJjh7KTpSYEPRuOmvRFym-Sv/view?usp=sharing
+        link.href = "https://drive.google.com/uc?id=1GVgkLv3xPJjh7KTpSYEPRuOmvRFym-Sv&export=download&format=pdf";
+        link.click();
+    };
+    const onApplicationFormDownload = _ => {
+        const link = document.createElement("a");
+        // https://docs.google.com/spreadsheets/d/1MuBYdQJo4wQpYIPwnXC0IkxUsso46OdO/edit?usp=sharing&ouid=102240011293136702046&rtpof=true&sd=true
+        link.href = "https://docs.google.com/spreadsheets/d/1MuBYdQJo4wQpYIPwnXC0IkxUsso46OdO/export?format=xlsx";
         link.click();
     };
 
@@ -137,8 +165,8 @@ const tournamentGuidelines = () => {
                         <tr>
                             <th>参加料</th>
                             <td>
-                                <p>１チーム　８，０００円</p>
-                                <p>※ただし、日本ビーチボール協会未加盟チームは１０，０００円とする。</p>
+                                <p>１チーム　8,000円</p>
+                                <p>※ただし、日本ビーチボール協会未加盟チームは10,000円とする。</p>
                             </td>
                         </tr>
                         <tr>
@@ -190,15 +218,22 @@ const tournamentGuidelines = () => {
                     </tbody>
                 </table>
 
-                {/* <div style={{margin: '35px auto', textAlign: 'center' }}>
+                <div className={classes.buttonArea}>
                     <Button
-                        onClick={onDownload}
+                        className={classes.PdfButton}
+                        onClick={onGuidelineDownload}
                         variant="contained"
-                        color="primary"
                         startIcon={<GetAppIcon />}>
-                            申込書をダウンロードする
+                            大会要項(pdf)をダウンロード
                     </Button>
-                </div> */}
+                    <Button
+                        className={classes.ExcelButton}
+                        onClick={onApplicationFormDownload}
+                        variant="contained"
+                        startIcon={<GetAppIcon />}>
+                            申込書(excel)をダウンロード
+                    </Button>
+                </div>
             </Container>
             <Footer />
         </>

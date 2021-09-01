@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
+import { useRouter } from 'next/router'
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '~/components/theme';
 import "~/../public/theme.css";
+import * as gtag from '~/libs/gtag'
 
 // for apollo client
 import { ApolloProvider } from "@apollo/react-hooks";
@@ -12,6 +14,7 @@ import { ApolloClient, HttpLink, InMemoryCache } from "apollo-boost";
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
+  const router = useRouter();
 
   useEffect(() => {
     // Remove the server-side injected CSS.
@@ -19,7 +22,20 @@ export default function MyApp(props) {
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
-  }, []);
+
+    if (!gtag.existsGaId) {
+      return
+    }
+
+    const handleRouteChange = (path) => {
+      gtag.pageview(path)
+    }
+
+    router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events]);
 
   // for apollo client
   const httpLink = new HttpLink({
