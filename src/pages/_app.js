@@ -53,7 +53,7 @@ export default function MyApp(props) {
   return (
     <ApolloProvider client={client}>
       <Head>
-        <title>福岡ビーチボールバレージャパンカップ2022公式サイト</title>
+        <title>第28回ジャパンカップビーチボール選手権福岡大会 公式サイト</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
