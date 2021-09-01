@@ -44,6 +44,14 @@ const tournamentGuidelines = () => {
         link.click();
     };
 
+    const jumpToButtonArea = _ => {
+        const target = document.getElementById("buttonArea");
+        window.scrollTo({
+            top: target.offsetTop,
+            behavior: 'smooth'
+        });
+    };
+
     return (
         <>
             <Header />
@@ -55,7 +63,14 @@ const tournamentGuidelines = () => {
                     </Link>
                     <Typography color="textPrimary">大会要項</Typography>
                 </Breadcrumbs>
-                <H1 title="大会要項" />
+
+                <div style={{"display": "flex", "justify-content": "center"}}>
+                    <H1 title="大会要項" />
+                    <a className="swing" onClick={jumpToButtonArea} style={{ "color": "#C7243A"}}>
+                        <GetAppIcon />
+                        <span style={{"font-size": "10px", "vertical-align": "super"}}>ダウンロード</span>
+                    </a>
+                </div>
 
                 <table className="guidLineTable">
                     <tbody>
@@ -218,7 +233,7 @@ const tournamentGuidelines = () => {
                     </tbody>
                 </table>
 
-                <div className={classes.buttonArea}>
+                <div id="buttonArea" className={classes.buttonArea}>
                     <Button
                         className={classes.PdfButton}
                         onClick={onGuidelineDownload}
@@ -234,6 +249,7 @@ const tournamentGuidelines = () => {
                             申込書(excel)をダウンロード
                     </Button>
                 </div>
+
             </Container>
             <Footer />
         </>

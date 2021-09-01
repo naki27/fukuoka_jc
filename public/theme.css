@@ -67,6 +67,28 @@
   margin-left: 16px
 }
 
+.swing {
+  margin: 2.5rem 0;
+  animation-name: swing;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swing {
+  0% { -webkit-transform: rotate(0deg); }
+  55% { -webkit-transform: rotate(0deg); }
+  60% { -webkit-transform: rotate(-10deg); }
+  65% { -webkit-transform: rotate(8deg); }
+  70% { -webkit-transform: rotate(-5deg); }
+  75% { -webkit-transform: rotate(4deg); }
+  80% { -webkit-transform: rotate(-3deg); }
+  85% { -webkit-transform: rotate(2deg); }
+  90% { -webkit-transform: rotate(-1deg); }
+  95% { -webkit-transform: rotate(1deg); }
+  100% { -webkit-transform: rotate(0deg); }
+}
+
 @media screen and (max-width: 640px) {
   .fixed2column {
     display: block;
