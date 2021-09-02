@@ -2045,6 +2045,11 @@ scheduler@^0.20.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
+scroll-behavior-polyfill@^2.0.13:
+  version "2.0.13"
+  resolved "https://registry.yarnpkg.com/scroll-behavior-polyfill/-/scroll-behavior-polyfill-2.0.13.tgz#f6f4db9eecdb94d5744b85b653440602fcf3b24b"
+  integrity sha512-X1AC6+k0++Y3XOT8Likr5Dh4XMmwvbTolr3Mp2g1jYPpOQ3++wff/JPfPEK6zqPCkZ88Ac0/OMRW/Uwh16U+HQ==
+
 semver@^6.0.0:
   version "6.3.0"
   resolved "https://registry.npmjs.org/semver/-/semver-6.3.0.tgz"

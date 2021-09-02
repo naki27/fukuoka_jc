@@ -10,6 +10,8 @@ import Gutter from "~/components/Gutter";
 import Footer from "~/components/Footer";
 import Link from "~/components/Link";
 
+import 'scroll-behavior-polyfill'
+
 const useStyles = makeStyles(() => ({
     buttonArea: {
         margin: "35px auto",
@@ -63,14 +65,7 @@ const tournamentGuidelines = () => {
                     </Link>
                     <Typography color="textPrimary">大会要項</Typography>
                 </Breadcrumbs>
-
-                <div style={{"display": "flex", "justify-content": "center"}}>
-                    <H1 title="大会要項" />
-                    <a className="swing" onClick={jumpToButtonArea} style={{ "color": "#C7243A"}}>
-                        <GetAppIcon />
-                        <span style={{"font-size": "10px", "vertical-align": "super"}}>ダウンロード</span>
-                    </a>
-                </div>
+                <H1 title="大会要項" />
 
                 <table className="guidLineTable">
                     <tbody>
@@ -112,8 +107,36 @@ const tournamentGuidelines = () => {
                         <tr>
                             <th>会場</th>
                             <td>
-                                <p>春日市総合スポーツセンター</p>
+                                <p>
+                                    春日市総合スポーツセンター
+                                    {/* <a href="./accessMap">春日市総合スポーツセンター</a> */}
+                                </p>
                                 <p>住所：福岡県春日市大谷６丁目２８</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>申込方法</th>
+                            <td>
+                                <p>別紙参加申込様式に必要事項を記入の上、日本ビーチボール協会加盟都県は、都県協会でまとめて申し込みください。</p>
+                                <p>未加盟チームも下記事務局までメールにて申し込みください。</p>
+                                <p>第２８回ジャパンカップビーチボール選手権 福岡大会</p>
+                                <p>実行委員会　総務部　宛</p>
+                                <p>
+                                    Ｅメール:
+                                    <a href="mailto:fukuoka.beachball.assoc@gmail.com">fukuoka.beachball.assoc@gmail.com</a></p>
+                                <p>
+                                    <a className="swing" onClick={jumpToButtonArea} style={{ "color": "#C7243A"}}>
+                                        <GetAppIcon style={{"vertical-align": "bottom"}}/>
+                                        申込書はこちら
+                                    </a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>申込期限</th>
+                            <td>
+                                <p>令和３年１０月２０日（水）</p>
+                                <p>※エントリー表提出期限となります。</p>
                             </td>
                         </tr>
                         <tr>
@@ -185,23 +208,6 @@ const tournamentGuidelines = () => {
                             </td>
                         </tr>
                         <tr>
-                            <th>申込方法</th>
-                            <td>
-                                <p>別紙参加申込様式に必要事項を記入の上、日本ビーチボール協会加盟都県は、都県協会でまとめて申し込みください。</p>
-                                <p>未加盟チームも下記事務局までメールにて申し込みください。</p>
-                                <p>第２８回ジャパンカップビーチボール選手権 福岡大会</p>
-                                <p>実行委員会　総務部　宛</p>
-                                <p>Ｅメール: fukuoka.beachball.assoc@gmail.com</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>申込期限</th>
-                            <td>
-                                <p>令和３年１０月２０日（水）</p>
-                                <p>※エントリー表提出期限となります。</p>
-                            </td>
-                        </tr>
-                        <tr>
                             <th>振込先</th>
                             <td>
                                 <p>参加料は、都県協会ごとに取りまとめ協会名を記入のうえ、振り込みをお願いします。</p>
@@ -227,7 +233,10 @@ const tournamentGuidelines = () => {
                             <td>
                                 <p>第28回ジャパンカップビーチボール選手権福岡大会　実行委員会</p>
                                 <p>理事長　西村澄子</p>
-                                <p>TEL：090-4343-1926</p>
+                                <p>
+                                    TEL：
+                                    <a href="tel:+81-90-4343-1926">090-4343-1926</a>
+                                </p>
                             </td>
                         </tr>
                     </tbody>

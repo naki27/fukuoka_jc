@@ -88,6 +88,13 @@
   95% { -webkit-transform: rotate(1deg); }
   100% { -webkit-transform: rotate(0deg); }
 }
+@media(min-width: 768px){
+  a[href^="tel:"]{
+    pointer-events: none;
+    color: #333;
+    text-decoration: none;
+  }
+}
 
 @media screen and (max-width: 640px) {
   .fixed2column {
