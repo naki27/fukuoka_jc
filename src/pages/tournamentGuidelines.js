@@ -27,6 +27,11 @@ const useStyles = makeStyles(() => ({
         margin: "32px",
         background: "#009250",
         color:"#fff"
+    },
+    ExcelPdfButton: {
+        margin: "32px",
+        background: "#EDAD0B",
+        color:"#fff"
     }
 }));
 
@@ -43,6 +48,12 @@ const tournamentGuidelines = () => {
         const link = document.createElement("a");
         // https://docs.google.com/spreadsheets/d/1MuBYdQJo4wQpYIPwnXC0IkxUsso46OdO/edit?usp=sharing&ouid=102240011293136702046&rtpof=true&sd=true
         link.href = "https://docs.google.com/spreadsheets/d/1MuBYdQJo4wQpYIPwnXC0IkxUsso46OdO/export?format=xlsx";
+        link.click();
+    };
+    const onApplicationFormPdfDownload = _ => {
+        const link = document.createElement("a");
+        // https://drive.google.com/file/d/1BspvvKKRURHJoCO95uYJ7erC8avpLrO1/view?usp=sharingS
+        link.href = "https://drive.google.com/uc?id=1BspvvKKRURHJoCO95uYJ7erC8avpLrO1&export=download&format=pdf";
         link.click();
     };
 
@@ -256,6 +267,13 @@ const tournamentGuidelines = () => {
                         variant="contained"
                         startIcon={<GetAppIcon />}>
                             申込書(excel)をダウンロード
+                    </Button>
+                    <Button
+                        className={classes.ExcelPdfButton}
+                        onClick={onApplicationFormPdfDownload}
+                        variant="contained"
+                        startIcon={<GetAppIcon />}>
+                            申込書(PDF))をダウンロード
                     </Button>
                 </div>
 
