@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /*
+Disallow: /api/*
+Host: https://fukuoka2022jc.vercel.app
+Sitemap: https://fukuoka2022jc.vercel.app/sitemap.xml
