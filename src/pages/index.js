@@ -144,15 +144,6 @@ const componentsStyle = {
     top: "80px!important",
     width: "100vw",
   },
-  keyVisualComment: {
-    position: "absolute",
-    top: "50%",
-    left: "0",
-    right: "0",
-    margin: "auto",
-    fontSize: "1.5rem",
-    fontWeight: "900"
-  },
   mainContent: {
     maxWidth: "1280px",
     margin: "0 auto",
@@ -235,26 +226,22 @@ export default function Index() {
             sizes="(min-width: 36em) 33.3vw, 100%"
             sources = {[
                 {
-                    srcSet: "keyVisual400.png",
+                    srcSet: "/keyVisual400.png",
                     media: "(max-width: 400px)",
                 },
                 {   // 768px
-                    srcSet: "keyVisual768.png",
+                    srcSet: "/keyVisual768.png",
                     media: "(max-width: 768px)",
                 },
                 {   // 1280px
-                    srcSet: "keyVisual1280.png",
+                    srcSet: "/keyVisual1280.png",
                     media: "(max-width: 1280px)",
                 },
                 {   // 1920px
-                    srcSet: "keyVisual1920.png",
+                    srcSet: "/keyVisual1920.png",
                 },
             ]}
         />
-        <div className={classes.keyVisualComment}>
-          <p>福岡JAPANカップの公式ページへようこそ！</p>
-          <p>まだ内容は少ないですが、内容が確定次第、随時公開して参ります！</p>
-        </div>
       </div>
 
       <div className={classes.mainContent}>
