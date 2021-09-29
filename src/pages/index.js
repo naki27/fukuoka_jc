@@ -16,7 +16,6 @@ import H1 from "~/components/H1";
 import ResultMatchCards from "~/components/ResultMatchCards";
 import Image from 'next/image';
 import { Picture } from 'react-responsive-picture';
-import keyVisual from '../../public/keyVisual.png';
 
 import {
   Description,
@@ -220,7 +219,6 @@ export default function Index() {
   return (
     <Container className={classes.root} maxWidth={false}>
       <Header />
-      {/* <Parallax image={"../../public/keyVisual.png"} /> */}
       <div className={classes.keyVisualContainer}>
         <Picture className={classes.keyVisual}
             sizes="(min-width: 36em) 33.3vw, 100%"
