@@ -26,7 +26,7 @@ export default async (req, res) => {
     query, { departmentId }
   ).then((results) => {
     if (results.error) {
-      console.log("in then responce error -> " + JSON.stringify(results.error))
+      console.log("in then response error -> " + JSON.stringify(results.error))
       return;
     }
     res.statusCode = 200
