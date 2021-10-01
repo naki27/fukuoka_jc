@@ -10,8 +10,8 @@ import Footer from "~/components/Footer";
 import Link from "~/components/Link";
 
 import Image from 'next/image';
-import outdoorMap from '../../public/outdoorMap.png';
-import secondFloorMap from '../../public/2ndFloorMap.png';
+import outdoorMap from '../../public/maps/outdoorMap.png';
+import secondFloorMap from '../../public/maps/2ndFloorMap.png';
 
 const venueMap = () => {
     return (
