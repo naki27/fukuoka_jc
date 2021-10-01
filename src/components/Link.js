@@ -31,6 +31,7 @@ function Link(props) {
     className: classNameProps,
     innerRef,
     naked,
+    target,
     ...other
   } = props;
 
@@ -39,13 +40,16 @@ function Link(props) {
   const className = clsx(classNameProps, {
     [activeClassName]: router.pathname === pathname && activeClassName,
   });
+  const url = href === "" ? "javascript:void(0)" : href;
+  const rel = url === href && target === "_blank" ? "noopener noreferrer" : "";
+  const target_let = rel === "" ? "" : target;
 
   if (naked) {
-    return <NextComposed className={className} ref={innerRef} href={href} {...other} />;
+    return <NextComposed className={className} ref={innerRef} href={url} target={target_let} rel={rel} {...other} />;
   }
 
   return (
-    <MuiLink component={NextComposed} className={className} ref={innerRef} href={href} {...other} />
+    <MuiLink component={NextComposed} className={className} ref={innerRef} href={url} target={target_let} rel={rel} {...other} />
   );
 }
 
@@ -58,6 +62,7 @@ Link.propTypes = {
   naked: PropTypes.bool,
   onClick: PropTypes.func,
   prefetch: PropTypes.bool,
+  target: PropTypes.string,
 };
 
 export default React.forwardRef((props, ref) => <Link {...props} innerRef={ref} />);

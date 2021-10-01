@@ -162,7 +162,7 @@ export default function ButtonAppBar() {
               </Link>
             </ListItem>
         </List>
-        {/* <Divider />
+        <Divider />
         <List>
           <ListItem button key="sponsor">
             <ListItemIcon><SupervisorAccount /></ListItemIcon>
@@ -171,7 +171,7 @@ export default function ButtonAppBar() {
             </Link>
           </ListItem>
         </List>
-        <Divider />
+        {/* <Divider />
         <List>
           <ListItem button key="underConstruction1">
             <ListItemIcon><Subject /></ListItemIcon>

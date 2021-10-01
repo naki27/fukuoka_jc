@@ -147,6 +147,14 @@ const componentsStyle = {
     maxWidth: "1280px",
     margin: "0 auto",
   },
+  sponsorContainer: {
+    marginBottom: "32px",
+  },
+  sponsor: {
+    maxWidth: "300px",
+    maxHeight: "100px",
+    textAlign: "center",
+  },
   "@media (max-width: 1280px)": {
     keyVisualContainer: {
       marginTop: "38px"
@@ -167,51 +175,65 @@ const componentsStyle = {
     keyVisual: {
       top: "58px!important"
     },
-  }
-  // "@media (max-width: 575px)": {
-  //   sexPanelContainer: {
-  //     display: "block",
-  //   },
-  //   sexPanel: {
-  //     margin: "16px 0",
-  //   },
-  //   quickResult: {
-  //     width: "100%",
-  //   },
-  // },
-  // "@media (max-width: 399px)": {
-  //   sexPanelContainer: {
-  //     display: "block",
-  //   },
-  //   sexPanel: {
-  //     margin: "16px 0",
-  //   },
-  //   quickResult: {
-  //     width: "100%",
-  //   },
-  // },
-  // "@media (min-width: 576px)": {
-  //   quickResult: {
-  //     width: "400px",
-  //   },
-  // },
-  // "@media (min-width: 768px)": {
-  //   quickResult: {
-  //     width: "400px",
-  //   },
-  // },
-  // "@media (min-width: 992px)": {
-  //   quickResult: {
-  //     width: "500px",
-  //   },
-  // },
-  // "@media (min-width: 1200px)": {
-  //   quickResult: {
-  //     width: "600px",
-  //   },
-  // },
+    sponsorContainer: {
+      flexDirection: "column",
+    },
+    sponsor: {
+      marginBottom: "16px",
+    },
+  },
+  "@media (max-width: 575px)": {
+    sexPanelContainer: {
+      display: "block",
+    },
+    sexPanel: {
+      margin: "16px 0",
+    },
+    quickResult: {
+      width: "100%",
+    },
+  },
+  "@media (max-width: 399px)": {
+    sexPanelContainer: {
+      display: "block",
+    },
+    sexPanel: {
+      margin: "16px 0",
+    },
+    quickResult: {
+      width: "100%",
+    },
+  },
+  "@media (min-width: 576px)": {
+    quickResult: {
+      width: "400px",
+    },
+  },
+  "@media (min-width: 768px)": {
+    quickResult: {
+      width: "400px",
+    },
+  },
+  "@media (min-width: 992px)": {
+    quickResult: {
+      width: "500px",
+    },
+  },
+  "@media (min-width: 1200px)": {
+    quickResult: {
+      width: "600px",
+    },
+  },
 };
 const useStyles = makeStyles(componentsStyle);
+
+import takumi from '../../public/sponsor/takumi.png';
+import hiragumi from '../../public/sponsor/hiragumi.gif';
+import canadianCamp from '../../public/sponsor/canadian-camp.png';
+import cafeCaprice from '../../public/sponsor/cafe-caprice.webp';
+import mikiya from '../../public/sponsor/mikiya.svg';
+import foodium from '../../public/sponsor/foodium.png';
+import sumitoul from '../../public/sponsor/sumitoul.jpg';
 
 export default function Index() {
   const classes = useStyles();
@@ -296,7 +318,7 @@ export default function Index() {
           </Grid>
         </Box>
 
-        {/* <Box my={4} py={5}>
+        <Box my={4} py={5}>
           <H1 title="スポンサー" />
 
           <Grid
@@ -304,15 +326,16 @@ export default function Index() {
             direction="row"
             justify="space-around"
             alignItems="center"
+            className={classes.sponsorContainer}
           >
-            <Grid item xl={4} style={{ textAlign: "center" }}>
-              <img src="https://dummyimage.com/300x100/000/fff" />
+            <Grid item xl={4} className={classes.sponsor}>
+              <Image src={takumi} objectFit="contain"/>
             </Grid>
-            <Grid item xl={4} style={{ textAlign: "center" }}>
-              <img src="https://dummyimage.com/300x100/000/fff" />
+            <Grid item xl={4} className={classes.sponsor}>
+              <Image src={sumitoul} objectFit="contain"/>
             </Grid>
-            <Grid item xl={4} style={{ textAlign: "center" }}>
-              <img src="https://dummyimage.com/300x100/000/fff" />
+            <Grid item xl={4} className={classes.sponsor}>
+              <Image src={foodium} objectFit="contain"/>
             </Grid>
           </Grid>
           <Grid
@@ -320,27 +343,28 @@ export default function Index() {
             direction="row"
             justify="space-around"
             alignItems="center"
+            className={classes.sponsorContainer}
           >
-            <Grid item xl={4} style={{ textAlign: "center" }}>
-              <img src="https://dummyimage.com/300x100/000/fff" />
+            <Grid item xl={4} className={classes.sponsor}>
+              <Image src={mikiya} objectFit="contain"/>
             </Grid>
-            <Grid item xl={4} style={{ textAlign: "center" }}>
-              <img src="https://dummyimage.com/300x100/000/fff" />
+            <Grid item xl={4} className={classes.sponsor}>
+              <Image src={hiragumi} objectFit="contain"/>
             </Grid>
-            <Grid item xl={4} style={{ textAlign: "center" }}>
-              <img src="https://dummyimage.com/300x100/000/fff" />
+            <Grid item xl={4} className={classes.sponsor}>
+              <Image src={cafeCaprice} objectFit="contain"/>
             </Grid>
           </Grid>
 
           <Typography>
-            <Link href="/sponsor" color="primary">
+            <Link href="/sponsor" color="secondary">
                 <span className="see-more">
                     もっとみる
                     <NavigateNextIcon />
                 </span>
             </Link>
           </Typography>
-        </Box> */}
+        </Box>
 
         {/* <Box my={4} py={5} bgcolor="#E3E3E3">
           <H1 title="組み合わせ・進行表" />

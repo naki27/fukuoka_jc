@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 export default function H2(props) {
   const componentsStyle = {
     h2Style: {
+      marginTop: "0",
       marginBottom: "0.35rem",
       textAlign: "left",
       color: "#C7243A",
