@@ -302,8 +302,8 @@ export default function Index() {
               <p>{"大会要項"}</p>
             </Link>
 
-            <Link href="/underConstruction" className={classes.inlineGrid}>
-              <div className={classes.iconCircle} disabled>
+            <Link href="/accessMap" className={classes.inlineGrid}>
+              <div className={classes.iconCircle}>
                 <Map fontSize="large" className={classes.innerCircle} />
               </div>
               <p>{"アクセスマップ"}</p>
@@ -329,13 +329,19 @@ export default function Index() {
             className={classes.sponsorContainer}
           >
             <Grid item xl={4} className={classes.sponsor}>
-              <Image src={takumi} objectFit="contain"/>
+                <Link href="http://www.gift-takumi.com/" target="_blank">
+                    <Image src={takumi} objectFit="contain"/>
+                </Link>
             </Grid>
             <Grid item xl={4} className={classes.sponsor}>
-              <Image src={sumitoul} objectFit="contain"/>
+                <Link href="https://ja-jp.facebook.com/sumitall/" target="_blank">
+                    <Image src={sumitoul} objectFit="contain"/>
+                </Link>
             </Grid>
             <Grid item xl={4} className={classes.sponsor}>
-              <Image src={foodium} objectFit="contain"/>
+                <Link href="https://foodium.co.jp/" target="_blank">
+                    <Image src={foodium} objectFit="contain"/>
+                </Link>
             </Grid>
           </Grid>
           <Grid
@@ -346,13 +352,19 @@ export default function Index() {
             className={classes.sponsorContainer}
           >
             <Grid item xl={4} className={classes.sponsor}>
-              <Image src={mikiya} objectFit="contain"/>
+                <Link href="https://miki-ya.co.jp/" target="_blank">
+                    <Image src={mikiya} objectFit="contain"/>
+                </Link>
             </Grid>
             <Grid item xl={4} className={classes.sponsor}>
-              <Image src={hiragumi} objectFit="contain"/>
+                <Link href="http://taira-gumi.com/" target="_blank">
+                    <Image src={hiragumi} objectFit="contain"/>
+                </Link>
             </Grid>
             <Grid item xl={4} className={classes.sponsor}>
-              <Image src={cafeCaprice} objectFit="contain"/>
+                <Link href="https://th-542gg.wixsite.com/mysite-1" target="_blank">
+                    <Image src={cafeCaprice} objectFit="contain"/>
+                </Link>
             </Grid>
           </Grid>
 
