@@ -77,6 +77,9 @@ const sponsor = () => {
                 <Sponsor name="須恵町ビーチボールバレー同好会" logo={dummy} url=""
                     description="福岡県糟屋郡須恵町のビーチボール同好会です。健康第一に仲間と楽しく練習しています！須恵町で一緒に楽しむ方、募集してます！" />
 
+                <Sponsor name="わた整骨院" logo={dummy} url=""
+                    description="わた整骨院は、ビーチボール競技を応援しています!第28回ジャパンカップビーチボール選手権福岡大会 選手皆様のご健闘をお祈りいたします。" />
+
             </Container>
             <Footer />
         </>
