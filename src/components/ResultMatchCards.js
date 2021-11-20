@@ -32,7 +32,7 @@ const ResultMatchCards = ({sex}) => {
             <VsCard key={key} resultMatch={d} />
         );
     });
-    if (!vsCards) {
+    if (!vsCards || vsCards.length === 0) {
         return (
             <p className="no_match_description">本日の対戦はまだありません</p>
         );

@@ -267,7 +267,7 @@ export default function Index() {
       <div className={classes.mainContent}>
         <SnsBox />
 
-        {/* <Box my={4} py={5}>
+        <Box my={4} py={5}>
           <H1 title="大会速報結果" />
 
           <Box className={classes.sexPanelContainer}>
@@ -284,7 +284,7 @@ export default function Index() {
               </Box>
             </div>
           </Box>
-        </Box> */}
+        </Box>
 
         <Box my={4} py={5} bgcolor="#fff">
           <H1 title="大会について" />

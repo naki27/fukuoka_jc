@@ -155,20 +155,20 @@ console.log("displayed now");
 
             <h3 className={classes.h3style}>1set</h3>
             <div className={classes.centering}>
-                <PointField name="leftPoint1" max="9" register={register} errors={errors} />
-                <PointField name="rightPoint1" max="9" register={register} errors={errors} />
+                <PointField name="leftPoint1" max="20" register={register} errors={errors} />
+                <PointField name="rightPoint1" max="20" register={register} errors={errors} />
             </div>
 
             <h3 className={classes.h3style}>2set</h3>
             <div className={classes.centering}>
-                <PointField name="leftPoint2" max="9" register={register} errors={errors} />
-                <PointField name="rightPoint2" max="9" register={register} errors={errors} />
+                <PointField name="leftPoint2" max="20" register={register} errors={errors} />
+                <PointField name="rightPoint2" max="20" register={register} errors={errors} />
             </div>
 
             <h3 className={classes.h3style}>3set</h3>
             <div className={classes.centering}>
-                <PointField name="leftPoint3" max="15" required={false} register={register} errors={errors} />
-                <PointField name="rightPoint3" max="15" required={false} register={register} errors={errors} />
+                <PointField name="leftPoint3" max="20" required={false} register={register} errors={errors} />
+                <PointField name="rightPoint3" max="20" required={false} register={register} errors={errors} />
             </div>
 
             <h3 className={classes.h3style}>結果</h3>
