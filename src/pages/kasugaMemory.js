@@ -6,27 +6,48 @@ import LoginIcon from '@material-ui/icons/Save';
 import H1 from '~/components/H1';
 import H2 from '~/components/H2';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     padding: "0",
     width: "100vw",
-    maxWidth: "1280px",
+    maxWidth: "500px",
     margin: "0 auto",
     textAlign: "center"
   },
   init: {
       display: "none",
-      width: "50vw",
+      width: "90vw",
       margin: "0 auto",
+      flexDirection: "column",
+      justifyContent: "space-around",
+      height: "30vh"
   },
   formControl: {
-    margin: theme.spacing(1),
-    width: "40%!important",
+    width: "90vw"
   },
   photoLink: {
     fontSize: "2rem",
     textDecoration: "none"
   },
+  authContainer: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  authButton: {
+    marginTop: "20px",
+    background: "#23AC0E",
+  },
+  inputColor:{
+    color:'#333!important'
+  },
+  subTitle:{
+    fontSize: "1.5rem",
+    marginBottom: "32px",
+    color: "#B61972",
+    display: "flex",
+    justifyContent: "center",
+  }
 }));
 
 const kasugaMemory = () => {
@@ -40,7 +61,7 @@ const kasugaMemory = () => {
       const body = document.getElementById('body');
       autoButton.addEventListener('click', e => {
         if (password.value === PASSWORD) {
-          body.style.display = "block";
+          body.style.display = "flex";
           authContainer.style.display = "none";
         } else {
           alert("パスワードが間違っています");
@@ -50,13 +71,19 @@ const kasugaMemory = () => {
 
     return (
         <>
-            <H1 title="春日親善大会の思い出" />
+            <H1 title="大会写真館" />
+            <span className={classes.subTitle}>
+              春日親善大会2021
+            </span>
 
             <Container className={classes.root} maxWidth={false}>
-              <div id="auth_container">
+              <div id="auth_container" className={classes.authContainer}>
                 <TextField
                     id="password"
                     className={classes.formControl}
+                    InputLabelProps={{
+                      className: classes.inputColor
+                    }}
                     label="パスワードを入力してください。"
                     type="text"
                 />
@@ -64,19 +91,17 @@ const kasugaMemory = () => {
                     id="auth_button"
                     type="button"
                     variant="contained"
-                    color="primary"
+                    className={classes.authButton}
                     startIcon={<LoginIcon />}>
                         認証する
                 </Button>
               </div>
 
               <div id="body" className={classes.init}>
-                <H2 title="男子" className={classes.photoLink}/>
                 <a href="https://photos.app.goo.gl/st3j8SQLDvfP1Anz8" className={classes.photoLink}>
                   男子はこちら
                 </a>
 
-                <H2 title="女子" />
                 <a href="https://photos.app.goo.gl/M9rJDKDxNpxL4frZA" className={classes.photoLink}>
                   女子はこちら
                 </a>
