@@ -111,17 +111,17 @@ const VsCard = ({ resultMatch, showCreatedBy }) => {
     const thirdSet = JSON.parse(resultMatch.thirdSet);
     const summary = JSON.parse(resultMatch.summary);
 
-    const team1WinOrLose = summary.team1 > summary.team2 ? classes.win : "";
-    const team2WinOrLose = summary.team1 < summary.team2 ? classes.win : "";
+    const team1WinOrLose = parseInt(summary.team1) > parseInt(summary.team2) ? classes.win : "";
+    const team2WinOrLose = parseInt(summary.team1) < parseInt(summary.team2) ? classes.win : "";
 
-    const team1WinOrLose1st = firstSet.team1 > firstSet.team2 ? classes.win : "";
-    const team2WinOrLose1st = firstSet.team1 < firstSet.team2 ? classes.win : "";
+    const team1WinOrLose1st = parseInt(firstSet.team1) > parseInt(firstSet.team2) ? classes.win : "";
+    const team2WinOrLose1st = parseInt(firstSet.team1) < parseInt(firstSet.team2) ? classes.win : "";
 
-    const team1WinOrLose2nd = secondSet.team1 > secondSet.team2 ? classes.win : "";
-    const team2WinOrLose2nd = secondSet.team1 < secondSet.team2 ? classes.win : "";
+    const team1WinOrLose2nd = parseInt(secondSet.team1) > parseInt(secondSet.team2) ? classes.win : "";
+    const team2WinOrLose2nd = parseInt(secondSet.team1) < parseInt(secondSet.team2) ? classes.win : "";
 
-    const team1WinOrLose3rd = thirdSet.team1 > thirdSet.team2 ? classes.win : "";
-    const team2WinOrLose3rd = thirdSet.team1 < thirdSet.team2 ? classes.win : "";
+    const team1WinOrLose3rd = parseInt(thirdSet.team1) > parseInt(thirdSet.team2) ? classes.win : "";
+    const team2WinOrLose3rd = parseInt(thirdSet.team1) < parseInt(thirdSet.team2) ? classes.win : "";
 
     let sealColor;
     switch (resultMatch.Department.age) {
