@@ -16,7 +16,6 @@ const useStyles = makeStyles(theme => ({
   },
   init: {
       display: "none",
-      width: "90vw",
       margin: "0 auto",
       flexDirection: "column",
       justifyContent: "space-around",
