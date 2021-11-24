@@ -34,11 +34,13 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 
-## Get Dump on Hasura
+## Get Dump on Hasura API
 POST https://fukuokajc2022.hasura.app/v1alpha1/pg_dump
+```bash
 Content-Type: application/json
 x-hasura-admin-secret: <admin_secret>
 body(raw): {
   "opts": ["-O", "-x", "--schema", "fukuokajc2022"],
   "clean_output": true
 }
+```
