@@ -7,8 +7,13 @@ import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
+import DeleteIcon from '@material-ui/icons/Delete';
+import { useForm } from 'react-hook-form';
+import { useMutation } from '@apollo/client';
 
 import { DateTime } from 'luxon';
+import ConfirmDialog from './ConfirmDialog';
+import { inValidMatchResult } from '~/pages/api/resultMatchApi';
 
 const useStyles = makeStyles({
   root: {
@@ -34,6 +39,11 @@ const useStyles = makeStyles({
     border: 1,
     borderStyle: "solid",
     borderRadius: "5px",
+
+    '&.Tournament': {
+      background: "linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%)",
+      border: 0
+    }
   },
   cardHeader: {
     display: "flex",
@@ -66,8 +76,9 @@ const useStyles = makeStyles({
   vsResult: {
     fontSize: "1.2em",
     fontWeight: "bold",
-    margin: "8px 0",
+    padding: "8px 0",
     textAlign: "center",
+    borderTop: "1px solid rgb(198, 198, 198)",
     "& > span": {
       margin: "0 8px",
     },
@@ -95,9 +106,25 @@ const useStyles = makeStyles({
     borderColor: "#333",
     color: "#fff",
   },
+  teamName: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  prefName: {
+    fontSize: '0.7rem'
+  },
+  managementFooter: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  deleteButton: {
+    border: 0,
+    background: 'none'
+  }
 });
 
-const VsCard = ({ resultMatch, showCreatedBy }) => {
+const VsCard = ({ resultMatch, showFooter }) => {
     if (!resultMatch) return;
     const classes = useStyles();
     const defaultProps = {
@@ -142,17 +169,42 @@ const VsCard = ({ resultMatch, showCreatedBy }) => {
             break;
     }
 
+    const [invalid] = useMutation(inValidMatchResult, {
+      onCompleted: () => console.log("invalid match result completed.")
+    })
+
+    const [dialog, setDialog] = React.useState(false);
+    const deleteCard = (id) => {
+      if (!confirm(`${id} 番の対戦を削除します。よろしいですか？`)) {
+        return;
+      }
+      invalid({
+        variables: {
+            id: id
+        }
+      }).then(_ => {
+        const card = document.getElementById(`card-${resultMatch.id}`);
+        card.style.display = "none";
+      });
+    }
+
     return (
-        <Card className={classes.root}>
+        <Card id={`card-${resultMatch.id}`} className={classes.root}>
             <CardContent>
                 <div className={classes.cardHeader}>
                     <span className={classes.seal + " " + sealColor}>{resultMatch.Department.age}歳以上</span>
-                    <span className={classes.seal}>{battleFormat}</span>
+                    <span className={`${classes.seal} ${resultMatch.RoundGame.battleFormat}`}>{battleFormat}</span>
                 </div>
                 <div className={classes.vsTitle}>
-                    <span className={team1WinOrLose}>{resultMatch.Team.name}</span>
+                    <div className={classes.teamName}>
+                      <span className={team1WinOrLose}>{resultMatch.Team.name}</span>
+                      <span className={classes.prefName}>({resultMatch.Team.prefectures})</span>
+                    </div>
                     vs
-                    <span className={team2WinOrLose}>{resultMatch.teamByTeam2id.name}</span>
+                    <div className={classes.teamName}>
+                      <span className={team2WinOrLose}>{resultMatch.teamByTeam2id.name}</span>
+                      <span className={classes.prefName}>({resultMatch.teamByTeam2id.prefectures})</span>
+                    </div>
                 </div>
                 <Box borderRadius={6} {...defaultProps}>
                     <div className={classes.vsRow}>
@@ -179,7 +231,15 @@ const VsCard = ({ resultMatch, showCreatedBy }) => {
                 </Box>
                 <div className={classes.cardFooter}>
                     {DateTime.fromISO(resultMatch.createdAt).toFormat('yyyy/MM/dd HH:mm:ss')}
-                    {(showCreatedBy === true) ? <p>by {resultMatch.createdBy}</p> : ""}
+                    <div className={classes.managementFooter}>
+                      {(showFooter) ? <p>{resultMatch.RoundGame.name}</p> : ""}
+                      {(showFooter) ? <p>id : {resultMatch.id}</p> : ""}
+                      {(showFooter) ?
+                        <button className={classes.deleteButton} onClick={_ => deleteCard(resultMatch.id)}>
+                          <DeleteIcon />
+                        </button>
+                      : ""}
+                    </div>
                 </div>
             </CardContent>
         </Card>

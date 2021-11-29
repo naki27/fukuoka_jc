@@ -1,7 +1,7 @@
-import { gql, useMutation, useQuery } from '@apollo/client';
+import { gql } from '@apollo/client';
 
 export const getLast5 = gql`query GetLast5($sex: String_comparison_exp = {}) {
-    fukuokajc2022_MatchResult(limit: 5, order_by: {createdAt: desc}, where: {Department: {sex: $sex}}) {
+    fukuokajc2022_MatchResult(limit: 6, order_by: {createdAt: desc}, where: {Department: {sex: $sex}, valid: {_eq: true}}) {
       id
       Department {
         age
@@ -12,10 +12,12 @@ export const getLast5 = gql`query GetLast5($sex: String_comparison_exp = {}) {
         name
       }
       Team {
-        name
+        name,
+        prefectures
       }
       teamByTeam2id {
-        name
+        name,
+        prefectures
       }
       firstSet
       secondSet
@@ -27,9 +29,11 @@ export const getLast5 = gql`query GetLast5($sex: String_comparison_exp = {}) {
   }`
 
 export const getAll = gql`query GetLast5($sex: String_comparison_exp = {}) {
-  fukuokajc2022_MatchResult(order_by: {createdAt: desc}, where: {Department: {sex: $sex}}) {
+  fukuokajc2022_MatchResult(order_by: {createdAt: desc}, where: {Department: {sex: $sex}, valid: {_eq: true}}) {
     id
     Department {
+      id
+      sex
       age
       name
     }
@@ -38,10 +42,12 @@ export const getAll = gql`query GetLast5($sex: String_comparison_exp = {}) {
       name
     }
     Team {
-      name
+      name,
+      prefectures
     }
     teamByTeam2id {
-      name
+      name,
+      prefectures
     }
     firstSet
     secondSet
@@ -68,4 +74,13 @@ export const addMatchResult = gql`mutation AddMatchResult($object: fukuokajc2022
       updatedAt
       updatedBy
     }
+}`
+
+export const inValidMatchResult = gql`mutation InValidMatchResult($id: Int) {
+  update_fukuokajc2022_MatchResult(_set: {valid: false}, where: {id: {_eq: $id}}) {
+    returning {
+      id
+    }
+    affected_rows
+  }
 }`

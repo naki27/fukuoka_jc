@@ -1,7 +1,7 @@
 import {useFetch} from '../../libs/apiHelper'
 
 const getAllQuery = `query GetRoundGameAll {
-  fukuokajc2022_RoundGame {
+  fukuokajc2022_RoundGame(where: {valid: {_eq: true}}, order_by: {sortBy: asc}) {
     battleFormat
     id
     name
@@ -9,7 +9,7 @@ const getAllQuery = `query GetRoundGameAll {
 }`
 
 const getByBattleFormatQuery = `query GetRoundGameByBattleFormat($battleFormat: String) {
-  fukuokajc2022_RoundGame(where: {battleFormat: {_eq: $battleFormat}}) {
+  fukuokajc2022_RoundGame(where: {battleFormat: {_eq: $battleFormat}, valid: {_eq: true}}, order_by: {sortBy: asc}) {
     battleFormat
     id
     name

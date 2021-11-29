@@ -22,6 +22,11 @@ const useStyles = makeStyles((theme) => ({
           margin: '0 8px',
           width: '25ch',
         },
+        '&.Tournament': {
+            '& .makeStyles-h3style-4': {
+                background: "linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%)"
+            }
+        },
     },
     buttonProgress: {
         position: 'absolute',
@@ -42,6 +47,11 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "center",
     },
     histories: {
+        'display': 'flex',
+        'width': '133ch',
+        'flexWrap': 'wrap',
+        'margin': '0 auto',
+
         '& .MuiCard-root': {
             margin: '0 auto',
             marginBottom: '10px',
@@ -56,7 +66,6 @@ const resultMatchForm = ({battleFormat}) => {
     const [departmentId, setDepartmentId] = useState();
     const handleChangeDepartment = (event) => {
         const value = event.target.value;
-        console.log("change department!!" + departmentId + " => " + value);
         setDepartmentId(value);
     }
     const [history, setHistory] = useState([]);
@@ -85,21 +94,9 @@ const resultMatchForm = ({battleFormat}) => {
         })
     }
     const histories = history.fukuokajc2022_MatchResult && history.fukuokajc2022_MatchResult.map((h, i) => {
-        const summary = JSON.parse(h.summary);
-        const historyCard = {
-            border: "#333 1px solid",
-            margin: "12px 8px",
-            padding: "8px",
-            borderRadius: "6px"
-        };
         const key = "historyCard" + i;
         return (
             <VsCard key={key} resultMatch={h} showCreatedBy={true}/>
-            // <div key={key} style={historyCard}>
-            //     <div>{DateTime.fromISO(h.createdAt).toFormat('yyyy/MM/dd HH:mm:ss')} by {h.createdBy}</div>
-            //     <div>{h.Department.name} - {h.RoundGame.battleFormat === "League" ? "予選" : "トーナメント"} - {h.RoundGame.name}</div>
-            //     <div>{h.Team.name} vs {h.teamByTeam2id.name} - {summary.team1} : {summary.team2}</div>
-            // </div>
         );
     });
 
@@ -117,8 +114,6 @@ const resultMatchForm = ({battleFormat}) => {
         setSuccess(false);
         setPageLoading(true);
 
-console.log(`submit => ${JSON.stringify(values)}`);
-
         executeAddMatchResult({
             team1Id: values.team1,
             team2Id: values.team2,
@@ -129,9 +124,9 @@ console.log(`submit => ${JSON.stringify(values)}`);
             thirdSet: createSetJsonStringify(values.leftPoint3, values.rightPoint3),
             summary: createSetJsonStringify(values.leftSetCount, values.rightSetCount),
             createdAt: DateTime.local(),
-            createdBy: "kyo",
+            createdBy: "",
             updatedAt: DateTime.local(),
-            updatedBy: "kyo"
+            updatedBy: ""
         }).then(() => {
             reset();
             setSuccess(true);
@@ -139,9 +134,8 @@ console.log(`submit => ${JSON.stringify(values)}`);
         });
     }
 
-console.log("displayed now");
     return (
-        <form className={classes.root} onSubmit={handleSubmit(submit)}>
+        <form className={`${classes.root} ${battleFormat}`} onSubmit={handleSubmit(submit)}>
             <h3 className={classes.h3style}>対戦内容</h3>
             <div className={classes.centering}>
                 <DepartmentSelect name="department" onChange={handleChangeDepartment} register={register} errors={errors}/>
@@ -191,7 +185,7 @@ console.log("displayed now");
 
             {success && <SnackBar isOpen={true} message="登録が完了しました。"/>}
 
-            <h3 className={classes.h3style}>登録の履歴（最新を5件ほど表示しています。）</h3>
+            <h3 className={classes.h3style}>登録の履歴（最新を6件ほど表示しています。）</h3>
             <div className={classes.histories}>
                 {histories}
             </div>

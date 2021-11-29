@@ -329,8 +329,8 @@ export default function Index() {
             className={classes.sponsorContainer}
           >
             <Grid item xl={4} className={classes.sponsor}>
-                <Link href="http://www.gift-takumi.com/" target="_blank">
-                    <Image src={takumi} objectFit="contain"/>
+                <Link href="http://taira-gumi.com/" target="_blank">
+                    <Image src={hiragumi} objectFit="contain"/>
                 </Link>
             </Grid>
             <Grid item xl={4} className={classes.sponsor}>
@@ -357,13 +357,13 @@ export default function Index() {
                 </Link>
             </Grid>
             <Grid item xl={4} className={classes.sponsor}>
-                <Link href="http://taira-gumi.com/" target="_blank">
-                    <Image src={hiragumi} objectFit="contain"/>
+                <Link href="https://th-542gg.wixsite.com/mysite-1" target="_blank">
+                    <Image src={cafeCaprice} objectFit="contain"/>
                 </Link>
             </Grid>
             <Grid item xl={4} className={classes.sponsor}>
-                <Link href="https://th-542gg.wixsite.com/mysite-1" target="_blank">
-                    <Image src={cafeCaprice} objectFit="contain"/>
+                <Link href="http://www.canacan.jp/" target="_blank">
+                    <Image src={canadianCamp} objectFit="contain"/>
                 </Link>
             </Grid>
           </Grid>

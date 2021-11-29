@@ -24,6 +24,10 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '10px',
     },
   },
+  title: {
+    margin: "50px 0",
+    fontSize: "2rem"
+  }
 }));
 
 const registMatchList = () => {
@@ -39,19 +43,64 @@ const registMatchList = () => {
       clearTimeout(timer.current);
     }, [data]);
 
-
-    const histories = history.fukuokajc2022_MatchResult && history.fukuokajc2022_MatchResult.map((h, i) => {
-      const summary = JSON.parse(h.summary);
-      const historyCard = {
-          border: "#333 1px solid",
-          margin: "12px 8px",
-          padding: "8px",
-          borderRadius: "6px"
-      };
-      const key = "historyCard" + i;
+    let counter = 0;
+    const generateVsCard = (histories) => {
+      return histories && histories.map((h) => {
+        counter++;
+        const key = "historyCard" + counter;
+        return (
+          <VsCard key={key} resultMatch={h} showFooter={true}/>
+        );
+      });
+    }
+    const generateHistories = (histories, title) => {
+      if (histories && histories.length === 0) return(<></>);
       return (
-          <VsCard key={key} resultMatch={h} showCreatedBy={true}/>
+        <>
+          <h3 className={classes.title}>{title}</h3>
+          <div className={classes.histories}>
+              {generateVsCard(histories)}
+          </div>
+        </>
       );
+    }
+
+    const male18Results = history.fukuokajc2022_MatchResult && history.fukuokajc2022_MatchResult.filter((h, i) => {
+      return h.Department.sex === "Male" && h.Department.age === 18;
+    });
+    const male30Results = history.fukuokajc2022_MatchResult && history.fukuokajc2022_MatchResult.filter((h, i) => {
+      return h.Department.sex === "Male" && h.Department.age === 30;
+    });
+    const male40Results = history.fukuokajc2022_MatchResult && history.fukuokajc2022_MatchResult.filter((h, i) => {
+      return h.Department.sex === "Male" && h.Department.age === 40;
+    });
+    const male50Results = history.fukuokajc2022_MatchResult && history.fukuokajc2022_MatchResult.filter((h, i) => {
+      return h.Department.sex === "Male" && h.Department.age === 50;
+    });
+    const male60Results = history.fukuokajc2022_MatchResult && history.fukuokajc2022_MatchResult.filter((h, i) => {
+      return h.Department.sex === "Male" && h.Department.age === 60;
+    });
+    const male99Results = history.fukuokajc2022_MatchResult && history.fukuokajc2022_MatchResult.filter((h, i) => {
+      return h.Department.sex === "Male" && h.Department.age === 99;
+    });
+
+    const feMale18Results = history.fukuokajc2022_MatchResult && history.fukuokajc2022_MatchResult.filter((h, i) => {
+      return h.Department.sex === "Female" && h.Department.age === 18;
+    });
+    const feMale30Results = history.fukuokajc2022_MatchResult && history.fukuokajc2022_MatchResult.filter((h, i) => {
+      return h.Department.sex === "Female" && h.Department.age === 30;
+    });
+    const feMale40Results = history.fukuokajc2022_MatchResult && history.fukuokajc2022_MatchResult.filter((h, i) => {
+      return h.Department.sex === "Female" && h.Department.age === 40;
+    });
+    const feMale50Results = history.fukuokajc2022_MatchResult && history.fukuokajc2022_MatchResult.filter((h, i) => {
+      return h.Department.sex === "Female" && h.Department.age === 50;
+    });
+    const feMale60Results = history.fukuokajc2022_MatchResult && history.fukuokajc2022_MatchResult.filter((h, i) => {
+      return h.Department.sex === "Female" && h.Department.age === 60;
+    });
+    const feMale99Results = history.fukuokajc2022_MatchResult && history.fukuokajc2022_MatchResult.filter((h, i) => {
+      return h.Department.sex === "Female" && h.Department.age === 99;
     });
 
     return (
@@ -59,9 +108,18 @@ const registMatchList = () => {
             <H1 title="対戦結果一覧をズラーっと" />
 
             <Container className={classes.root} maxWidth={false}>
-              <div className={classes.histories}>
-                  {histories}
-              </div>
+              {generateHistories(feMale18Results, "女子 １８歳以上")}
+              {generateHistories(feMale30Results, "女子 ３０歳以上")}
+              {generateHistories(feMale40Results, "女子 ４０歳以上")}
+              {generateHistories(feMale50Results, "女子 ５０歳以上")}
+              {generateHistories(feMale60Results, "女子 ６０歳以上")}
+              {generateHistories(feMale99Results, "女子ALL")}
+              {generateHistories(male18Results, "男子 １８歳以上")}
+              {generateHistories(male30Results, "男子 ３０歳以上")}
+              {generateHistories(male40Results, "男子 ４０歳以上")}
+              {generateHistories(male50Results, "男子 ５０歳以上")}
+              {generateHistories(male60Results, "男子 ６０歳以上")}
+              {generateHistories(male99Results, "男子ALL")}
             </Container>
         </>
       );
