@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
           width: '25ch',
         },
         '&.Tournament': {
-            '& .makeStyles-h3style-4': {
+            '& .h3': {
                 background: "linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%)"
             }
         },
@@ -136,7 +136,7 @@ const resultMatchForm = ({battleFormat}) => {
 
     return (
         <form className={`${classes.root} ${battleFormat}`} onSubmit={handleSubmit(submit)}>
-            <h3 className={classes.h3style}>対戦内容</h3>
+            <h3 className={classes.h3style + " h3"}>対戦内容</h3>
             <div className={classes.centering}>
                 <DepartmentSelect name="department" onChange={handleChangeDepartment} register={register} errors={errors}/>
                 <RoundGameSelect name="roundGame" battleFormat={battleFormat} register={register} errors={errors}/>
@@ -147,25 +147,25 @@ const resultMatchForm = ({battleFormat}) => {
                 <TeamSelect name="team2" departmentId={departmentId} register={register} errors={errors}/>
             </div>
 
-            <h3 className={classes.h3style}>1set</h3>
+            <h3 className={classes.h3style + " h3"}>1set</h3>
             <div className={classes.centering}>
                 <PointField name="leftPoint1" max="20" register={register} errors={errors} />
                 <PointField name="rightPoint1" max="20" register={register} errors={errors} />
             </div>
 
-            <h3 className={classes.h3style}>2set</h3>
+            <h3 className={classes.h3style + " h3"}>2set</h3>
             <div className={classes.centering}>
                 <PointField name="leftPoint2" max="20" register={register} errors={errors} />
                 <PointField name="rightPoint2" max="20" register={register} errors={errors} />
             </div>
 
-            <h3 className={classes.h3style}>3set</h3>
+            <h3 className={classes.h3style + " h3"}>3set</h3>
             <div className={classes.centering}>
                 <PointField name="leftPoint3" max="20" required={false} register={register} errors={errors} />
                 <PointField name="rightPoint3" max="20" required={false} register={register} errors={errors} />
             </div>
 
-            <h3 className={classes.h3style}>結果</h3>
+            <h3 className={classes.h3style + " h3"}>結果</h3>
             <div className={classes.centering}>
                 <PointField name="leftSetCount" max="2" label="セット数" register={register} errors={errors} />
                 <PointField name="rightSetCount" max="2" label="セット数" register={register} errors={errors} />
