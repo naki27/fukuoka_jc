@@ -334,7 +334,7 @@ export default function Index() {
                 </Link>
             </Grid>
             <Grid item xl={4} className={classes.sponsor}>
-                <Link href="https://ja-jp.facebook.com/sumitall/" target="_blank">
+                <Link href="https://tsuku2.jp/sumitall/" target="_blank">
                     <Image src={sumitoul} objectFit="contain"/>
                 </Link>
             </Grid>

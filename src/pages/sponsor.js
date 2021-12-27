@@ -53,7 +53,7 @@ const sponsor = () => {
                 <Sponsor name="(株)匠" logo={takumi} url="http://www.gift-takumi.com/"
                     description="ギフトのタクミが素敵な商品お探しします！プレゼントから記念品等、まずはお気軽にお電話ください！ TEL:092-435-3420" />
 
-                <Sponsor name="SuMiと〜る" logo={sumitoul} url="https://ja-jp.facebook.com/sumitall/"
+                <Sponsor name="SuMiと〜る" logo={sumitoul} url="https://tsuku2.jp/sumitall/"
                     description="SuMiと〜るは、懐かしさ漂う昭和レトロなカフェです。カフェの２階は時間貸しのフリースペース！隣には、イベント等にも利用できるギャラリーを開設。カフェ営業日以外は、カフェごとレンタルできる「間借りカフェ」も受けております。昭和レトロな空間に包まれ、ゆっくりな時間をお過ごしに来ませんか。" />
 
                 <Sponsor name="(有)フーディアムトクナガ" logo={foodium} url="https://foodium.co.jp/"
