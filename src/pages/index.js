@@ -90,7 +90,7 @@ const componentsStyle = {
     border: "1px solid #C6C6C6",
     display: "inline-block",
     position: "relative",
-    margin: "0 auto",
+    margin: "0 15px",
     "&[disabled]": {
       background: "#C6C6C6",
       cursor: "not-allowed"
@@ -300,6 +300,13 @@ export default function Index() {
                 <Description fontSize="large" className={classes.innerCircle} />
               </div>
               <p>{"大会要項"}</p>
+            </Link>
+
+            <Link href="/detailGuidelines" className={classes.inlineGrid}>
+              <div className={classes.iconCircle}>
+                <Description fontSize="large" className={classes.innerCircle} />
+              </div>
+              <p>{"細部要項"}</p>
             </Link>
 
             <Link href="/accessMap" className={classes.inlineGrid}>
