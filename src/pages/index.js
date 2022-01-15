@@ -19,8 +19,10 @@ import { Picture } from 'react-responsive-picture';
 
 import {
   Description,
+  DescriptionOutlined,
   Map,
   Domain,
+  ImportContacts
 } from "@material-ui/icons";
 
 const containerFluid = {
@@ -304,7 +306,7 @@ export default function Index() {
 
             <Link href="/detailGuidelines" className={classes.inlineGrid}>
               <div className={classes.iconCircle}>
-                <Description fontSize="large" className={classes.innerCircle} />
+                <DescriptionOutlined fontSize="large" className={classes.innerCircle} />
               </div>
               <p>{"細部要項"}</p>
             </Link>
@@ -321,6 +323,13 @@ export default function Index() {
                 <Domain fontSize="large" className={classes.innerCircle} />
               </div>
               <p>{"会場図"}</p>
+            </Link>
+
+            <Link href="/variousGuides" className={classes.inlineGrid}>
+              <div className={classes.iconCircle}>
+                <ImportContacts fontSize="large" className={classes.innerCircle} />
+              </div>
+              <p>{"各種ご案内"}</p>
             </Link>
           </Grid>
         </Box>
