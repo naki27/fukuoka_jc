@@ -140,6 +140,7 @@ const detailGuidelines = () => {
                     <div className={classes.content}>
                         <p>締切は、<span className={classes.Important}>2月7日（月）到着分</span>までとさせていただきます。</p>
                         <p>当日販売はしておりませんのでご注意ください。</p>
+                        <p className={classes.Important}>※振込手数料は購入者側でお願いします。</p>
                     </div>
 
                     <div id="buttonArea" className={classes.buttonArea}>

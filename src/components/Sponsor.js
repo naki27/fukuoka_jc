@@ -39,13 +39,13 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const Sponsor = ({name, logo, url, description }) => {
+const Sponsor = ({name, logo, url, description, height }) => {
     const classes = useStyles();
     return (
         <div className={classes.sponsorContainer}>
             <div className={classes.sponsorLogo}>
                 <Link href={url} target="_blank">
-                    <Image src={logo} objectFit="contain"/>
+                    <Image src={logo} objectFit="contain" height={height}/>
                 </Link>
             </div>
             <div className={classes.sponsorDetail}>
