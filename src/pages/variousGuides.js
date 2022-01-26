@@ -138,7 +138,7 @@ const detailGuidelines = () => {
 
                     <H2 title="2. 記念グッズ予約販売の案内" />
                     <div className={classes.content}>
-                        <p>締切は、<span className={classes.Important}>2月7日（月）到着分</span>までとさせていただきます。</p>
+                        <p>締切は、<span className={classes.Important}>２月７日（月）到着分</span>までとさせていただきます。</p>
                         <p>当日販売はしておりませんのでご注意ください。</p>
                         <p className={classes.Important}>※予約販売の商品代金等のお振込についてですが、振込手数料はご購入者様のご負担とさせていただいております。ご了承ください。</p>
                         <p className={classes.Important}>ジャパンカップ福岡大会に参加されないチーム様ももちろん購入可能でございます。その場合、大会初日に直接の受け渡しができないため、郵送対応となりますので、
