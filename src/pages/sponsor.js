@@ -23,7 +23,7 @@ import mikiya from '../../public/sponsor/mikiya.svg';
 import foodium from '../../public/sponsor/foodium.png';
 import sumitoul from '../../public/sponsor/sumitoul.jpg';
 import goldwin from '../../public/sponsor/GOLDWIN.png';
-import jcc from '../../public/sponsor/JCC.png';
+import jcc from '../../public/sponsor/jcc.jpg';
 import anyhome from '../../public/sponsor/アニィホーム.jpg';
 import yokoburishi from '../../public/sponsor/ヨコブリシ.png';
 import nagaeAuto from '../../public/sponsor/永江自動車.png';
@@ -116,7 +116,7 @@ const sponsor = () => {
                 <Sponsor name="とろけるわらびもちと和紅茶の店 甘美屋" logo={kanmiya} url="https://www.instagram.com/kanmi_ya/"
                     description="" />
 
-                <Sponsor name="（株）JCC" logo={jcc} url="http://jcc-jp.jp/"
+                <Sponsor name="（株）JCC" logo={jcc} url="https://e-jcc.jp/"
                     description="" />
 
                 <Sponsor name="Total Beauty IORI" logo={dummy} url=""
