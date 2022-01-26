@@ -140,7 +140,10 @@ const detailGuidelines = () => {
                     <div className={classes.content}>
                         <p>締切は、<span className={classes.Important}>2月7日（月）到着分</span>までとさせていただきます。</p>
                         <p>当日販売はしておりませんのでご注意ください。</p>
-                        <p className={classes.Important}>※振込手数料は購入者側でお願いします。</p>
+                        <p className={classes.Important}>※予約販売の商品代金等のお振込についてですが、振込手数料はご購入者様のご負担とさせていただいております。ご了承ください。</p>
+                        <p className={classes.Important}>ジャパンカップ福岡大会に参加されないチーム様ももちろん購入可能でございます。その場合、大会初日に直接の受け渡しができないため、郵送対応となりますので、
+                        お振込みの際は、商品代金に送料1000円を合わせた金額でお願い致します。</p>
+                        <p className={classes.Important}>申込書のお名前の右横に【郵送希望】と記入して頂けると助かります。</p>
                     </div>
 
                     <div id="buttonArea" className={classes.buttonArea}>
