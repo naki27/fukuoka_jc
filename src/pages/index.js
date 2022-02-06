@@ -157,6 +157,21 @@ const componentsStyle = {
     maxHeight: "100px",
     textAlign: "center",
   },
+  majidekuso: {
+    padding: "19px",
+    border: "1px #C7243A solid",
+    margin: "0 32px",
+    background: "#C7243A",
+    borderRadius: "8px",
+    fontSize: "1.5rem",
+    color: "#fff",
+    animation: "hurueru .1s",
+    animationIterationCount: 20
+  },
+  majidekuso2: {
+    textAlign: "right",
+    fontSize: "0.9em"
+  },
   "@media (max-width: 1280px)": {
     keyVisualContainer: {
       marginTop: "38px"
@@ -268,6 +283,21 @@ export default function Index() {
 
       <div className={classes.mainContent}>
         <SnsBox />
+        <Box my={4} py={5}>
+          <div>
+            <H1 title="福岡大会中止のお知らせ" />
+            <div className={classes.majidekuso}>
+              <p>2/6(日)9時10分〜の日本協会理事長会に置いて、今年のJC大会は中止となりました。</p>
+              <p>今まで長年楽しみにし、選手と共に実行委員会として準備をしておりましたが、現状のオミクロン感染拡大が止まない中の開催は、選手、役員に対し大きなリスクがある事、また、十分な練習が練習が出来ない事によりやむなく中止の判断となりました。</p>
+              <p>参加費等などの経費については、後日連絡を致します。</p>
+              <p>福岡県協会の皆さん、残念な報告ですが、引き続き感染予防と、ビーチボール愛を宜しくお願いします。</p>
+              <p className={classes.majidekuso2}>
+                福岡県ビーチボール協会<br/>
+                理事長 西村澄子
+              </p>
+            </div>
+          </div>
+        </Box>
 
         <Box my={4} py={5}>
           <H1 title="大会速報結果" />
