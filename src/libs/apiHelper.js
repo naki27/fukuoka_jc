@@ -1,6 +1,4 @@
-// let endpoint = process.env.FAUNADB_GRAPHQL_ENDPOINT;
-let endpoint = "https://fukuokajc2022.hasura.app/v1/graphql";
-// let secret = NEXT_PUBLIC_FAUNADB_SECRET;
+let endpoint = "https://fukuokajc.hasura.app/v1/graphql";
 let secret = "EHtoYLe5QfSaoPd51YAcONiWwXagS3KVC9Iti2opsFR6YEbclLWEaCdkgm5u5uWp";
 
 export async function useFetch(query, variables) {

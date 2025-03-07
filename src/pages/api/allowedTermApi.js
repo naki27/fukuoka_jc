@@ -1,7 +1,7 @@
 import {useFetch} from '../../libs/apiHelper'
 
-const getByIpUaQuery = `query GetAllowedTermByIpUa($ip: String, $ua: String) {
-  fukuokajc2022_AllowedTerm(where: {ip: {_eq: $ip}, ua: {_eq: $ua}}) {
+const getByIpUaQuery = `query GetAllowedTermByIpUa($ip: String, $ua: String) @cached {
+  fukuokajc2025_AllowedTerm(where: {ip: {_eq: $ip}, ua: {_eq: $ua}}) {
     createdAt
     expireAt
     id

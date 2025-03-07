@@ -1,15 +1,15 @@
 import {useFetch} from '../../libs/apiHelper'
 
-const getAllQuery = `query GetRoundGameAll {
-  fukuokajc2022_RoundGame(where: {valid: {_eq: true}}, order_by: {sortBy: asc}) {
+const getAllQuery = `query GetRoundGameAll @cached {
+  fukuokajc2025_RoundGame(where: {valid: {_eq: true}}, order_by: {sortBy: asc}) {
     battleFormat
     id
     name
   }
 }`
 
-const getByBattleFormatQuery = `query GetRoundGameByBattleFormat($battleFormat: String) {
-  fukuokajc2022_RoundGame(where: {battleFormat: {_eq: $battleFormat}, valid: {_eq: true}}, order_by: {sortBy: asc}) {
+const getByBattleFormatQuery = `query GetRoundGameByBattleFormat($battleFormat: String) @cached {
+  fukuokajc2025_RoundGame(where: {battleFormat: {_eq: $battleFormat}, valid: {_eq: true}}, order_by: {sortBy: asc}) {
     battleFormat
     id
     name

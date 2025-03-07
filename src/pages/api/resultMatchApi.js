@@ -1,35 +1,35 @@
 import { gql } from '@apollo/client';
 
-export const getLast5 = gql`query GetLast5($sex: String_comparison_exp = {}) {
-    fukuokajc2022_MatchResult(limit: 6, order_by: {createdAt: desc}, where: {Department: {sex: $sex}, valid: {_eq: true}}) {
-      id
-      Department {
-        age
-        name
-      }
-      RoundGame {
-        battleFormat
-        name
-      }
-      Team {
-        name,
-        prefectures
-      }
-      teamByTeam2id {
-        name,
-        prefectures
-      }
-      firstSet
-      secondSet
-      thirdSet
-      summary
-      createdBy
-      createdAt
+export const getLast5 = gql`query GetLast5($sex: String_comparison_exp = {}) @cached {
+  fukuokajc2025_MatchResult(limit: 6, order_by: {createdAt: desc}, where: {Department: {sex: $sex, valid: {_eq: true}}}) {
+    id
+    Department {
+      age
+      name
     }
-  }`
+    RoundGame {
+      battleFormat
+      name
+    }
+    Team {
+      name
+      prefectures
+    }
+    teamByTeam2id {
+      name
+      prefectures
+    }
+    firstSet
+    secondSet
+    thirdSet
+    summary
+    createdBy
+    createdAt
+  }
+}`
 
-export const getAll = gql`query GetLast5($sex: String_comparison_exp = {}) {
-  fukuokajc2022_MatchResult(order_by: {createdAt: desc}, where: {Department: {sex: $sex}, valid: {_eq: true}}) {
+export const getAll = gql`query GetAll($sex: String_comparison_exp = {}) @cached {
+  fukuokajc2025_MatchResult(order_by: {createdAt: desc}, where: {Department: {sex: $sex, valid: {_eq: true}}}) {
     id
     Department {
       id
@@ -58,8 +58,8 @@ export const getAll = gql`query GetLast5($sex: String_comparison_exp = {}) {
   }
 }`
 
-export const addMatchResult = gql`mutation AddMatchResult($object: fukuokajc2022_MatchResult_insert_input = {}) {
-    insert_fukuokajc2022_MatchResult_one(object: $object) {
+export const addMatchResult = gql`mutation AddMatchResult($object: fukuokajc2025_MatchResult_insert_input = {}) {
+    insert_fukuokajc2025_MatchResult_one(object: $object) {
       id
       departmentId
       roundGameId
@@ -76,8 +76,10 @@ export const addMatchResult = gql`mutation AddMatchResult($object: fukuokajc2022
     }
 }`
 
+// TODO InValidMatchResult　valid がないけど？？
+
 export const inValidMatchResult = gql`mutation InValidMatchResult($id: Int) {
-  update_fukuokajc2022_MatchResult(_set: {valid: false}, where: {id: {_eq: $id}}) {
+  update_fukuokajc2025_MatchResult(_set: {valid: false}, where: {id: {_eq: $id}}) {
     returning {
       id
     }

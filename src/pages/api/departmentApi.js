@@ -1,7 +1,7 @@
 import {useFetch} from '../../libs/apiHelper'
 
-const getAllQuery = `query GetDepartmentAll {
-  fukuokajc2022_Department(where: {valid: {_eq: true}}, order_by: {sex: asc, sortBy: asc}) {
+const getAllQuery = `query GetDepartmentAll @cached {
+  fukuokajc2025_Department(where: {valid: {_eq: true}}, order_by: {sex: asc, sortBy: asc}) {
     age
     id
     name
@@ -9,8 +9,8 @@ const getAllQuery = `query GetDepartmentAll {
   }
 }`
 
-const getBySexQuery = `query GetDepartmentBySex($sex: String) {
-  fukuokajc2022_Department(where: {sex: {_eq: $sex}, valid: {_eq: true}}, order_by: {sex: asc, sortBy: asc}) {
+const getBySexQuery = `query GetDepartmentBySex($sex: String) @cached {
+  fukuokajc2025_Department(where: {sex: {_eq: $sex}, valid: {_eq: true}}, order_by: {sex: asc, sortBy: asc}) {
     name
     id
     age

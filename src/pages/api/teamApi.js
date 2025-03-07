@@ -1,7 +1,7 @@
 import {useFetch} from '../../libs/apiHelper'
 
-const getAllQuery = `query GetTeamAll {
-  fukuokajc2022_Team {
+const getAllQuery = `query GetTeamAll @cached {
+  fukuokajc2025_Team {
     departmentId
     id
     name
@@ -9,8 +9,8 @@ const getAllQuery = `query GetTeamAll {
   }
 }`
 
-const getByDepartmentIdQuery = `query GetTeamByDepartment($departmentId: Int) {
-  fukuokajc2022_Team(where: {departmentId: {_eq: $departmentId}}) {
+const getByDepartmentIdQuery = `query GetTeamByDepartment($departmentId: Int) @cached {
+  fukuokajc2025_Team(where: {departmentId: {_eq: $departmentId}}) {
     departmentId
     id
     name

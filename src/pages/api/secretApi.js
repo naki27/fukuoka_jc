@@ -1,7 +1,7 @@
 import {useFetch} from '../../libs/apiHelper'
 
-const getOneQuery = `query GetOne {
-  fukuokajc2022_Secret_by_pk(id: 1) {
+const getOneQuery = `query GetOne @cached {
+  fukuokajc2025_Secret_by_pk(id: 1) {
     adminPassword
     id
     invalid
