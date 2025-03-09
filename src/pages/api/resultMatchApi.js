@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
 export const getLast5 = gql`query GetLast5($sex: String_comparison_exp = {}) @cached {
-  fukuokajc2025_MatchResult(limit: 6, order_by: {createdAt: desc}, where: {Department: {sex: $sex, valid: {_eq: true}}}) {
+  fukuokajc_MatchResult(limit: 6, order_by: {createdAt: desc}, where: {Department: {sex: $sex, valid: {_eq: true}}}) {
     id
     Department {
       age
@@ -29,7 +29,7 @@ export const getLast5 = gql`query GetLast5($sex: String_comparison_exp = {}) @ca
 }`
 
 export const getAll = gql`query GetAll($sex: String_comparison_exp = {}) @cached {
-  fukuokajc2025_MatchResult(order_by: {createdAt: desc}, where: {Department: {sex: $sex, valid: {_eq: true}}}) {
+  fukuokajc_MatchResult(order_by: {createdAt: desc}, where: {Department: {sex: $sex, valid: {_eq: true}}}) {
     id
     Department {
       id
@@ -58,8 +58,8 @@ export const getAll = gql`query GetAll($sex: String_comparison_exp = {}) @cached
   }
 }`
 
-export const addMatchResult = gql`mutation AddMatchResult($object: fukuokajc2025_MatchResult_insert_input = {}) {
-    insert_fukuokajc2025_MatchResult_one(object: $object) {
+export const addMatchResult = gql`mutation AddMatchResult($object: fukuokajc_MatchResult_insert_input = {}) {
+    insert_fukuokajc_MatchResult_one(object: $object) {
       id
       departmentId
       roundGameId
@@ -79,7 +79,7 @@ export const addMatchResult = gql`mutation AddMatchResult($object: fukuokajc2025
 // TODO InValidMatchResult　valid がないけど？？
 
 export const inValidMatchResult = gql`mutation InValidMatchResult($id: Int) {
-  update_fukuokajc2025_MatchResult(_set: {valid: false}, where: {id: {_eq: $id}}) {
+  update_fukuokajc_MatchResult(_set: {valid: false}, where: {id: {_eq: $id}}) {
     returning {
       id
     }
