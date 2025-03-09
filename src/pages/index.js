@@ -1,11 +1,11 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { Box, Container, Grid } from "@material-ui/core";
-import Typography from "@material-ui/core/Typography";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import styles from "./styles/index.module.scss";
+import { Box, Container, Grid } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 import Link from "~/components/Link";
 import Header from "~/components/Header";
@@ -23,226 +23,7 @@ import {
   Map,
   Domain,
   ImportContacts
-} from "@material-ui/icons";
-
-const containerFluid = {
-  padding: "0",
-  margin: "0",
-  width: "100vw",
-};
-const container = {
-  ...containerFluid,
-  // "@media (min-width: 576px)": {
-  //   maxWidth: "540px"
-  // },
-  // "@media (min-width: 768px)": {
-  //   maxWidth: "720px"
-  // },
-  // "@media (min-width: 992px)": {
-  //   maxWidth: "960px"
-  // },
-  // "@media (min-width: 1200px)": {
-  //   maxWidth: "1140px"
-  // }
-};
-const componentsStyle = {
-  // container,
-  root: {
-    padding: "0",
-    margin: "0",
-    width: "100vw",
-  },
-  brand: {
-    color: "#FFFFFF",
-    textAlign: "left",
-  },
-  title: {
-    fontSize: "4.2rem",
-    fontWeight: "600",
-    display: "inline-block",
-    position: "relative",
-  },
-  subtitle: {
-    fontSize: "1.313rem",
-    maxWidth: "500px",
-    margin: "10px 0 0",
-  },
-  main: {
-    background: "#FFFFFF",
-    position: "relative",
-    zIndex: "3",
-  },
-  mainRaised: {
-    margin: "-60px 30px 0px",
-    borderRadius: "6px",
-    boxShadow:
-      "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
-  },
-  link: {
-    textDecoration: "none",
-  },
-  textCenter: {
-    textAlign: "center",
-  },
-  iconCircle: {
-    borderRadius: "50%",
-    width: "80px",
-    height: "80px",
-    background: "#fff",
-    border: "1px solid #C6C6C6",
-    display: "inline-block",
-    position: "relative",
-    margin: "0 15px",
-    "&[disabled]": {
-      background: "#C6C6C6",
-      cursor: "not-allowed"
-    }
-  },
-  innerCircle: {
-    position: "absolute",
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
-    margin: "auto",
-  },
-  inlineGrid: {
-    display: "inline-grid",
-    textAlign: "center",
-    color: "#333",
-  },
-  quickResult: {
-    display: "flex",
-    borderColor: "#C6C6C6",
-    border: 1,
-    borderStyle: "solid",
-    borderRadius: "5px",
-    padding: "12px",
-    position: "relative"
-  },
-  sexPanel: {
-    margin: "auto",
-    padding: "0 16px",
-  },
-  sexPanelContainer: {
-    display: "flex",
-  },
-  maleTitle: {
-    margin: "auto",
-    color: "#3261AB",
-    fontSize: "x-large",
-  },
-  femaleTitle: {
-    margin: "auto",
-    color: "#C7243A",
-    fontSize: "x-large",
-  },
-  keyVisualContainer: {
-    position: "relative",
-    textAlign: "center"
-  },
-  keyVisual: {
-    top: "80px!important",
-    width: "100vw",
-  },
-  mainContent: {
-    maxWidth: "1280px",
-    margin: "0 auto",
-  },
-  sponsorContainer: {
-    marginBottom: "32px",
-  },
-  sponsor: {
-    maxWidth: "300px",
-    maxHeight: "100px",
-    textAlign: "center",
-  },
-  majidekuso: {
-    padding: "19px",
-    border: "1px #C7243A solid",
-    margin: "0 32px",
-    background: "#C7243A",
-    borderRadius: "8px",
-    fontSize: "1.5rem",
-    color: "#fff",
-    animation: "hurueru .1s",
-    animationIterationCount: 20
-  },
-  majidekuso2: {
-    textAlign: "right",
-    fontSize: "0.9em"
-  },
-  "@media (max-width: 1280px)": {
-    keyVisualContainer: {
-      marginTop: "38px"
-    }
-  },
-  "@media (max-width: 768px)": {
-    keyVisualComment: {
-      fontSize: "1rem",
-    },
-    keyVisual: {
-      top: "70px!important"
-    },
-  },
-  "@media (max-width: 540px)": {
-    keyVisualComment: {
-      fontSize: "0.8rem",
-    },
-    keyVisual: {
-      top: "58px!important"
-    },
-    sponsorContainer: {
-      flexDirection: "column",
-    },
-    sponsor: {
-      marginBottom: "16px",
-    },
-  },
-  "@media (max-width: 575px)": {
-    sexPanelContainer: {
-      display: "block",
-    },
-    sexPanel: {
-      margin: "16px 0",
-    },
-    quickResult: {
-      width: "100%",
-    },
-  },
-  "@media (max-width: 399px)": {
-    sexPanelContainer: {
-      display: "block",
-    },
-    sexPanel: {
-      margin: "16px 0",
-    },
-    quickResult: {
-      width: "100%",
-    },
-  },
-  "@media (min-width: 576px)": {
-    quickResult: {
-      width: "400px",
-    },
-  },
-  "@media (min-width: 768px)": {
-    quickResult: {
-      width: "400px",
-    },
-  },
-  "@media (min-width: 992px)": {
-    quickResult: {
-      width: "500px",
-    },
-  },
-  "@media (min-width: 1200px)": {
-    quickResult: {
-      width: "600px",
-    },
-  },
-};
-const useStyles = makeStyles(componentsStyle);
+} from "@mui/icons-material";
 
 import takumi from '../../public/sponsor/takumi.png';
 import hiragumi from '../../public/sponsor/hiragumi.gif';
@@ -253,31 +34,13 @@ import foodium from '../../public/sponsor/foodium.png';
 import sumitoul from '../../public/sponsor/sumitoul.jpg';
 
 export default function Index() {
-  const classes = useStyles();
 
   return (
-    <Container className={classes.root} maxWidth={false}>
+    <Container className={styles.root} maxWidth={false}>
       <Header />
-      <div className={classes.mainContent}>
-        <Box my={4} py={5}>
-          <div>
-            <H1 title="福岡大会中止のお知らせ" />
-            <div className={classes.majidekuso}>
-              <p>2/6(日)9時10分〜の日本協会理事長会に置いて、今年のJC大会は中止となりました。</p>
-              <p>今まで長年楽しみにし、選手と共に実行委員会として準備をしておりましたが、現状のオミクロン感染拡大が止まない中の開催は、選手、役員に対し大きなリスクがある事、また、十分な練習が練習が出来ない事によりやむなく中止の判断となりました。</p>
-              <p>参加費等などの経費については、後日連絡を致します。</p>
-              <p>福岡県協会の皆さん、残念な報告ですが、引き続き感染予防と、ビーチボール愛を宜しくお願いします。</p>
-              <p className={classes.majidekuso2}>
-                福岡県ビーチボール協会<br/>
-                理事長 西村澄子
-              </p>
-            </div>
-          </div>
-        </Box>
-      </div>
 
-      <div className={classes.keyVisualContainer}>
-        <Picture className={classes.keyVisual}
+      <div className={styles.keyVisualContainer}>
+        <Picture className={styles.keyVisual}
             sizes="(min-width: 36em) 33.3vw, 100%"
             sources = {[
                 {
@@ -299,22 +62,22 @@ export default function Index() {
         />
       </div>
 
-      <div className={classes.mainContent}>
+      <div className={styles.mainContent}>
         <SnsBox />
 
         <Box my={4} py={5}>
           <H1 title="大会速報結果" />
 
-          <Box className={classes.sexPanelContainer}>
-            <div className={classes.sexPanel}>
-              <h3 className={classes.femaleTitle}>女子</h3>
-              <Box overflow="scroll" className={classes.quickResult}>
+          <Box className={styles.sexPanelContainer}>
+            <div className={styles.sexPanel}>
+              <h3 className={styles.femaleTitle}>女子</h3>
+              <Box overflow="scroll" className={styles.quickResult}>
                   <ResultMatchCards sex="Female" />
               </Box>
             </div>
-            <div className={classes.sexPanel}>
-              <h3 className={classes.maleTitle}>男子</h3>
-              <Box overflow="scroll" className={classes.quickResult}>
+            <div className={styles.sexPanel}>
+              <h3 className={styles.maleTitle}>男子</h3>
+              <Box overflow="scroll" className={styles.quickResult}>
                   <ResultMatchCards sex="Male" />
               </Box>
             </div>
@@ -330,37 +93,37 @@ export default function Index() {
             justify="space-around"
             alignItems="center"
           >
-            <Link href="/tournamentGuidelines" className={classes.inlineGrid}>
-              <div className={classes.iconCircle}>
-                <Description fontSize="large" className={classes.innerCircle} />
+            <Link href="/tournamentGuidelines" className={styles.inlineGrid}>
+              <div className={styles.iconCircle}>
+                <Description fontSize="large" className={styles.innerCircle} />
               </div>
               <p>{"大会要項"}</p>
             </Link>
 
-            <Link href="/detailGuidelines" className={classes.inlineGrid}>
-              <div className={classes.iconCircle}>
-                <DescriptionOutlined fontSize="large" className={classes.innerCircle} />
+            <Link href="/detailGuidelines" className={styles.inlineGrid}>
+              <div className={styles.iconCircle}>
+                <DescriptionOutlined fontSize="large" className={styles.innerCircle} />
               </div>
               <p>{"細部要項"}</p>
             </Link>
 
-            <Link href="/accessMap" className={classes.inlineGrid}>
-              <div className={classes.iconCircle}>
-                <Map fontSize="large" className={classes.innerCircle} />
+            <Link href="/accessMap" className={styles.inlineGrid}>
+              <div className={styles.iconCircle}>
+                <Map fontSize="large" className={styles.innerCircle} />
               </div>
               <p>{"アクセスマップ"}</p>
             </Link>
 
-            <Link href="/underConstruction" className={classes.inlineGrid}>
-              <div className={classes.iconCircle} disabled>
-                <Domain fontSize="large" className={classes.innerCircle} />
+            <Link href="/underConstruction" className={styles.inlineGrid}>
+              <div className={styles.iconCircle} disabled>
+                <Domain fontSize="large" className={styles.innerCircle} />
               </div>
               <p>{"会場図"}</p>
             </Link>
 
-            <Link href="/variousGuides" className={classes.inlineGrid}>
-              <div className={classes.iconCircle}>
-                <ImportContacts fontSize="large" className={classes.innerCircle} />
+            <Link href="/variousGuides" className={styles.inlineGrid}>
+              <div className={styles.iconCircle}>
+                <ImportContacts fontSize="large" className={styles.innerCircle} />
               </div>
               <p>{"各種ご案内"}</p>
             </Link>
@@ -375,19 +138,19 @@ export default function Index() {
             direction="row"
             justify="space-around"
             alignItems="center"
-            className={classes.sponsorContainer}
+            className={styles.sponsorContainer}
           >
-            <Grid item xl={4} className={classes.sponsor}>
+            <Grid item xl={4} className={styles.sponsor}>
                 <Link href="http://taira-gumi.com/" target="_blank">
                     <Image src={hiragumi} objectFit="contain"/>
                 </Link>
             </Grid>
-            <Grid item xl={4} className={classes.sponsor}>
+            <Grid item xl={4} className={styles.sponsor}>
                 <Link href="https://tsuku2.jp/sumitall/" target="_blank">
                     <Image src={sumitoul} objectFit="contain"/>
                 </Link>
             </Grid>
-            <Grid item xl={4} className={classes.sponsor}>
+            <Grid item xl={4} className={styles.sponsor}>
                 <Link href="https://foodium.co.jp/" target="_blank">
                     <Image src={foodium} objectFit="contain"/>
                 </Link>
@@ -398,19 +161,19 @@ export default function Index() {
             direction="row"
             justify="space-around"
             alignItems="center"
-            className={classes.sponsorContainer}
+            className={styles.sponsorContainer}
           >
-            <Grid item xl={4} className={classes.sponsor}>
+            <Grid item xl={4} className={styles.sponsor}>
                 <Link href="https://miki-ya.co.jp/" target="_blank">
                     <Image src={mikiya} objectFit="contain"/>
                 </Link>
             </Grid>
-            <Grid item xl={4} className={classes.sponsor}>
+            <Grid item xl={4} className={styles.sponsor}>
                 <Link href="https://th-542gg.wixsite.com/mysite-1" target="_blank">
                     <Image src={cafeCaprice} objectFit="contain"/>
                 </Link>
             </Grid>
-            <Grid item xl={4} className={classes.sponsor}>
+            <Grid item xl={4} className={styles.sponsor}>
                 <Link href="http://www.canacan.jp/" target="_blank">
                     <Image src={canadianCamp} objectFit="contain"/>
                 </Link>
@@ -436,12 +199,12 @@ export default function Index() {
             justify="space-around"
             alignItems="center"
           >
-            <Link href="/underConstruction" className={classes.inlineGrid}>
+            <Link href="/underConstruction" className={styles.inlineGrid}>
               <img src="https://dummyimage.com/300x300/000/fff" />
               <p>{"女子"}</p>
             </Link>
 
-            <Link href="/underConstruction" className={classes.inlineGrid}>
+            <Link href="/underConstruction" className={styles.inlineGrid}>
               <img src="https://dummyimage.com/300x300/000/fff" />
               <p>{"男子"}</p>
             </Link>
@@ -457,12 +220,12 @@ export default function Index() {
             justify="space-around"
             alignItems="center"
           >
-            <Link href="/underConstruction" className={classes.inlineGrid}>
+            <Link href="/underConstruction" className={styles.inlineGrid}>
               <img src="https://dummyimage.com/300x300/000/fff" />
               <p>{"予選"}</p>
             </Link>
 
-            <Link href="/underConstruction" className={classes.inlineGrid}>
+            <Link href="/underConstruction" className={styles.inlineGrid}>
               <img src="https://dummyimage.com/300x300/000/fff" />
               <p>{"トーナメント"}</p>
             </Link>

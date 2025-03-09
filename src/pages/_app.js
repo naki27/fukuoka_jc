@@ -2,8 +2,10 @@ import React, { useEffect } from 'react';
 import { useRouter } from 'next/router'
 import PropTypes from 'prop-types';
 import Head from 'next/head';
-import { ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
+import { CacheProvider } from '@emotion/react';
+import createCache from '@emotion/cache';
+import CssBaseline from '@mui/material/CssBaseline';
 import theme from '~/components/theme';
 import "~/../public/theme.css";
 import * as gtag from '~/libs/gtag'
@@ -12,8 +14,10 @@ import * as gtag from '~/libs/gtag'
 import { ApolloProvider } from "@apollo/react-hooks";
 import { ApolloClient, HttpLink, InMemoryCache } from "apollo-boost";
 
+const clientSideEmotionCache = createCache({ key: 'css', prepend: true });
+
 export default function MyApp(props) {
-  const { Component, pageProps } = props;
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   const router = useRouter();
 
   useEffect(() => {
@@ -39,7 +43,7 @@ export default function MyApp(props) {
 
   // for apollo client
   const httpLink = new HttpLink({
-    uri: "https://fukuokajc2022.hasura.app/v1/graphql",
+    uri: "https://fukuokajc.hasura.app/v1/graphql",
     headers: {
       'x-hasura-admin-secret': "EHtoYLe5QfSaoPd51YAcONiWwXagS3KVC9Iti2opsFR6YEbclLWEaCdkgm5u5uWp"
     }
@@ -56,11 +60,13 @@ export default function MyApp(props) {
         <title>第28回ジャパンカップビーチボール選手権福岡大会 公式サイト</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
-      <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <CacheProvider value={emotionCache}>
+        <ThemeProvider theme={theme}>
+          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </CacheProvider>
     </ApolloProvider>
   );
 }

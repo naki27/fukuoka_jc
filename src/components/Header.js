@@ -1,23 +1,24 @@
 import React from 'react';
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
+import { useTheme } from '@mui/material/styles';
+import styles from "./styles/Header.module.scss";
+import Drawer from '@mui/material/Drawer';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import List from '@mui/material/List';
+import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
 import Image from 'next/image';
-import Box from '@material-ui/core/Box';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import Box from '@mui/material/Box';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
 import Link from '~/components/Link';
 import {
   Description,
@@ -26,76 +27,10 @@ import {
   SupervisorAccount,
   EmojiEvents,
   Subject,
-} from "@material-ui/icons";
+} from "@mui/icons-material";
 import logo from '../../public/logo.png';
 
-const drawerWidth = 240;
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-      display: 'flex',
-    },
-    appBar: {
-      transition: theme.transitions.create(['margin', 'width'], {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen,
-      }),
-    },
-    appBarShift: {
-      width: `calc(100% - ${drawerWidth}px)`,
-      transition: theme.transitions.create(['margin', 'width'], {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-      marginRight: drawerWidth,
-    },
-    title: {
-      flexGrow: 1,
-    },
-    hide: {
-      display: 'none',
-    },
-    drawer: {
-      width: drawerWidth,
-      flexShrink: 0,
-    },
-    drawerPaper: {
-      width: drawerWidth,
-    },
-    drawerHeader: {
-      display: 'flex',
-      alignItems: 'center',
-      padding: theme.spacing(0, 1),
-      // necessary for content to be below app bar
-      ...theme.mixins.toolbar,
-      justifyContent: 'flex-start',
-    },
-    content: {
-      flexGrow: 1,
-      padding: theme.spacing(3),
-      transition: theme.transitions.create('margin', {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen,
-      }),
-      marginRight: -drawerWidth,
-    },
-    contentShift: {
-      transition: theme.transitions.create('margin', {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-      marginRight: 0,
-    },
-    logo: {
-      height: "50px",
-      width: "auto",
-      marginRight: theme.spacing(3)
-    },
-  }));
-
-
 export default function ButtonAppBar() {
-  const classes = useStyles();
   const theme = useTheme();
 
   const [open, setOpen] = React.useState(false);
@@ -109,34 +44,31 @@ export default function ButtonAppBar() {
   };
 
   return (
-    <div className={classes.root}>
-      <AppBar position="fixed" className={clsx(classes.appBar, {
-          [classes.appBarShift]: open,
+    <div className={styles.root}>
+      <AppBar position="fixed" className={clsx(styles.appBar, {
+          [styles.appBarShift]: open,
         })}>
         <Toolbar>
           <Link href="/">
             <Image src={logo} width="300" height="100" className="logo"/>
           </Link>
-          <Typography variant="h6" className={classes.title}>
-            {/* ビーチボールジャパンカップ2022 IN 福岡(仮) */}
-          </Typography>
-          <IconButton edge="end" className={classes.menuButton} color="inherit"
-                aria-label="menu" onClick={handleDrawerOpen} className={clsx(open && classes.hide)}>
+          <IconButton edge="end" className={`${styles.menuButton} ${clsx(open && styles.hide)}`} color="inherit"
+                aria-label="menu" onClick={handleDrawerOpen}>
             <MenuIcon />
           </IconButton>
         </Toolbar>
       </AppBar>
 
       <Drawer
-        className={classes.drawer}
+        className={styles.drawer}
         variant="persistent"
         anchor="right"
         open={open}
-        classes={{
-          paper: classes.drawerPaper,
+        styles={{
+          paper: styles.drawerPaper,
         }}
       >
-        <div className={classes.drawerHeader}>
+        <div className={styles.drawerHeader}>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>

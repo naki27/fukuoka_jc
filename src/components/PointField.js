@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
 
-import { TextField } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) => ({
-    formControl: {
-      margin: theme.spacing(1),
-      width: "40%!important",
-    },
-}));
+import { TextField } from '@mui/material';
+import styles from "./styles/PointField.module.scss";
 
 const errorMessage = (type, max) => {
     if (type === "required") {
@@ -24,12 +17,11 @@ const errorMessage = (type, max) => {
 };
 
 const pointField = ({name, max, label, register, errors, required }) => {
-    const classes = useStyles();
     label = label ?? "点数";
     required = required ?? true;
     return (
         <TextField
-            className={classes.formControl}
+            className={styles.formControl}
             label={label}
             type="number"
             {...register(

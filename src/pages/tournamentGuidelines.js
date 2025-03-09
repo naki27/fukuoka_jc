@@ -1,8 +1,8 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import styles from "./styles/MemoriesPhotoGallery.module.scss";
 
-import { Container, Breadcrumbs, Typography, Button } from "@material-ui/core";
-import GetAppIcon from '@material-ui/icons/GetApp';
+import { Container, Breadcrumbs, Typography, Button } from "@mui/material";
+import GetAppIcon from '@mui/icons-material/GetApp';
 
 import H1 from '~/components/H1';
 import Header from "~/components/Header";
@@ -12,32 +12,7 @@ import Link from "~/components/Link";
 
 import 'scroll-behavior-polyfill'
 
-const useStyles = makeStyles(() => ({
-    buttonArea: {
-        margin: "35px auto",
-        textAlign: "center",
-        display: "flow-root",
-    },
-    PdfButton: {
-        margin: "32px",
-        background: "#C7243A",
-        color:"#fff"
-    },
-    ExcelButton: {
-        margin: "32px",
-        background: "#009250",
-        color:"#fff"
-    },
-    ExcelPdfButton: {
-        margin: "32px",
-        background: "#EDAD0B",
-        color:"#fff"
-    }
-}));
-
 const tournamentGuidelines = () => {
-    const classes = useStyles();
-
     const onGuidelineDownload = _ => {
         const link = document.createElement("a");
         // https://drive.google.com/file/d/1GVgkLv3xPJjh7KTpSYEPRuOmvRFym-Sv/view?usp=sharing
@@ -253,23 +228,23 @@ const tournamentGuidelines = () => {
                     </tbody>
                 </table>
 
-                <div id="buttonArea" className={classes.buttonArea}>
+                <div id="buttonArea" className={styles.buttonArea}>
                     <Button
-                        className={classes.PdfButton}
+                        className={styles.PdfButton}
                         onClick={onGuidelineDownload}
                         variant="contained"
                         startIcon={<GetAppIcon />}>
                             大会要項(pdf)をダウンロード
                     </Button>
                     <Button
-                        className={classes.ExcelButton}
+                        className={styles.ExcelButton}
                         onClick={onApplicationFormDownload}
                         variant="contained"
                         startIcon={<GetAppIcon />}>
                             申込書(excel)をダウンロード
                     </Button>
                     <Button
-                        className={classes.ExcelPdfButton}
+                        className={styles.ExcelPdfButton}
                         onClick={onApplicationFormPdfDownload}
                         variant="contained"
                         startIcon={<GetAppIcon />}>

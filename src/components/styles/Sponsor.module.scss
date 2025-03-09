@@ -1,0 +1,35 @@
+.formControl {
+  margin: 8px;
+  width: 40%!important;
+}
+
+.sponsorContainer {
+  display: flex;
+  min-height: 120px;
+  margin: 20px;
+}
+
+.sponsorDetail {
+  margin-left: 16px;
+  width: 100%;
+}
+
+.sponsorLogo {
+  flex-basis: 300px;
+  min-width: 300px;
+}
+
+@media (max-width: 640px) {
+  .sponsorContainer {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .sponsorDetail {
+    margin-left: 0;
+    order: 1;
+  }
+  .sponsorLogo {
+    max-height: 100px;
+    order: 2;
+  }
+}

@@ -1,0 +1,47 @@
+.root {
+  padding: 0;
+  width: 100vw;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center
+}
+
+.init {
+  display: none;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 30vh;
+}
+
+.formControl {
+  width: 90vw;
+}
+
+.photoLink {
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.authContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.authButton {
+  margin-top: 20px;
+  background: #23AC0E;
+}
+
+.inputColor {
+  color: #333!important;
+}
+
+.subTitle {
+  font-size: 1.5rem;
+  margin-bottom: 32px;
+  color: #B61972;
+  display: flex;
+  justify-content: center;
+}

@@ -1,23 +1,13 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Box from '@material-ui/core/Box';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import MuiLink from '@material-ui/core/Link';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 2,
-  },
-  title: {
-    flexGrow: 2,
-  },
-}));
+import styles from "./styles/Footer.module.scss";
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import MuiLink from '@mui/material/Link';
 
 export default function ButtonAppBar() {
-  const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div className={styles.root}>
       <Box bgcolor="#ECACB5" p={4}>
         <Typography variant="body2" align="center">
           {'Copyright © '}

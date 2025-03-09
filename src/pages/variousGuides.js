@@ -1,8 +1,8 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import styles from "./styles/variousGuides.module.scss";
 
-import { Container, Breadcrumbs, Typography, Button, Box } from "@material-ui/core";
-import GetAppIcon from '@material-ui/icons/GetApp';
+import { Container, Breadcrumbs, Typography, Button, Box } from "@mui/material";
+import GetAppIcon from '@mui/icons-material/GetApp';
 
 import H1 from '~/components/H1';
 import H2 from '~/components/H2';
@@ -13,33 +13,7 @@ import Link from "~/components/Link";
 import Image from 'next/image';
 import SoldOut from '../../public/soldout.jpeg';
 
-const useStyles = makeStyles(() => ({
-    buttonArea: {
-        margin: "35px auto",
-        textAlign: "center",
-        display: "flow-root",
-    },
-    InfoButton: {
-        margin: "32px",
-        background: "#C7243A",
-        color:"#fff"
-    },
-    FormButton: {
-      margin: "32px",
-      background: "#009250",
-      color:"#fff"
-    },
-    Important: {
-        textDecoration: "double underline",
-        fontWeight: "900"
-    },
-    content: {
-        fontSize: "1.1rem",
-    },
-}));
-
-const detailGuidelines = () => {
-    const classes = useStyles();
+const variousGuides = () => {
 
     const onBentoHotelInfoDownload = _ => {
       const link = document.createElement("a");
@@ -117,22 +91,22 @@ const detailGuidelines = () => {
 
                 <Container maxWidth="lg">
                     <H2 title="1. 宿泊・弁当お申込の案内" />
-                    <div className={classes.content}>
+                    <div className={styles.content}>
                         <Image src={SoldOut} objectFit="contain" height={100}/>
                         <p>予約は終了しました。ご協力ありがとうございました。</p>
-                        {/* <p>締切は、<span className={classes.Important}>１月２１日（金）</span>とさせていただきます。</p> */}
+                        {/* <p>締切は、<span className={styles.Important}>１月２１日（金）</span>とさせていただきます。</p> */}
                     </div>
 
-                    <div id="buttonArea" className={classes.buttonArea}>
+                    <div id="buttonArea" className={styles.buttonArea}>
                         <Button
-                            className={classes.InfoButton}
+                            className={styles.InfoButton}
                             onClick={onBentoHotelInfoDownload}
                             variant="contained"
                             startIcon={<GetAppIcon />}>
                                 宿泊・弁当の案内(pdf)をダウンロード
                         </Button>
                         <Button
-                            className={classes.FormButton}
+                            className={styles.FormButton}
                             onClick={onBentoHotelFormDownload}
                             variant="contained"
                             startIcon={<GetAppIcon />}>
@@ -141,27 +115,27 @@ const detailGuidelines = () => {
                     </div>
 
                     <H2 title="2. 記念グッズ予約販売の案内" />
-                    <div className={classes.content}>
+                    <div className={styles.content}>
                         <Image src={SoldOut} objectFit="contain" height={100}/>
                         <p>販売は締め切りました。ご協力ありがとうございました。</p>
-                        {/* <p>締切は、<span className={classes.Important}>２月１４日（月）到着分</span>までとさせていただきます。</p>
+                        {/* <p>締切は、<span className={styles.Important}>２月１４日（月）到着分</span>までとさせていただきます。</p>
                         <p>当日販売はしておりませんのでご注意ください。</p>
-                        <p className={classes.Important}>※予約販売の商品代金等のお振込についてですが、振込手数料はご購入者様のご負担とさせていただいております。ご了承ください。</p>
-                        <p className={classes.Important}>ジャパンカップ福岡大会に参加されないチーム様ももちろん購入可能でございます。その場合、大会初日に直接の受け渡しができないため、郵送対応となりますので、
+                        <p className={styles.Important}>※予約販売の商品代金等のお振込についてですが、振込手数料はご購入者様のご負担とさせていただいております。ご了承ください。</p>
+                        <p className={styles.Important}>ジャパンカップ福岡大会に参加されないチーム様ももちろん購入可能でございます。その場合、大会初日に直接の受け渡しができないため、郵送対応となりますので、
                         お振込みの際は、商品代金に送料1000円を合わせた金額でお願い致します。</p>
-                        <p className={classes.Important}>申込書のお名前の右横に【郵送希望】と記入して頂けると助かります。</p> */}
+                        <p className={styles.Important}>申込書のお名前の右横に【郵送希望】と記入して頂けると助かります。</p> */}
                     </div>
 
-                    <div id="buttonArea" className={classes.buttonArea}>
+                    <div id="buttonArea" className={styles.buttonArea}>
                         <Button
-                            className={classes.InfoButton}
+                            className={styles.InfoButton}
                             onClick={onGoodsInfoDownload}
                             variant="contained"
                             startIcon={<GetAppIcon />}>
                                 記念グッズ案内(pdf)をダウンロード
                         </Button>
                         <Button
-                            className={classes.FormButton}
+                            className={styles.FormButton}
                             onClick={onGoodsFormDownload}
                             variant="contained"
                             startIcon={<GetAppIcon />}>
@@ -170,13 +144,13 @@ const detailGuidelines = () => {
                     </div>
 
                     <H2 title="3. 駐車券申込書について" />
-                    <div className={classes.content}>
-                        <p>駐車券締切は、<span className={classes.Important}>２月２８日（月）まで</span>とさせていただきます。</p>
+                    <div className={styles.content}>
+                        <p>駐車券締切は、<span className={styles.Important}>２月２８日（月）まで</span>とさせていただきます。</p>
                     </div>
 
-                    <div id="buttonArea" className={classes.buttonArea}>
+                    <div id="buttonArea" className={styles.buttonArea}>
                         <Button
-                            className={classes.FormButton}
+                            className={styles.FormButton}
                             onClick={onParkingFormDownload}
                             variant="contained"
                             startIcon={<GetAppIcon />}>
@@ -185,34 +159,34 @@ const detailGuidelines = () => {
                     </div>
 
                     <H2 title="4. 健康チェックシート兼誓約書について" />
-                    <div className={classes.content}>
-                        <p><span className={classes.Important}>当日の朝に受付に提出</span>ください。</p>
+                    <div className={styles.content}>
+                        <p><span className={styles.Important}>当日の朝に受付に提出</span>ください。</p>
                         <p>2日目の応援の場合は、会場入口の回収ボックスに入れてください</p>
                     </div>
-                    <div id="buttonArea" className={classes.buttonArea}>
+                    <div id="buttonArea" className={styles.buttonArea}>
                         <Button
-                            className={classes.FormButton}
+                            className={styles.FormButton}
                             onClick={onHealthCheck319StaffFormDownload}
                             variant="contained"
                             startIcon={<GetAppIcon />}>
                                 健康チェックシートシート兼誓約書 3/19 スタッフ用(pdf)をダウンロード
                         </Button>
                         <Button
-                            className={classes.FormButton}
+                            className={styles.FormButton}
                             onClick={onHealthCheck319PlayerFormDownload}
                             variant="contained"
                             startIcon={<GetAppIcon />}>
                                 健康チェックシートシート兼誓約書 3/19 選手用(pdf)をダウンロード
                         </Button>
                         <Button
-                            className={classes.FormButton}
+                            className={styles.FormButton}
                             onClick={onHealthCheck320StaffFormDownload}
                             variant="contained"
                             startIcon={<GetAppIcon />}>
                                 健康チェックシートシート兼誓約書 3/20 スタッフ用(pdf)をダウンロード
                         </Button>
                         <Button
-                            className={classes.FormButton}
+                            className={styles.FormButton}
                             onClick={onHealthCheck320PlayerFormDownload}
                             variant="contained"
                             startIcon={<GetAppIcon />}>
@@ -221,12 +195,12 @@ const detailGuidelines = () => {
                     </div>
 
                     <H2 title="5. 大会写真撮影および写真ダウンロードについて" />
-                    <div className={classes.content}>
-                        <p>辞退届は、<span className={classes.Important}>２月２８日（月）まで</span>とさせていただきます。</p>
+                    <div className={styles.content}>
+                        <p>辞退届は、<span className={styles.Important}>２月２８日（月）まで</span>とさせていただきます。</p>
                     </div>
-                    <div id="buttonArea" className={classes.buttonArea}>
+                    <div id="buttonArea" className={styles.buttonArea}>
                         <Button
-                            className={classes.FormButton}
+                            className={styles.FormButton}
                             onClick={onPictureFormDownload}
                             variant="contained"
                             startIcon={<GetAppIcon />}>
@@ -242,4 +216,4 @@ const detailGuidelines = () => {
     );
 }
 
-export default detailGuidelines;
+export default variousGuides;

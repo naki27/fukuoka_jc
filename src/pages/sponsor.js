@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Container, Breadcrumbs, Typography, Box } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { Container, Breadcrumbs, Typography, Box } from "@mui/material";
+import styles from "./styles/sponsor.module.scss";
 
 import H1 from '~/components/H1';
 import H2 from '~/components/H2';
@@ -34,25 +34,12 @@ import kokuraFudousan from '../../public/sponsor/小倉不動産.png';
 import salonUchida from '../../public/sponsor/足圧サロンうちだ.png';
 import ooga from '../../public/sponsor/大賀薬局.png';
 
-const componentsStyle = {
-    // container,
-    root: {
-      padding: "0",
-      width: "100vw",
-      maxWidth: "1280px",
-      margin: "0 auto",
-    },
-}
-const useStyles = makeStyles(componentsStyle);
-
 const sponsor = () => {
-    const classes = useStyles();
-
     return (
         <>
             <Header />
             <Gutter />
-            <Container className={classes.root} maxWidth={false}>
+            <Container className={styles.root} maxWidth={false}>
                 <Breadcrumbs aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">
                         トップ

@@ -1,17 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-import { FormControl, Select, MenuItem, FormHelperText, InputLabel } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) => ({
-    formControl: {
-      margin: theme.spacing(1),
-      width: "40%",
-    },
-}));
+import { FormControl, Select, MenuItem, FormHelperText, InputLabel } from '@mui/material';
+import styles from "./styles/TeamSelect.module.scss";
 
 const teamSelect = ({name, departmentId, register, errors}) => {
-    const classes = useStyles();
     const [data, setData] = useState([]);
     const query = departmentId ? `?departmentId=${departmentId}` : "";
 
@@ -21,7 +13,7 @@ const teamSelect = ({name, departmentId, register, errors}) => {
             const response = await fetch("api/teamApi" + query)
                                     .then(res => res.json())
                                     .catch((e) => console.log(e));
-            setData(response.data.fukuokajc2022_Team);
+            setData(response.data.fukuokajc_Team);
         };
         fetchData();
     }, [departmentId]);
@@ -35,7 +27,7 @@ const teamSelect = ({name, departmentId, register, errors}) => {
     });
 
     return (
-        <FormControl className={classes.formControl} error={errors[name] !== undefined}>
+        <FormControl className={styles.formControl} error={errors[name] !== undefined}>
             <InputLabel htmlFor={name}>チーム</InputLabel>
             <Select
                 defaultValue=""

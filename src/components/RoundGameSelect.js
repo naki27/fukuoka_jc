@@ -1,17 +1,8 @@
 import React, { useState, useEffect } from 'react';
-
-import { FormControl, Select, MenuItem, FormHelperText, InputLabel } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) => ({
-    formControl: {
-      margin: theme.spacing(1),
-      width: "40%",
-    },
-}));
+import { FormControl, Select, MenuItem, FormHelperText, InputLabel } from '@mui/material';
+import styles from "./styles/RoundGameSelect.module.scss";
 
 const RoundGameSelect = ({name, battleFormat, register, errors}) => {
-    const classes = useStyles();
     const [data, setData] = useState([]);
     const handleId = (event) => setRId(event.target.value);
 
@@ -20,7 +11,7 @@ const RoundGameSelect = ({name, battleFormat, register, errors}) => {
             const response = await fetch("api/roundGameApi")
                                     .then(res => res.json())
                                     .catch((e) => console.log(e));
-            setData(response.data.fukuokajc2022_RoundGame);
+            setData(response.data.fukuokajc_RoundGame);
         };
         fetchData();
     }, []);
@@ -38,7 +29,7 @@ const RoundGameSelect = ({name, battleFormat, register, errors}) => {
                     });
 
     return (
-        <FormControl className={classes.formControl} error={errors[name] !== undefined}>
+        <FormControl className={styles.formControl} error={errors[name] !== undefined}>
             <InputLabel htmlFor="roundGame">回戦</InputLabel>
             <Select
                 defaultValue=""

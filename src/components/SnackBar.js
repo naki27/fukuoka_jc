@@ -1,23 +1,13 @@
 import React, {useState, useEffect} from "react";
-import Snackbar from "@material-ui/core/Snackbar";
-import MuiAlert from "@material-ui/lab/Alert";
-import { makeStyles } from "@material-ui/core/styles";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
+import styles from "./styles/SnackBar.module.scss";
 
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: "100%",
-    "& > * + *": {
-      marginTop: theme.spacing(2)
-    }
-  }
-}));
-
 export default function SnackBar({isOpen, message}) {
-    const classes = useStyles();
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
@@ -32,7 +22,7 @@ export default function SnackBar({isOpen, message}) {
     };
 
     return (
-        <div className={classes.root}>
+        <div className={styles.root}>
             <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}>
                 <Alert onClose={handleClose} severity="success">
                     {message}

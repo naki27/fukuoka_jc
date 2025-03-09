@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Breadcrumbs, Typography, Button } from "@material-ui/core";
+import { Container, Breadcrumbs, Typography, Button } from "@mui/material";
 
 import H1 from '~/components/H1';
 import H2 from '~/components/H2';

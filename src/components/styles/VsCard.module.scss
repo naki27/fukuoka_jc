@@ -1,0 +1,106 @@
+.root {
+  width: 300;
+  min-width: 300;
+  margin: 0 8px;
+}
+.bullet {
+  display: inline-block;
+  margin: 0 2px;
+  transform: scale(0.8);
+}
+.title {
+  font-size: 14;
+}
+.pos {
+  margin-bottom: 12;
+}
+.seal {
+  padding: 7px 14px;
+  border-radius: 6px;
+  border-color: #C6C6C6;
+  border: 1;
+  border-style: solid;
+  border-radius: 5px;
+
+  &.Tournament {
+    background: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);
+    border: 0;
+  }
+}
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+.vsTitle {
+  display: flex;
+  justify-content: space-around;
+  margin: 12px 0;
+}
+.cardFooter {
+  text-align: right;
+  margin-top: 3px;
+  font-size: 0.8em;
+}
+.win {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #C7243A;
+}
+.vsRow {
+  text-align: center;
+  font-weight: bold;
+  margin: 4px 0;
+  & > span {
+    margin: 0 8px;
+  }
+}
+.vsResult {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 8px 0;
+  text-align: center;
+  border-top: 1px solid rgb(198, 198, 198);
+  & > span {
+    margin: 0 8px;
+  }
+}
+.age18 {
+  background: #6EB7DB;
+  border-color: #6EB7DB;
+}
+.age30 {
+  background: #009250;
+  border-color: #009250;
+  color: #fff;
+}
+.age40 {
+  background: #EDAD0B;
+  border-color: #EDAD0B;
+}
+.age50 {
+  background: #A52175;
+  border-color: #A52175;
+  color: #fff;
+}
+.age60 {
+  background: #333;
+  border-color: #333;
+  color: #fff;
+}
+.teamName {
+  display: flex;
+  flex-direction: column;
+}
+.prefName {
+  font-size: 0.7rem;
+}
+.managementFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.deleteButton {
+  border: 0;
+  background: none;
+}
