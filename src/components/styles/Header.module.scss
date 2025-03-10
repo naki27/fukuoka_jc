@@ -11,10 +11,8 @@ $transition-duration-enteringScreen: 225ms;
               width $transition-duration-leavingScreen $transition-easing-sharp;
 }
 .appBarShift {
-  width: calc(100% - 240px);
   transition: margin $transition-duration-enteringScreen $transition-easing-easeOut,
               width $transition-duration-enteringScreen $transition-easing-easeOut;
-  margin-right: 240;
 }
 .title {
   flex-grow: 1;
@@ -23,11 +21,17 @@ $transition-duration-enteringScreen: 225ms;
   display: none;
 }
 .drawer {
-  width: 240;
+  width: 240px;
   flex-shrink: 0;
 }
 .drawerPaper {
-  width: 240;
+  width: 240px;
+}
+.toolbar {
+  justify-content: space-between;
+}
+.menuButton {
+  font-size: 2.5rem;
 }
 
 $toolbar-height-mobile: 56px;
@@ -48,7 +52,7 @@ $toolbar-height-desktop: 64px;
   padding: 24px;
   transition: margin $transition-duration-leavingScreen $transition-easing-sharp,
               width $transition-duration-leavingScreen $transition-easing-sharp;
-  margin-right: -240;
+  margin-right: -240px;
 }
 .contentShift {
   transition: margin $transition-duration-enteringScreen $transition-easing-easeOut,

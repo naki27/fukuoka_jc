@@ -22,11 +22,11 @@ import MailIcon from '@mui/icons-material/Mail';
 import Link from '~/components/Link';
 import {
   Description,
+  DescriptionOutlined,
   Map,
   Domain,
   SupervisorAccount,
-  EmojiEvents,
-  Subject,
+  ImportContacts,
 } from "@mui/icons-material";
 import logo from '../../public/logo.png';
 
@@ -48,13 +48,13 @@ export default function ButtonAppBar() {
       <AppBar position="fixed" className={clsx(styles.appBar, {
           [styles.appBarShift]: open,
         })}>
-        <Toolbar>
+        <Toolbar className={styles.toolbar}>
           <Link href="/">
-            <Image src={logo} width="300" height="100" className="logo"/>
+            <Image src={logo} width="300" height="100" className="logo" alt="第32回ジャパンカップビーチボール選手権福岡大会 公式サイト"/>
           </Link>
-          <IconButton edge="end" className={`${styles.menuButton} ${clsx(open && styles.hide)}`} color="inherit"
+          <IconButton edge="end" className={`${clsx(open && styles.hide)}`} color="inherit"
                 aria-label="menu" onClick={handleDrawerOpen}>
-            <MenuIcon />
+            <MenuIcon className={styles.menuButton} />
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -75,10 +75,16 @@ export default function ButtonAppBar() {
         </div>
         <Divider />
         <List>
-            <ListItem button key="description">
+            <ListItem button key="tournamentGuidelines">
               <ListItemIcon><Description /></ListItemIcon>
               <Link href="/tournamentGuidelines">
                 <ListItemText primary="大会要項" className="default-color"/>
+              </Link>
+            </ListItem>
+            <ListItem button key="detailGuidelines">
+              <ListItemIcon><DescriptionOutlined /></ListItemIcon>
+              <Link href="/detailGuidelines">
+                <ListItemText primary="細部要項" className="default-color"/>
               </Link>
             </ListItem>
             <ListItem button key="accessMap">
@@ -87,10 +93,16 @@ export default function ButtonAppBar() {
                 <ListItemText primary="アクセスマップ" className="default-color"/>
               </Link>
             </ListItem>
-            <ListItem button key="domain">
+            <ListItem button key="underConstruction">
               <ListItemIcon><Domain /></ListItemIcon>
               <Link href="/underConstruction">
                 <ListItemText primary="会場図" className="default-color"/>
+              </Link>
+            </ListItem>
+            <ListItem button key="variousGuides">
+              <ListItemIcon><ImportContacts /></ListItemIcon>
+              <Link href="/variousGuides">
+                <ListItemText primary="各種ご案内" className="default-color"/>
               </Link>
             </ListItem>
         </List>

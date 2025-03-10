@@ -17,6 +17,11 @@
 .sponsorLogo {
   flex-basis: 300px;
   min-width: 300px;
+
+  img {
+    max-width: 300px;
+    height: auto;
+  }
 }
 
 @media (max-width: 640px) {

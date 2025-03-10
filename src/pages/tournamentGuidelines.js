@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./styles/MemoriesPhotoGallery.module.scss";
+import styles from "./styles/tournamentGuidelines.module.scss";
 
 import { Container, Breadcrumbs, Typography, Button } from "@mui/material";
 import GetAppIcon from '@mui/icons-material/GetApp';
@@ -11,6 +11,7 @@ import Footer from "~/components/Footer";
 import Link from "~/components/Link";
 
 import 'scroll-behavior-polyfill'
+import { Padding } from '@mui/icons-material';
 
 const tournamentGuidelines = () => {
     const onGuidelineDownload = _ => {
@@ -129,9 +130,9 @@ const tournamentGuidelines = () => {
                             <th>競技区分</th>
                             <td>
                                 <div style={{display: 'flex'}}>
-                                    <div style={{margin: '8px'}}>
-                                        <p style={{marginLeft: '22px'}}>男子</p>
-                                        <ul>
+                                    <div style={{margin: '8px 8px 8px 0'}}>
+                                        <p>男子</p>
+                                        <ul style={{paddingLeft: '22px'}}>
                                             <li>１８歳以上の部</li>
                                             <li>３０歳以上の部</li>
                                             <li>４０歳以上の部</li>
@@ -140,8 +141,8 @@ const tournamentGuidelines = () => {
                                         </ul>
                                     </div>
                                     <div style={{margin: '8px'}}>
-                                        <p style={{marginLeft: '22px'}}>女子</p>
-                                        <ul>
+                                        <p>女子</p>
+                                        <ul style={{paddingLeft: '22px'}}>
                                             <li>１８歳以上の部</li>
                                             <li>３０歳以上の部</li>
                                             <li>４０歳以上の部</li>
@@ -155,7 +156,7 @@ const tournamentGuidelines = () => {
                         <tr>
                             <th>参加資格</th>
                             <td>
-                                <ol>
+                                <ol className={styles.bulletPoint}>
                                     <li>協会並びに加盟団体より推薦を受けたチーム及び協会が特に出場を認めたチームとする。</li>
                                     <li>選手は、令和３年４月１日現在の満年齢にて該当部門に参加できる。</li>
                                     <li>チーム内には選手兼任審判員としてB級以上の審判員がいること。いない場合はB級以上の審判員を帯同すること。</li>
@@ -166,7 +167,7 @@ const tournamentGuidelines = () => {
                         <tr>
                             <th>チーム編成</th>
                             <td>
-                                <ol>
+                                <ol className={styles.bulletPoint}>
                                     <li>監督１名、選手６名以内をもってチーム編成とする。</li>
                                     <li>同一人物が監督及び選手として複数のチームで登録・参加はできない。</li>
                                     <li>チームは、B級以上の審判員とC級以上の審判員を各１名帯同しなければならない。（協会未加盟チームについては、別途対応する）</li>
@@ -176,7 +177,7 @@ const tournamentGuidelines = () => {
                         <tr>
                             <th>競技方法</th>
                             <td>
-                                <ol>
+                                <ol className={styles.bulletPoint}>
                                     <li>競技区分ごとの予選リーグ戦、その勝者による決勝トーナメント戦をおこなう。</li>
                                     <li>競技規則は日本ビーチボール協会認定「ビーチボールのルール」を適用する。</li>
                                 </ol>

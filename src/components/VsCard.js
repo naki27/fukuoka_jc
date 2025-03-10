@@ -13,6 +13,7 @@ import { useMutation } from '@apollo/client';
 import { DateTime } from 'luxon';
 import ConfirmDialog from './ConfirmDialog';
 import { inValidMatchResult } from '~/pages/api/resultMatchApi';
+import { safeJsonParseIgnoreError } from "../libs/util"
 
 const VsCard = ({ resultMatch, showFooter }) => {
     if (!resultMatch) return;
@@ -21,10 +22,14 @@ const VsCard = ({ resultMatch, showFooter }) => {
         border: 1,
     };
 
+    const tournamentColor = resultMatch.RoundGame.battleFormat === "League" ? {} : {
+      background: "linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%)",
+      border: 0
+    };
     const battleFormat = resultMatch.RoundGame.battleFormat === "League" ? "予選" : "トーナメント"
     const firstSet = JSON.parse(resultMatch.firstSet);
     const secondSet = JSON.parse(resultMatch.secondSet);
-    const thirdSet = JSON.parse(resultMatch.thirdSet);
+    const thirdSet = safeJsonParseIgnoreError(resultMatch.thirdSet);
     const summary = JSON.parse(resultMatch.summary);
 
     const team1WinOrLose = parseInt(summary.team1) > parseInt(summary.team2) ? styles.win : "";
@@ -82,7 +87,7 @@ const VsCard = ({ resultMatch, showFooter }) => {
             <CardContent>
                 <div className={styles.cardHeader}>
                     <span className={styles.seal + " " + sealColor}>{resultMatch.Department.age}歳以上</span>
-                    <span className={`${styles.seal} ${resultMatch.RoundGame.battleFormat}`}>{battleFormat}</span>
+                    <span className={styles.seal} style={tournamentColor}>{battleFormat}</span>
                 </div>
                 <div className={styles.vsTitle}>
                     <div className={styles.teamName}>

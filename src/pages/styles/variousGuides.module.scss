@@ -13,10 +13,15 @@ margin: 32px;
 background: #009250;
 color:#fff
 }
+.soldOut {
+  background: #ddd;
+  color: #333;
+}
 .Important {
   text-decoration: double underline;
   font-weight: 900
 }
 .content {
   font-size: 1.1rem;
+  text-align: center;
 }

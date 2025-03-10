@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles/index.module.scss";
-import { Box, Container, Grid } from "@mui/material";
+import { Box, Container, Grid2 } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -87,11 +87,10 @@ export default function Index() {
         <Box my={4} py={5} bgcolor="#fff">
           <H1 title="大会について" />
 
-          <Grid
+          <Grid2
             container
             direction="row"
-            justify="space-around"
-            alignItems="center"
+            className={styles.container}
           >
             <Link href="/tournamentGuidelines" className={styles.inlineGrid}>
               <div className={styles.iconCircle}>
@@ -127,58 +126,54 @@ export default function Index() {
               </div>
               <p>{"各種ご案内"}</p>
             </Link>
-          </Grid>
+          </Grid2>
         </Box>
 
         <Box my={4} py={5}>
           <H1 title="スポンサー" />
 
-          <Grid
+          <Grid2
             container
             direction="row"
-            justify="space-around"
-            alignItems="center"
             className={styles.sponsorContainer}
           >
-            <Grid item xl={4} className={styles.sponsor}>
+            <Grid2 className={styles.sponsor}>
                 <Link href="http://taira-gumi.com/" target="_blank">
-                    <Image src={hiragumi} objectFit="contain"/>
+                    <Image src={hiragumi} alt="株式会社平組"/>
                 </Link>
-            </Grid>
-            <Grid item xl={4} className={styles.sponsor}>
+            </Grid2>
+            <Grid2 className={styles.sponsor}>
                 <Link href="https://tsuku2.jp/sumitall/" target="_blank">
-                    <Image src={sumitoul} objectFit="contain"/>
+                    <Image src={sumitoul} alt="すみとーる"/>
                 </Link>
-            </Grid>
-            <Grid item xl={4} className={styles.sponsor}>
+            </Grid2>
+            <Grid2 className={styles.sponsor}>
                 <Link href="https://foodium.co.jp/" target="_blank">
-                    <Image src={foodium} objectFit="contain"/>
+                    <Image src={foodium} alt="foodium tokunaga"/>
                 </Link>
-            </Grid>
-          </Grid>
-          <Grid
+            </Grid2>
+          </Grid2>
+          <Grid2
             container
             direction="row"
-            justify="space-around"
-            alignItems="center"
             className={styles.sponsorContainer}
           >
-            <Grid item xl={4} className={styles.sponsor}>
+            <Grid2 className={styles.sponsor}>
                 <Link href="https://miki-ya.co.jp/" target="_blank">
-                    <Image src={mikiya} objectFit="contain"/>
+                    <Image src={mikiya} alt="株式会社ミキヤ"/>
                 </Link>
-            </Grid>
-            <Grid item xl={4} className={styles.sponsor}>
+            </Grid2>
+            <Grid2 className={styles.sponsor}>
                 <Link href="https://th-542gg.wixsite.com/mysite-1" target="_blank">
-                    <Image src={cafeCaprice} objectFit="contain"/>
+                    <Image src={cafeCaprice} alt="cafeCaprice"/>
                 </Link>
-            </Grid>
-            <Grid item xl={4} className={styles.sponsor}>
+            </Grid2>
+            <Grid2 className={styles.sponsor}>
                 <Link href="http://www.canacan.jp/" target="_blank">
-                    <Image src={canadianCamp} objectFit="contain"/>
+                    <Image src={canadianCamp} alt="カナディアンキャンプ乗馬クラブ"/>
                 </Link>
-            </Grid>
-          </Grid>
+            </Grid2>
+          </Grid2>
 
           <Typography>
             <Link href="/sponsor" color="secondary">
@@ -190,14 +185,13 @@ export default function Index() {
           </Typography>
         </Box>
 
-        {/* <Box my={4} py={5} bgcolor="#E3E3E3">
+        <Box my={4} py={5}>
           <H1 title="組み合わせ・進行表" />
 
-          <Grid
+          <Grid2
             container
             direction="row"
-            justify="space-around"
-            alignItems="center"
+            className={styles.container}
           >
             <Link href="/underConstruction" className={styles.inlineGrid}>
               <img src="https://dummyimage.com/300x300/000/fff" />
@@ -208,17 +202,16 @@ export default function Index() {
               <img src="https://dummyimage.com/300x300/000/fff" />
               <p>{"男子"}</p>
             </Link>
-          </Grid>
-        </Box> */}
+          </Grid2>
+        </Box>
 
-        {/* <Box my={4} py={5}>
+        <Box my={4} py={5}>
           <H1 title="大会結果" />
 
-          <Grid
+          <Grid2
             container
             direction="row"
-            justify="space-around"
-            alignItems="center"
+            className={styles.container}
           >
             <Link href="/underConstruction" className={styles.inlineGrid}>
               <img src="https://dummyimage.com/300x300/000/fff" />
@@ -229,8 +222,8 @@ export default function Index() {
               <img src="https://dummyimage.com/300x300/000/fff" />
               <p>{"トーナメント"}</p>
             </Link>
-          </Grid>
-        </Box> */}
+          </Grid2>
+        </Box>
       </div>
 
       <Footer />

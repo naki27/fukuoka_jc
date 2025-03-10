@@ -3,6 +3,9 @@ import { red } from '@mui/material/colors';
 
 // Create a theme instance.
 const theme = createTheme({
+  typography: {
+    fontFamily: '"Zen Kurenaido", sans-serif', // フォントをテーマに追加
+  },
   palette: {
     primary: {
       main: '#fff',

@@ -99,14 +99,14 @@ const variousGuides = () => {
 
                     <div id="buttonArea" className={styles.buttonArea}>
                         <Button
-                            className={styles.InfoButton}
+                            className={`${styles.soldOut} ${styles.InfoButton}`}
                             onClick={onBentoHotelInfoDownload}
                             variant="contained"
                             startIcon={<GetAppIcon />}>
                                 宿泊・弁当の案内(pdf)をダウンロード
                         </Button>
                         <Button
-                            className={styles.FormButton}
+                            className={`${styles.soldOut} ${styles.FormButton}`}
                             onClick={onBentoHotelFormDownload}
                             variant="contained"
                             startIcon={<GetAppIcon />}>
@@ -128,14 +128,14 @@ const variousGuides = () => {
 
                     <div id="buttonArea" className={styles.buttonArea}>
                         <Button
-                            className={styles.InfoButton}
+                            className={`${styles.soldOut} ${styles.InfoButton}`}
                             onClick={onGoodsInfoDownload}
                             variant="contained"
                             startIcon={<GetAppIcon />}>
                                 記念グッズ案内(pdf)をダウンロード
                         </Button>
                         <Button
-                            className={styles.FormButton}
+                            className={`${styles.soldOut} ${styles.FormButton}`}
                             onClick={onGoodsFormDownload}
                             variant="contained"
                             startIcon={<GetAppIcon />}>

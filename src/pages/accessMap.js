@@ -58,11 +58,11 @@ const accessMap = () => {
 
                 <div className={styles.googleMap}>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.029864665791!2d130.45322791526152!3d33.526609152693226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354190b716f33819%3A0x84cee7fe7581dfd7!2z5pil5pel5biC57eP5ZCI44K544Od44O844OE44K744Oz44K_44O8!5e0!3m2!1sja!2sjp!4v1626922065727!5m2!1sja!2sjp"
-                    width="100%" height="auto" style={{border:0}} loading="lazy"></iframe>
+                    style={{border:0}} loading="lazy"></iframe>
                 </div>
 
-                <H1 title="駐車場はこちら" />
-                <Image src={parkingMap} objectFit="contain"/>
+                <H1 title="駐車場周辺" />
+                <Image src={parkingMap} className={styles.parkingMap}/>
 
             </Container>
             <Footer />
