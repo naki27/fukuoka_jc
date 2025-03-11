@@ -45,7 +45,7 @@ const tournamentGuidelines = () => {
         <>
             <Header />
             <Gutter />
-            <Container maxWidth={false}>
+            <Container maxWidth="lg">
                 <Breadcrumbs aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">
                         トップ

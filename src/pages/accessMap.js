@@ -17,7 +17,7 @@ const accessMap = () => {
         <>
             <Header />
             <Gutter />
-            <Container className={styles.root} maxWidth={false}>
+            <Container maxWidth="lg">
                 <Breadcrumbs aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">
                         トップ
@@ -63,7 +63,6 @@ const accessMap = () => {
 
                 <H1 title="駐車場周辺" />
                 <Image src={parkingMap} className={styles.parkingMap}/>
-
             </Container>
             <Footer />
         </>

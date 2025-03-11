@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 
 const Gutter = () => {
     return (
-        <Box mt={10.25} />
+        <Box mt={15.25} />
     );
 };
 

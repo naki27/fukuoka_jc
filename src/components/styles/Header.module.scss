@@ -59,8 +59,15 @@ $toolbar-height-desktop: 64px;
               width $transition-duration-enteringScreen $transition-easing-easeOut;
   margin-right: 0;
 }
+
 .logo {
-  height: 50px;
-  width: auto;
-  margin-right: 24px;
+  height: auto;
+  width: 300px;
+}
+
+@media (max-width: 540px) {
+  .logo {
+    max-width: 70%;
+    height: auto;
+  }
 }

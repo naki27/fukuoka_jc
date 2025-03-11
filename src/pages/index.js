@@ -32,34 +32,27 @@ import cafeCaprice from '../../public/sponsor/cafe-caprice.webp';
 import mikiya from '../../public/sponsor/mikiya.svg';
 import foodium from '../../public/sponsor/foodium.png';
 import sumitoul from '../../public/sponsor/sumitoul.jpg';
+import matchTableMan from '../../public/match-table-man.jpg';
+import matchTableWoman from '../../public/match-table-woman.jpg';
+import battleResultLeague from '../../public/battle-result-league.jpg';
+import battleResultTournament from '../../public/battle-result-tournament.jpg';
 
 export default function Index() {
 
   return (
-    <Container className={styles.root} maxWidth={false}>
+    <Container className={styles.root} maxWidth={true}>
       <Header />
 
       <div className={styles.keyVisualContainer}>
-        <Picture className={styles.keyVisual}
-            sizes="(min-width: 36em) 33.3vw, 100%"
-            sources = {[
-                {
-                    srcSet: "/keyVisual400.png",
-                    media: "(max-width: 400px)",
-                },
-                {   // 768px
-                    srcSet: "/keyVisual768.png",
-                    media: "(max-width: 768px)",
-                },
-                {   // 1280px
-                    srcSet: "/keyVisual1280.png",
-                    media: "(max-width: 1280px)",
-                },
-                {   // 1920px
-                    srcSet: "/keyVisual1920.png",
-                },
-            ]}
-        />
+        <p className={`${styles.keyVisualTitle} ${styles.keyVisualMessage1}`}>第32回</p>
+        <p className={`${styles.keyVisualTitle} ${styles.keyVisualMessage2}`}>ジャパンカップ</p>
+        <p className={`${styles.keyVisualTitle} ${styles.keyVisualMessage3}`}>ビーチボール選手権</p>
+        <p className={`${styles.keyVisualTitle} ${styles.keyVisualSub}`}>福岡大会</p>
+        <p className={`${styles.keyVisualTitle} ${styles.keyVisualDate}`}>2/21(土)、2/22(日)</p>
+        <div className={styles.keyVisualFilter}>
+          <video src="/keyVisualMovie.mp4" className={styles.keyVisualMovie} autoPlay loop muted playsInline>
+          </video>
+        </div>
       </div>
 
       <div className={styles.mainContent}>
@@ -130,6 +123,46 @@ export default function Index() {
         </Box>
 
         <Box my={4} py={5}>
+          <H1 title="組み合わせ・進行表" />
+
+          <Grid2
+            container
+            direction="row"
+            className={styles.container}
+          >
+            <Link href="/underConstruction" className={styles.inlineGrid}>
+              <Image src={matchTableWoman} className={styles.buttonPhoto} alt="組み合わせ女子"/>
+              <p>{"女子"}</p>
+            </Link>
+
+            <Link href="/underConstruction" className={styles.inlineGrid}>
+            <Image src={matchTableMan} className={styles.buttonPhoto} alt="組み合わせ男子"/>
+              <p>{"男子"}</p>
+            </Link>
+          </Grid2>
+        </Box>
+
+        <Box my={4} py={5}>
+          <H1 title="大会結果" />
+
+          <Grid2
+            container
+            direction="row"
+            className={styles.container}
+          >
+            <Link href="/underConstruction" className={styles.inlineGrid}>
+              <Image src={battleResultLeague} className={styles.buttonPhoto} alt="予選"/>
+              <p>{"予選"}</p>
+            </Link>
+
+            <Link href="/underConstruction" className={styles.inlineGrid}>
+              <Image src={battleResultTournament} className={styles.buttonPhoto} alt="トーナメント"/>
+              <p>{"トーナメント"}</p>
+            </Link>
+          </Grid2>
+        </Box>
+
+        <Box my={4} py={5}>
           <H1 title="スポンサー" />
 
           <Grid2
@@ -183,46 +216,6 @@ export default function Index() {
                 </span>
             </Link>
           </Typography>
-        </Box>
-
-        <Box my={4} py={5}>
-          <H1 title="組み合わせ・進行表" />
-
-          <Grid2
-            container
-            direction="row"
-            className={styles.container}
-          >
-            <Link href="/underConstruction" className={styles.inlineGrid}>
-              <img src="https://dummyimage.com/300x300/000/fff" />
-              <p>{"女子"}</p>
-            </Link>
-
-            <Link href="/underConstruction" className={styles.inlineGrid}>
-              <img src="https://dummyimage.com/300x300/000/fff" />
-              <p>{"男子"}</p>
-            </Link>
-          </Grid2>
-        </Box>
-
-        <Box my={4} py={5}>
-          <H1 title="大会結果" />
-
-          <Grid2
-            container
-            direction="row"
-            className={styles.container}
-          >
-            <Link href="/underConstruction" className={styles.inlineGrid}>
-              <img src="https://dummyimage.com/300x300/000/fff" />
-              <p>{"予選"}</p>
-            </Link>
-
-            <Link href="/underConstruction" className={styles.inlineGrid}>
-              <img src="https://dummyimage.com/300x300/000/fff" />
-              <p>{"トーナメント"}</p>
-            </Link>
-          </Grid2>
         </Box>
       </div>
 

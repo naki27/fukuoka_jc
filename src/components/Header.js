@@ -27,6 +27,8 @@ import {
   Domain,
   SupervisorAccount,
   ImportContacts,
+  Subject,
+  EmojiEvents,
 } from "@mui/icons-material";
 import logo from '../../public/logo.png';
 
@@ -50,7 +52,7 @@ export default function ButtonAppBar() {
         })}>
         <Toolbar className={styles.toolbar}>
           <Link href="/">
-            <Image src={logo} width="300" height="100" className="logo" alt="第32回ジャパンカップビーチボール選手権福岡大会 公式サイト"/>
+            <Image src={logo} className={styles.logo} alt="第32回ジャパンカップビーチボール選手権福岡大会 公式サイト"/>
           </Link>
           <IconButton edge="end" className={`${clsx(open && styles.hide)}`} color="inherit"
                 aria-label="menu" onClick={handleDrawerOpen}>
@@ -75,31 +77,31 @@ export default function ButtonAppBar() {
         </div>
         <Divider />
         <List>
-            <ListItem button key="tournamentGuidelines">
+            <ListItem key="tournamentGuidelines">
               <ListItemIcon><Description /></ListItemIcon>
               <Link href="/tournamentGuidelines">
                 <ListItemText primary="大会要項" className="default-color"/>
               </Link>
             </ListItem>
-            <ListItem button key="detailGuidelines">
+            <ListItem key="detailGuidelines">
               <ListItemIcon><DescriptionOutlined /></ListItemIcon>
               <Link href="/detailGuidelines">
                 <ListItemText primary="細部要項" className="default-color"/>
               </Link>
             </ListItem>
-            <ListItem button key="accessMap">
+            <ListItem key="accessMap">
               <ListItemIcon><Map /></ListItemIcon>
               <Link href="/accessMap">
                 <ListItemText primary="アクセスマップ" className="default-color"/>
               </Link>
             </ListItem>
-            <ListItem button key="underConstruction">
+            <ListItem key="underConstruction">
               <ListItemIcon><Domain /></ListItemIcon>
               <Link href="/underConstruction">
                 <ListItemText primary="会場図" className="default-color"/>
               </Link>
             </ListItem>
-            <ListItem button key="variousGuides">
+            <ListItem key="variousGuides">
               <ListItemIcon><ImportContacts /></ListItemIcon>
               <Link href="/variousGuides">
                 <ListItemText primary="各種ご案内" className="default-color"/>
@@ -108,22 +110,13 @@ export default function ButtonAppBar() {
         </List>
         <Divider />
         <List>
-          <ListItem button key="sponsor">
-            <ListItemIcon><SupervisorAccount /></ListItemIcon>
-            <Link href="/sponsor">
-              <ListItemText primary="スポンサー" className="default-color"/>
-            </Link>
-          </ListItem>
-        </List>
-        {/* <Divider />
-        <List>
-          <ListItem button key="underConstruction1">
+          <ListItem key="underConstruction1">
             <ListItemIcon><Subject /></ListItemIcon>
             <Link href="/underConstruction">
               <ListItemText primary="組み合わせ・進行表（女子）" className="default-color"/>
             </Link>
           </ListItem>
-          <ListItem button key="underConstruction2">
+          <ListItem key="underConstruction2">
             <ListItemIcon><Subject /></ListItemIcon>
             <Link href="/underConstruction">
               <ListItemText primary="組み合わせ・進行表（男子）" className="default-color"/>
@@ -132,19 +125,28 @@ export default function ButtonAppBar() {
         </List>
         <Divider />
         <List>
-          <ListItem button key="underConstruction3">
+          <ListItem key="underConstruction3">
             <ListItemIcon><EmojiEvents /></ListItemIcon>
             <Link href="/underConstruction">
               <ListItemText primary="大会結果（女子）" className="default-color"/>
             </Link>
           </ListItem>
-          <ListItem button key="underConstruction4">
+          <ListItem key="underConstruction4">
             <ListItemIcon><EmojiEvents /></ListItemIcon>
             <Link href="/underConstruction">
               <ListItemText primary="大会結果（男子）" className="default-color"/>
             </Link>
           </ListItem>
-        </List> */}
+        </List>
+        <Divider />
+        <List>
+          <ListItem key="sponsor">
+            <ListItemIcon><SupervisorAccount /></ListItemIcon>
+            <Link href="/sponsor">
+              <ListItemText primary="スポンサー" className="default-color"/>
+            </Link>
+          </ListItem>
+        </List>
       </Drawer>
     </div>
   );

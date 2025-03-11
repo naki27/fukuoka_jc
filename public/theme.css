@@ -103,21 +103,6 @@
   }
 }
 
-@media (max-width: 768px) {
-  .logo {
-    min-width: 60% !important;
-    min-height: 60% !important;
-    margin-left: 0 !important;
-  }
-}
-
-@media (max-width: 540px) {
-  .logo {
-    min-width: 50% !important;
-    min-height: 50% !important;
-  }
-}
-
 .ml16 {
   margin-left: 16px;
 }

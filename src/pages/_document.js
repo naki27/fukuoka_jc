@@ -47,12 +47,13 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"></link>
           <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"/>
           <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"/>
           <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"/>
           <link rel="manifest" href="/favicons/site.webmanifest"/>
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
-          <meta name="keywords" content="福岡,ビーチボール,ジャパンカップ"></meta>
+          <meta name="keywords" content="福岡,福岡県,ビーチボール,ジャパンカップ"></meta>
           <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
           <meta name="msapplication-TileColor" content="#da532c"/>
           <meta name="theme-color" content="#ffffff"/>

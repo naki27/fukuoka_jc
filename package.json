@@ -4,7 +4,7 @@
   "description": "福岡 ビーチボール ジャパンカップ 2025 公式サイト",
   "private": true,
   "scripts": {
-    "dev": "NODE_OPTIONS='--inspect' next src",
+    "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start"
   },
@@ -21,7 +21,6 @@
     "apollo-boost": "^0.4.9",
     "apollo-link-context": "^1.0.20",
     "classnames": "^2.5.1",
-    "framer-motion": "^12.4.10",
     "graphql": "^15.5.1",
     "luxon": "^1.27.0",
     "next": "^15.2.1",

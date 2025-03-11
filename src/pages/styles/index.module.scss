@@ -87,14 +87,6 @@
   color: #C7243A;
   font-size: x-large;
 }
-.keyVisualContainer {
-  position: relative;
-  text-align: center
-}
-.keyVisual {
-  top: 80px!important;
-  width: 100vw;
-}
 .mainContent {
   max-width: 1280px;
   margin: 0 auto;
@@ -119,22 +111,74 @@
   justify-content: space-around;
   align-items: center;
 }
+.buttonPhoto {
+  width: 300px;
+  height: auto;
+  border-radius: 7px;
+}
+.keyVisualContainer {
+  position: relative;
+  text-align: center;
+  margin-top: 105px;
+}
+.keyVisualTitle {
+  color: #333;
+  font-family: "Noto Sans JP";
+  font-size: 400%;
+  font-weight: 900;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+.keyVisualMovie {
+  height: calc(100vh - 108px);
+  width: 100vw;
+  object-fit: cover;
+}
+.keyVisualFilter {
+  background-color: #fff;
+  opacity: 0.5;
+  z-index: 2;
+  overflow: hidden;
+}
+.keyVisualMessage1 {
+  top: 100px;
+}
+.keyVisualMessage2 {
+  top: 183px;
+}
+.keyVisualMessage3 {
+  top: 266px;
+}
+.keyVisualSub {
+  top: 349px;
+}
+.keyVisualDate {
+  top: 432px;
+}
+
 @media (max-width: 1280px) {
   .keyVisualContainer {
-    margin-top: 38px
+    margin-top: 108px
   }
 }
 @media (max-width: 768px) {
-  .keyVisualComment {
-    font-size: 1rem;
+  .keyVisualTitle {
+    font-size: 350%;
   }
   .keyVisual {
     top: 70px!important
   }
 }
 @media (max-width: 540px) {
-  .keyVisualComment {
-    font-size: 0.8rem;
+  .keyVisualContainer {
+    margin-top: 74px
+  }
+  .keyVisualMovie {
+    height: calc(100vh - 74px);
+  }
+  .keyVisualTitle {
+    font-size: 300%;
   }
   .keyVisual {
     top: 58px!important
@@ -144,6 +188,26 @@
   }
   .sponsor {
     margin-bottom: 16px;
+  }
+}
+@media (max-width: 450px) {
+  .keyVisualTitle {
+    font-size: 200%;
+  }
+  .keyVisualMessage1 {
+    top: 65px;
+  }
+  .keyVisualMessage2 {
+    top: 115px;
+  }
+  .keyVisualMessage3 {
+    top: 165px;
+  }
+  .keyVisualSub {
+    top: 215px;
+  }
+  .keyVisualDate {
+    top: 265px;
   }
 }
 @media (max-width: 575px) {
