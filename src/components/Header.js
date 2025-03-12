@@ -29,6 +29,7 @@ import {
   ImportContacts,
   Subject,
   EmojiEvents,
+  JoinInner,
 } from "@mui/icons-material";
 import logo from '../../public/logo.png';
 
@@ -110,31 +111,46 @@ export default function ButtonAppBar() {
         </List>
         <Divider />
         <List>
-          <ListItem key="underConstruction1">
-            <ListItemIcon><Subject /></ListItemIcon>
-            <Link href="/underConstruction">
-              <ListItemText primary="組み合わせ・進行表（女子）" className="default-color"/>
+          <ListItem key="matchTableIndex1">
+            <ListItemIcon><JoinInner /></ListItemIcon>
+            <Link href="/matchTableIndex?sex=female">
+              <ListItemText primary="組み合わせ（女子）" className="default-color"/>
             </Link>
           </ListItem>
-          <ListItem key="underConstruction2">
-            <ListItemIcon><Subject /></ListItemIcon>
-            <Link href="/underConstruction">
-              <ListItemText primary="組み合わせ・進行表（男子）" className="default-color"/>
+          <ListItem key="matchTableIndex2">
+            <ListItemIcon><JoinInner /></ListItemIcon>
+            <Link href="/matchTableIndex?sex=male">
+              <ListItemText primary="組み合わせ（男子）" className="default-color"/>
             </Link>
           </ListItem>
         </List>
         <Divider />
         <List>
-          <ListItem key="underConstruction3">
-            <ListItemIcon><EmojiEvents /></ListItemIcon>
-            <Link href="/underConstruction">
-              <ListItemText primary="大会結果（女子）" className="default-color"/>
+          <ListItem key="progressChart1">
+            <ListItemIcon><Subject /></ListItemIcon>
+            <Link href="/progressChart?bf=league">
+              <ListItemText primary="進行表（予選）" className="default-color"/>
             </Link>
           </ListItem>
-          <ListItem key="underConstruction4">
+          <ListItem key="progressChart2">
+            <ListItemIcon><Subject /></ListItemIcon>
+            <Link href="/progressChart?bf=tournament">
+              <ListItemText primary="進行表（決勝）" className="default-color"/>
+            </Link>
+          </ListItem>
+        </List>
+        <Divider />
+        <List>
+          <ListItem key="resultMatchIndex1">
             <ListItemIcon><EmojiEvents /></ListItemIcon>
-            <Link href="/underConstruction">
-              <ListItemText primary="大会結果（男子）" className="default-color"/>
+            <Link href="/resultMatchIndex?bf=league">
+              <ListItemText primary="大会結果（予選）" className="default-color"/>
+            </Link>
+          </ListItem>
+          <ListItem key="resultMatchIndex2">
+            <ListItemIcon><EmojiEvents /></ListItemIcon>
+            <Link href="/resultMatchIndex?bf=tournament">
+              <ListItemText primary="大会結果（決勝）" className="default-color"/>
             </Link>
           </ListItem>
         </List>

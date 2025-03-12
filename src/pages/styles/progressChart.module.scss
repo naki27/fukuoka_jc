@@ -1,0 +1,26 @@
+.InfoButton {
+  background: #C7243A;
+  color:#fff
+}
+
+.PageButton {
+  color: #333;
+  font-weight: 900;
+}
+
+.ButtonArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.PageButtonArea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.PageText {
+  font-family: "Noto Sans JP";
+  margin-right: 32px;
+}

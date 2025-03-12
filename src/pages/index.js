@@ -34,8 +34,11 @@ import foodium from '../../public/sponsor/foodium.png';
 import sumitoul from '../../public/sponsor/sumitoul.jpg';
 import matchTableMan from '../../public/match-table-man.jpg';
 import matchTableWoman from '../../public/match-table-woman.jpg';
+import progressChartLeague from '../../public/progress-chart-league.jpg';
+import progressChartTournament from '../../public/progress-chart-tournament.jpg';
 import battleResultLeague from '../../public/battle-result-league.jpg';
 import battleResultTournament from '../../public/battle-result-tournament.jpg';
+import photoGallery from '../../public/photo-gallery.jpg';
 
 export default function Index() {
 
@@ -123,21 +126,41 @@ export default function Index() {
         </Box>
 
         <Box my={4} py={5}>
-          <H1 title="組み合わせ・進行表" />
+          <H1 title="組み合わせ" />
 
           <Grid2
             container
             direction="row"
             className={styles.container}
           >
-            <Link href="/underConstruction" className={styles.inlineGrid}>
+            <Link href="/matchTableIndex?sex=female" className={styles.inlineGrid}>
               <Image src={matchTableWoman} className={styles.buttonPhoto} alt="組み合わせ女子"/>
               <p>{"女子"}</p>
             </Link>
 
-            <Link href="/underConstruction" className={styles.inlineGrid}>
+            <Link href="/matchTableIndex?sex=male" className={styles.inlineGrid}>
             <Image src={matchTableMan} className={styles.buttonPhoto} alt="組み合わせ男子"/>
               <p>{"男子"}</p>
+            </Link>
+          </Grid2>
+        </Box>
+
+        <Box my={4} py={5}>
+          <H1 title="進行表" />
+
+          <Grid2
+            container
+            direction="row"
+            className={styles.container}
+          >
+            <Link href="/progressChart?bf=league" className={styles.inlineGrid}>
+              <Image src={progressChartLeague} className={styles.buttonPhoto} alt="進行表予選"/>
+              <p>{"予選"}</p>
+            </Link>
+
+            <Link href="/progressChart?bf=tournament" className={styles.inlineGrid}>
+            <Image src={progressChartTournament} className={styles.buttonPhoto} alt="進行表決勝"/>
+              <p>{"決勝"}</p>
             </Link>
           </Grid2>
         </Box>
@@ -150,14 +173,19 @@ export default function Index() {
             direction="row"
             className={styles.container}
           >
-            <Link href="/underConstruction" className={styles.inlineGrid}>
+            <Link href="/resultMatchIndex?bf=league" className={styles.inlineGrid}>
               <Image src={battleResultLeague} className={styles.buttonPhoto} alt="予選"/>
               <p>{"予選"}</p>
             </Link>
 
-            <Link href="/underConstruction" className={styles.inlineGrid}>
+            <Link href="/resultMatchIndex?bf=tournament" className={styles.inlineGrid}>
               <Image src={battleResultTournament} className={styles.buttonPhoto} alt="トーナメント"/>
               <p>{"トーナメント"}</p>
+            </Link>
+
+            <Link href="/memoriesPhotoGallery" className={styles.inlineGrid}>
+              <Image src={photoGallery} className={styles.buttonPhoto} alt="写真館"/>
+              <p>{"写真館"}</p>
             </Link>
           </Grid2>
         </Box>

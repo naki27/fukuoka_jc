@@ -2,6 +2,7 @@ const path = require("path");
 
 module.exports = {
   webpack: config => {
+    config.resolve.alias.canvas = false;
     config.resolve.alias = {
       ...config.resolve.alias,
       "~": path.resolve(__dirname, "./src"),
