@@ -25,6 +25,7 @@ import {
   ImportContacts
 } from "@mui/icons-material";
 
+import keyVisualTitle from '../../public/keyVisualTitle.png';
 import takumi from '../../public/sponsor/takumi.png';
 import hiragumi from '../../public/sponsor/hiragumi.gif';
 import canadianCamp from '../../public/sponsor/canadian-camp.png';
@@ -47,11 +48,14 @@ export default function Index() {
       <Header />
 
       <div className={styles.keyVisualContainer}>
-        <p className={`${styles.keyVisualTitle} ${styles.keyVisualMessage1}`}>第32回</p>
+        {/* <p className={`${styles.keyVisualTitle} ${styles.keyVisualMessage1}`}>第32回</p>
         <p className={`${styles.keyVisualTitle} ${styles.keyVisualMessage2}`}>ジャパンカップ</p>
         <p className={`${styles.keyVisualTitle} ${styles.keyVisualMessage3}`}>ビーチボール選手権</p>
         <p className={`${styles.keyVisualTitle} ${styles.keyVisualSub}`}>福岡大会</p>
-        <p className={`${styles.keyVisualTitle} ${styles.keyVisualDate}`}>2/21(土)、2/22(日)</p>
+        <p className={`${styles.keyVisualTitle} ${styles.keyVisualDate}`}>2/21(土)、2/22(日)</p> */}
+        <div className={styles.keyVisualTitle}>
+            <Image src={keyVisualTitle} className={styles.keyVisualTitleImage} alt="第32回ジャパンカップビーチボール選手権"福岡大会/>
+        </div>
         <div className={styles.keyVisualFilter}>
           <video src="/keyVisualMovie.mp4" className={styles.keyVisualMovie} autoPlay loop muted playsInline>
           </video>

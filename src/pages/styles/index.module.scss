@@ -122,12 +122,14 @@
   margin-top: 105px;
 }
 .keyVisualTitle {
-  color: #333;
-  font-family: "Noto Sans JP";
-  font-size: 400%;
-  font-weight: 900;
   position: absolute;
+  margin-top: calc(8% + 108px);
+  width: 100%;
   z-index: 1;
+}
+.keyVisualTitleImage {
+  max-width: 600px;
+  height: auto;
   width: 100%;
 }
 .keyVisualMovie {
@@ -136,30 +138,13 @@
   object-fit: cover;
 }
 .keyVisualFilter {
-  background-color: #fff;
-  opacity: 0.5;
-  z-index: 2;
+  opacity: 0.4;
   overflow: hidden;
-}
-.keyVisualMessage1 {
-  top: 100px;
-}
-.keyVisualMessage2 {
-  top: 183px;
-}
-.keyVisualMessage3 {
-  top: 266px;
-}
-.keyVisualSub {
-  top: 349px;
-}
-.keyVisualDate {
-  top: 432px;
 }
 
 @media (max-width: 1280px) {
   .keyVisualContainer {
-    margin-top: 108px
+    margin-top: 103px
   }
 }
 @media (max-width: 768px) {
@@ -177,37 +162,11 @@
   .keyVisualMovie {
     height: calc(100vh - 74px);
   }
-  .keyVisualTitle {
-    font-size: 300%;
-  }
-  .keyVisual {
-    top: 58px!important
-  }
   .sponsorContainer {
     flex-direction: column;
   }
   .sponsor {
     margin-bottom: 16px;
-  }
-}
-@media (max-width: 450px) {
-  .keyVisualTitle {
-    font-size: 200%;
-  }
-  .keyVisualMessage1 {
-    top: 65px;
-  }
-  .keyVisualMessage2 {
-    top: 115px;
-  }
-  .keyVisualMessage3 {
-    top: 165px;
-  }
-  .keyVisualSub {
-    top: 215px;
-  }
-  .keyVisualDate {
-    top: 265px;
   }
 }
 @media (max-width: 575px) {
