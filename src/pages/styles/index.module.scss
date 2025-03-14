@@ -120,6 +120,11 @@
   position: relative;
   text-align: center;
   margin-top: 105px;
+
+  &.blackLayer {
+    background: black;
+    height: 100vh;
+  }
 }
 .keyVisualTitle {
   position: absolute;
@@ -131,6 +136,10 @@
   max-width: 600px;
   height: auto;
   width: 100%;
+
+  &.invert {
+    filter: invert(100%);
+  }
 }
 .keyVisualMovie {
   height: calc(100vh - 108px);
