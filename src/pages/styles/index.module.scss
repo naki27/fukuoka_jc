@@ -125,7 +125,7 @@
   position: absolute;
   margin-top: calc(8% + 108px);
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 .keyVisualTitleImage {
   max-width: 600px;
@@ -138,8 +138,20 @@
   object-fit: cover;
 }
 .keyVisualFilter {
-  opacity: 0.4;
   overflow: hidden;
+
+  &:before {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F9DFD5;
+    content: "";
+    opacity: .4
+  }
 }
 
 @media (max-width: 1280px) {
