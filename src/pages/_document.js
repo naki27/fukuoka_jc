@@ -53,7 +53,7 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"/>
           <link rel="manifest" href="/favicons/site.webmanifest"/>
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
-          <meta name="keywords" content="福岡,福岡県,ビーチボール,ジャパンカップ"></meta>
+          <meta name="keywords" content="福岡,福岡県,ビーチ,ビーチボール,ジャパンカップ,2025"></meta>
           <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
           <meta name="msapplication-TileColor" content="#da532c"/>
           <meta name="theme-color" content="#ffffff"/>

@@ -1,9 +1,17 @@
 .h1Style {
   margin: 3rem 0;
   text-align: center;
-  color: #fff;
+  color: #333;
   font-weight: 900;
-  font-size: 2.125rem;
+  font-size: 3.125rem;
   font-family: "Noto Sans JP";
-  background: #333;
+}
+
+.inlineLeft {
+  text-align: left;
+  margin: 0;
+}
+.inlineRight {
+  text-align: right;
+  margin: 0;
 }

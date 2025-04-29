@@ -17,6 +17,12 @@
   max-width: 500px;
   margin: 10px 0 0;
 }
+.description {
+  color: #A6A6A6;
+}
+.description2 {
+  max-width: 400px;
+}
 .main {
   background: #FFFFFF;
   position: relative;
@@ -60,6 +66,7 @@
   display: inline-grid;
   text-align: center;
   color: #333;
+  justify-items: center;
 }
 .quickResult {
   border-color: #C6C6C6;
@@ -76,6 +83,7 @@
 }
 .sexPanelContainer {
   display: flex;
+  font-size: 1rem;
 }
 .maleTitle {
   margin: auto;
@@ -88,13 +96,21 @@
   font-size: x-large;
 }
 .mainContent {
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+.inline_container {
   max-width: 1280px;
   margin: 0 auto;
 }
 .sponsorContainer {
-  margin-bottom: 32px;
-  justify-content: space-around;
+  margin-bottom: 82px;
+  justify-content: space-between;
   align-items: center;
+}
+.sponsor_remarks {
+  display: flex;
+  justify-content: space-between;
 }
 .sponsor {
   max-width: 300px;
@@ -109,12 +125,36 @@
 }
 .container {
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
+}
+.container_column {
+  flex-direction: column;
+  align-items: flex-start;
 }
 .buttonPhoto {
-  width: 300px;
+  width: 400px;
   height: auto;
   border-radius: 7px;
+}
+.linkButton {
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: 2.2rem;
+    height: auto;
+  }
+}
+.inline_container_2 {
+  width: 640px;
+  height: auto;
+  border-radius: 12px;
+}
+.inline_container_left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 .keyVisualContainer {
   position: relative;
@@ -161,6 +201,24 @@
     content: "";
     opacity: .4
   }
+}
+
+.about_layer {
+  background-image: url("https://cdn.mainichi.jp/vol1/2017/03/10/20170310k0000e050157000p/9.jpg");
+  background-blend-mode: lighten;
+  background-color: rgba(255, 255, 255, 0.9);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.battle_result_layer {
+  background-image: url("https://the-ans.jp/wp-content/uploads/2024/07/01121609/20240701_men_japan_volleyball3_vnl.jpg");
+  background-blend-mode: lighten;
+  background-color: rgba(255, 255, 255, 0.9);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 1280px) {

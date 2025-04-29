@@ -46,8 +46,14 @@ function Link(props) {
     return <NextComposed className={className} ref={innerRef} href={url} target={target_let} rel={rel} {...other} />;
   }
 
+
+  const sx = {
+    color: '#333',
+    textDecoration: "none",
+  };
+
   return (
-    <MuiLink component={NextComposed} className={className} ref={innerRef} href={url} target={target_let} rel={rel} {...other} />
+    <MuiLink sx={sx} component={NextComposed} className={className} ref={innerRef} href={url} target={target_let} rel={rel} {...other} />
   );
 }
 
