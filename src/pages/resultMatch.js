@@ -39,7 +39,7 @@ const resultMatch = () => {
     const battleFormatName = params.battleFormat == "league" ? "予選" : "決勝";
 
     // cors対策のため、vercel blobを利用（https://vercel.com/fukuokajcs-projects/~/stores/blob/store_IjTBgl77PFZ64Mxz/browser）
-    const pdfFilePath = `https://ijtbgl77pfz64mxz.public.blob.vercel-storage.com/result-match-${params.sex}-${params.age}-${params.battleFormat}.pdf`;
+    const pdfFilePath = `https://ijtbgl77pfz64mxz.public.blob.vercel-storage.com/result-match-${params.sex}-${params.age}-${params.battleFormat}.pdf?timestamp=${new Date().getTime()}`;
     pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
     function onDocumentLoadSuccess({ numPages }) {
