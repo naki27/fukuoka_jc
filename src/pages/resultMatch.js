@@ -121,7 +121,7 @@ const resultMatch = () => {
                             renderTextLayer={false}
                             renderAnnotationLayer={false}/>
                     </Document>
-                </Box>s
+                </Box>
             </Container>
             <Footer />
         </>
