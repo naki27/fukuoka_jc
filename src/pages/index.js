@@ -63,6 +63,8 @@ export default function Index() {
     }, 3000); // さらに1秒後にフェードアウト
   }, []);
 
+  // TODO pdfのキャッシュクリアとページングの相互作用をどうするか？60〜120秒縛りを入れて、画像のタイムスタンプの秒以下を切り捨てる。
+
   return (
     <Container className={styles.root} maxWidth={true}>
       <Header />
