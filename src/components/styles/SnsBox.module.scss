@@ -5,10 +5,19 @@
 }
 
 .iconBox {
-  margin-left: 35px;
+  margin-left: 32px;
   color: #333;
 
   svg {
     font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .iconBox {
+    margin-left: 16px;
+    svg {
+      font-size: 2.5em;
+    }
   }
 }

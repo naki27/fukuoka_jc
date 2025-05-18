@@ -15,3 +15,9 @@
   text-align: right;
   margin: 0;
 }
+
+@media (max-width: 450px) {
+  .h1Style {
+    font-size: 2em;
+  }
+}

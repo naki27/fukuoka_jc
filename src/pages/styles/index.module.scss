@@ -146,7 +146,7 @@
   }
 }
 .inline_container_2 {
-  width: 640px;
+  width: 50%;
   height: auto;
   border-radius: 12px;
 }
@@ -203,22 +203,8 @@
   }
 }
 
-.about_layer {
-  background-image: url("https://cdn.mainichi.jp/vol1/2017/03/10/20170310k0000e050157000p/9.jpg");
-  background-blend-mode: lighten;
-  background-color: rgba(255, 255, 255, 0.9);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.battle_result_layer {
-  background-image: url("https://the-ans.jp/wp-content/uploads/2024/07/01121609/20240701_men_japan_volleyball3_vnl.jpg");
-  background-blend-mode: lighten;
-  background-color: rgba(255, 255, 255, 0.9);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.even_layer {
+  background: #eee;
 }
 
 @media (max-width: 1280px) {
@@ -246,6 +232,36 @@
   }
   .sponsor {
     margin-bottom: 16px;
+  }
+  .mainContent {
+    margin: 0 auto;
+    font-size: 1em;
+  }
+  .inline_container_2 {
+    width: 100%;
+  }
+  .inline_container_3 {
+    height: 225px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    border-radius: 12px;
+  }
+  .inline_container_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 8px;
+  }
+  .buttonPhoto {
+    margin-top: 16px;
+  }
+  .sponsor_remarks {
+    flex-direction: column;
+    margin: 0 8px;
+  }
+  .sponsorContainer {
+    margin: 0;
   }
 }
 @media (max-width: 575px) {
