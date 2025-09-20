@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from "react";
 
 import { Container, Breadcrumbs, Typography, Box } from "@mui/material";
 import styles from "./styles/sponsor.module.scss";
@@ -10,6 +10,7 @@ import Gutter from "~/components/Gutter";
 import Footer from "~/components/Footer";
 import Link from "~/components/Link";
 import Sponsor from "~/components/Sponsor";
+import { MobileContext } from '~/contexts/MobileContext';
 
 import Image from 'next/image';
 
@@ -35,6 +36,7 @@ import salonUchida from '../../public/sponsor/足圧サロンうちだ.png';
 import ooga from '../../public/sponsor/大賀薬局.png';
 
 const sponsor = () => {
+    const isMobile = useContext(MobileContext);
     return (
         <>
             <Header />

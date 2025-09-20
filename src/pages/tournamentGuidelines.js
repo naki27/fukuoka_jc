@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from "react";
 import styles from "./styles/tournamentGuidelines.module.scss";
 
 import { Container, Breadcrumbs, Typography, Button } from "@mui/material";
@@ -9,11 +9,14 @@ import Header from "~/components/Header";
 import Gutter from "~/components/Gutter";
 import Footer from "~/components/Footer";
 import Link from "~/components/Link";
+import { MobileContext } from '~/contexts/MobileContext';
 
 import 'scroll-behavior-polyfill'
 import { Padding } from '@mui/icons-material';
 
 const tournamentGuidelines = () => {
+    const isMobile = useContext(MobileContext);
+
     const onGuidelineDownload = _ => {
         const link = document.createElement("a");
         // https://drive.google.com/file/d/1FV8yx_1oaS6oxvH7ZS51yWEsnMOZjI7x/view?usp=drive_link

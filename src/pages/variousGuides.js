@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from "react";
 import styles from "./styles/variousGuides.module.scss";
 
 import { Container, Breadcrumbs, Typography, Button, Box } from "@mui/material";
@@ -12,8 +12,10 @@ import Footer from "~/components/Footer";
 import Link from "~/components/Link";
 import Image from 'next/image';
 import SoldOut from '../../public/soldout.jpeg';
+import { MobileContext } from '~/contexts/MobileContext';
 
 const variousGuides = () => {
+    const isMobile = useContext(MobileContext);
 
     const onBentoHotelInfoDownload = _ => {
       const link = document.createElement("a");

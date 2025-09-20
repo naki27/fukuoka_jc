@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useCallback} from "react";
+import React, {useEffect, useState, useContext} from "react";
 import { Container, Breadcrumbs, Typography, Button, Box } from "@mui/material";
 import GetAppIcon from '@mui/icons-material/GetApp';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -12,11 +12,13 @@ import Footer from "~/components/Footer";
 import Link from "~/components/Link";
 import Image from 'next/image';
 import { Document, Page, pdfjs } from "react-pdf";
+import { MobileContext } from '~/contexts/MobileContext';
 
 const progressChart = () => {
     const [params, setParams] = useState({ battleFormat: "" });
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
+    const isMobile = useContext(MobileContext);
 
     useEffect(() => {
         const searchParams = new URLSearchParams(window.location.search);

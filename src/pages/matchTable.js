@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useContext} from "react";
 import { Container, Breadcrumbs, Typography, Button, Box } from "@mui/material";
 import GetAppIcon from '@mui/icons-material/GetApp';
 import styles from "./styles/matchTable.module.scss";
@@ -9,9 +9,11 @@ import Gutter from "~/components/Gutter";
 import Footer from "~/components/Footer";
 import Link from "~/components/Link";
 import Image from 'next/image';
+import { MobileContext } from '~/contexts/MobileContext';
 
 const matchTable = () => {
     const [params, setParams] = useState({ sex: "", age: "" });
+    const isMobile = useContext(MobileContext);
 
     useEffect(() => {
         const searchParams = new URLSearchParams(window.location.search);

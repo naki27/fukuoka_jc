@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useEffect, useState, useRef, useContext} from 'react';
 import styles from "./styles/resultMatchList.module.scss";
 import { Container } from "@mui/material";
 import { useQuery } from '@apollo/client';
@@ -6,9 +6,11 @@ import { getAll } from '~/pages/api/resultMatchApi';
 
 import H1 from '~/components/H1';
 import VsCard from '~/components/VsCard';
+import { MobileContext } from '~/contexts/MobileContext';
 
 const registMatchList = () => {
     const [history, setHistory] = useState([]);
+    const isMobile = useContext(MobileContext);
 
     const { loading, error, data } = useQuery(getAll);
     if (error) return `Error! ${error}`

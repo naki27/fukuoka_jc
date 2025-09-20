@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from "react";
 import { Container, Breadcrumbs, Typography, Button } from "@mui/material";
 import styles from "./styles/accessMap.module.scss";
 import LinkIcon from '@mui/icons-material/Link';
@@ -10,9 +10,10 @@ import Link from "~/components/Link";
 import Image from 'next/image';
 import kasugaSportCenter from '../../public/maps/kasugaSportCenter.jpg';
 import parkingMap from '../../public/maps/map_fk.jpg';
-
+import { MobileContext } from '~/contexts/MobileContext';
 
 const accessMap = () => {
+    const isMobile = useContext(MobileContext);
     return (
         <>
             <Header />

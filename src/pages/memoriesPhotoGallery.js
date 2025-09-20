@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect, useContext } from 'react';
 import { Button, Breadcrumbs, Typography, Container, TextField } from "@mui/material";
 import LockIcon from '@mui/icons-material/Lock';
 import styles from "./styles/memoriesPhotoGallery.module.scss";
@@ -9,8 +9,10 @@ import Header from "~/components/Header";
 import Gutter from "~/components/Gutter";
 import Footer from "~/components/Footer";
 import Link from "~/components/Link";
+import { MobileContext } from '~/contexts/MobileContext';
 
 const memoriesPhotoGallery = () => {
+    const isMobile = useContext(MobileContext);
     const PASSWORD = "r7K6z/gd";
 
     useEffect(_ => {

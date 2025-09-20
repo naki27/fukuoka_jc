@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container, Breadcrumbs, Typography, Button, Box } from "@mui/material";
 import GetAppIcon from '@mui/icons-material/GetApp';
 import styles from "./styles/detailGuidelines.module.scss";
@@ -8,6 +8,7 @@ import Header from "~/components/Header";
 import Gutter from "~/components/Gutter";
 import Footer from "~/components/Footer";
 import Link from "~/components/Link";
+import { MobileContext } from '~/contexts/MobileContext';
 
 const detailGuidelines = () => {
     const onGuidelineDownload = _ => {
@@ -16,6 +17,7 @@ const detailGuidelines = () => {
         link.href = "https://drive.google.com/uc?id=1zhjoZ7Y7sCLUq3iXiS2QYVIsOJomyu-U&export=download&format=pdf";
         link.click();
     };
+    const isMobile = useContext(MobileContext);
 
     return (
         <>

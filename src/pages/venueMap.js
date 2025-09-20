@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from "react";
 
 import { Container, Breadcrumbs, Typography, Button } from "@mui/material";
 
@@ -8,12 +8,14 @@ import Header from "~/components/Header";
 import Gutter from "~/components/Gutter";
 import Footer from "~/components/Footer";
 import Link from "~/components/Link";
+import { MobileContext } from '~/contexts/MobileContext';
 
 import Image from 'next/image';
 import outdoorMap from '../../public/maps/outdoorMap.png';
 import secondFloorMap from '../../public/maps/2ndFloorMap.png';
 
 const venueMap = () => {
+    const isMobile = useContext(MobileContext);
     return (
         <>
             <Header />
