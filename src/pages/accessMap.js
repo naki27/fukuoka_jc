@@ -64,7 +64,7 @@ const accessMap = () => {
                 <H1 title="駐車場周辺" />
                 <Image src={parkingMap} className={styles.parkingMap}/>
             </Container>
-            <Footer />
+            <Footer isMobile={isMobile}/>
         </>
     );
 };

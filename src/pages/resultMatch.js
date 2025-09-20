@@ -123,7 +123,7 @@ const resultMatch = () => {
                     </Document>
                 </Box>
             </Container>
-            <Footer />
+            <Footer isMobile={isMobile}/>
         </>
     );
 }

@@ -9,6 +9,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import theme from '~/components/theme';
 import "~/../public/theme.css";
 import * as gtag from '~/libs/gtag'
+import useIsMobile from '~/hooks/useIsMobile';
+import { MobileContext } from '~/contexts/MobileContext';
 
 // for apollo client
 import { ApolloProvider } from "@apollo/react-hooks";
@@ -19,6 +21,7 @@ const clientSideEmotionCache = createCache({ key: 'css', prepend: true });
 export default function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   const router = useRouter();
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     // Remove the server-side injected CSS.
@@ -29,6 +32,11 @@ export default function MyApp(props) {
 
     if (!gtag.existsGaId) {
       return
+    }
+
+    if (isMobile === null) {
+      // サーバーとクライアントで値が一致するまで何も表示しない
+      return null;
     }
 
     const handleRouteChange = (path) => {
@@ -55,19 +63,21 @@ export default function MyApp(props) {
   });
 
   return (
-    <ApolloProvider client={client}>
-      <Head>
-        <title>第32回ジャパンカップビーチボール選手権福岡大会 公式サイト</title>
-        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-      </Head>
-      <CacheProvider value={emotionCache}>
-        <ThemeProvider theme={theme}>
-          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-          <CssBaseline />
-          <Component {...pageProps} />
-        </ThemeProvider>
-      </CacheProvider>
-    </ApolloProvider>
+    <MobileContext.Provider value={isMobile}>
+      <ApolloProvider client={client}>
+        <Head>
+          <title>第32回ジャパンカップビーチボール選手権福岡大会 公式サイト</title>
+          <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+        </Head>
+        <CacheProvider value={emotionCache}>
+          <ThemeProvider theme={theme}>
+            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+            <CssBaseline />
+            <Component {...pageProps} />
+          </ThemeProvider>
+        </CacheProvider>
+      </ApolloProvider>
+    </MobileContext.Provider>
   );
 }
 

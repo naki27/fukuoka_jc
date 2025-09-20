@@ -105,7 +105,7 @@ const progressChart = () => {
                     </Document>
                 </Box>
             </Container>
-            <Footer />
+            <Footer isMobile={isMobile}/>
         </>
     );
 }

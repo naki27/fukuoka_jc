@@ -113,7 +113,7 @@ const resultTableIndex = () => {
                     </div>
                 </Box>
             </Container>
-            <Footer />
+            <Footer isMobile={isMobile}/>
         </>
     );
 }

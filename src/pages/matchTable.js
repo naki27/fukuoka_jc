@@ -49,7 +49,7 @@ const matchTable = () => {
                         width={1240} height={1754} alt="組み合わせ"/>
                 </Box>
             </Container>
-            <Footer />
+            <Footer isMobile={isMobile}/>
         </>
     );
 }

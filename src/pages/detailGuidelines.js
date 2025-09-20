@@ -192,7 +192,7 @@ const detailGuidelines = () => {
                     </Button>
                 </div>
             </Container>
-            <Footer />
+            <Footer isMobile={isMobile}/>
         </>
     );
 }

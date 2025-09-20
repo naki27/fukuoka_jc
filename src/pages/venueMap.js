@@ -83,7 +83,7 @@ const venueMap = () => {
                 </table>
 
             </Container>
-            <Footer />
+            <Footer isMobile={isMobile}/>
         </>
     );
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import styles from "./styles/index.module.scss";
 import { Box, Container, Grid2 } from "@mui/material";
 import Typography from "@mui/material/Typography";
@@ -13,6 +13,7 @@ import H1Style from "~/components/styles/H1.module.scss";
 import ResultMatchCards from "~/components/ResultMatchCards";
 import Image from 'next/image';
 import AnimatedSection from "~/components/AnimatedSection";
+import { MobileContext } from '~/contexts/MobileContext';
 
 import {
   Description,
@@ -40,17 +41,8 @@ import catchCopy from '../../public/catchcopy.png';
 
 export default function Index() {
   const [showLogo, setShowLogo] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useContext(MobileContext);
   const boxPy = isMobile ? 2 : 16;
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 450);
-    };
-    checkMobile(); // 初回実行
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   return (
     <Container className={styles.root} maxWidth={true}>

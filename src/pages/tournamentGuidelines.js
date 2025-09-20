@@ -228,7 +228,7 @@ const tournamentGuidelines = () => {
                 </div>
 
             </Container>
-            <Footer />
+            <Footer isMobile={isMobile}/>
         </>
     );
 }

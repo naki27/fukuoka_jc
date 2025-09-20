@@ -146,7 +146,7 @@ const sponsor = () => {
                     description="吉野ヶ里ミニバレー協会は、ビーチボール競技を応援しています!第28回ジャパンカップビーチボール選手権福岡大会 選手皆様のご健闘をお祈りいたします。" />
 
             </Container>
-            <Footer />
+            <Footer isMobile={isMobile}/>
         </>
     );
 };

@@ -73,7 +73,7 @@ const matchTableIndex = () => {
                     </div>
                 </Box>
             </Container>
-            <Footer />
+            <Footer isMobile={isMobile}/>
         </>
     );
 }
