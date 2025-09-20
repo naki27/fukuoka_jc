@@ -331,11 +331,22 @@ export default function Index() {
             </AnimatedSection>
           </Box>
 
-          {/* <Box py={boxPy}>
+          <Box py={boxPy}>
             <AnimatedSection animationType="slideUp">
               <div className={styles.inline_container}>
                 <H1 title="スポンサー" />
-                <Grid2
+                <p className={`${styles.description} ${styles.description3}`}>
+                  {"現在、当大会には 企業・個人・団体あわせて15件のご協賛 をいただいております（2025年9月時点）。"}
+                  {"ご支援いただいた皆さまには、こちらのWebサイトにて感謝の意を込めて宣伝させていただきます。"}
+                  {"なお、協賛の受付が締め切られた後、すべての協賛先を一覧で公開いたします。"}
+                  {"協賛は 随時募集しております。ご興味をお持ちの方は、ぜひ"}
+                  <Link href="/tournamentGuidelines" className={`${styles.link}`}>
+                    {"大会要項"}
+                  </Link>
+                  {"に記載の問い合わせ先までご連絡ください。"}
+                  {"皆さまの温かいご支援を心よりお待ちしております。"}
+                </p>
+                {/* <Grid2
                   container
                   direction="row"
                   className={styles.sponsorContainer}
@@ -387,10 +398,10 @@ export default function Index() {
                           <NavigateNextIcon />
                       </span>
                   </Link>
-                </Typography>
+                </Typography> */}
               </div>
             </AnimatedSection>
-          </Box> */}
+          </Box>
         </div>
 
         <Footer isMobile={isMobile}/>

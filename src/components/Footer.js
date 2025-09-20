@@ -9,33 +9,25 @@ import Divider from "@mui/material/Divider";
 
 export default function ButtonAppBar({isMobile}) {
   return (
-    <Box className={styles.footer} p={2} display="flex" justifyContent="space-around">
+    <Box className={styles.footer} p={2} display="flex" justifyContent="space-evenly">
       {isMobile ? <></>
       :
         <Box display="flex" flexDirection="column" alignItems="flex-start">
           <p>
-            第32回ジャパンカップビーチボール選手権福岡大会<br/>公式サイト
+            第32回  ジャパンカップビーチボール選手権福岡大会  公式サイト
           </p>
+          <Image src={logo} className={styles.logo} alt="第32回ジャパンカップビーチボール選手権福岡大会 公式サイト"/>
           <p>
-            2026/02/21(土)、2026/02/22(日)
-          </p>
-          <p>
-            春日市総合スポーツセンター・大谷小学校
+            {'Copyright © '}
+            <MuiLink href="https://fukuoka-beachball.jimdofree.com/">
+                福岡県ビーチボール協会
+            </MuiLink>
+            {' '}
+            {new Date().getFullYear()}
+            {'.'}
           </p>
         </Box>
       }
-      <Box display="flex" flexDirection="column" alignItems="center">
-        <Image src={logo} className={styles.logo} alt="第32回ジャパンカップビーチボール選手権福岡大会 公式サイト"/>
-        <p>
-          {'Copyright © '}
-          <MuiLink href="https://fukuoka-beachball.jimdofree.com/">
-              福岡県ビーチボール協会
-          </MuiLink>
-          {' '}
-          {new Date().getFullYear()}
-          {'.'}
-        </p>
-      </Box>
       {isMobile ? <></>
       :
         <Box display="flex" flexDirection="row">
