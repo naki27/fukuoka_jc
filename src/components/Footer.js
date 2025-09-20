@@ -12,7 +12,7 @@ export default function ButtonAppBar({isMobile}) {
     <Box className={styles.footer} p={2} display="flex" justifyContent="space-evenly">
       {isMobile ?
         <Box display="flex" flexDirection="column" alignItems="center" sx={{textAlign: 'center'}}>
-          <p>第32回ジャパンカップビーチボール選手権福岡大会<br />公式サイト</p>
+          <p>第32回ジャパンカップ<br />ビーチボール選手権福岡大会<br />公式サイト</p>
           <Image src={logo} className={styles.logo} alt="第32回ジャパンカップビーチボール選手権福岡大会 公式サイト"/>
           <p>
             {'Copyright © '}
