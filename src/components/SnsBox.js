@@ -2,7 +2,7 @@ import React from 'react';
 import styles from "./styles/SnsBox.module.scss";
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
@@ -13,7 +13,7 @@ export default function SnsBox() {
           <InstagramIcon fontSize="large"/>
       </Link>
       <Link className={styles.iconBox} href="https://twitter.com/fukuokabeach/">
-          <TwitterIcon fontSize="large"/>
+          <XIcon fontSize="large"/>
       </Link>
       <Link className={styles.iconBox} href="https://www.facebook.com/fukuoka.beach/">
           <FacebookIcon fontSize="large"/>

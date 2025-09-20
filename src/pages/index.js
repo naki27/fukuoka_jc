@@ -3,8 +3,6 @@ import styles from "./styles/index.module.scss";
 import { Box, Container, Grid2 } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import { motion, AnimatePresence } from "framer-motion";
-import { Parallax } from 'react-parallax';
 
 import Link from "~/components/Link";
 import Header from "~/components/Header";
@@ -14,6 +12,7 @@ import H1 from "~/components/H1";
 import H1Style from "~/components/styles/H1.module.scss";
 import ResultMatchCards from "~/components/ResultMatchCards";
 import Image from 'next/image';
+import AnimatedSection from "~/components/AnimatedSection";
 
 import {
   Description,
@@ -37,11 +36,10 @@ import progressChartTournament from '../../public/progress-chart-tournament.jpg'
 import battleResultLeague from '../../public/battle-result-league.jpg';
 import battleResultTournament from '../../public/battle-result-tournament.jpg';
 import photoGallery from '../../public/photo-gallery.jpg';
-import { style } from "framer-motion/client";
+import catchCopy from '../../public/catchcopy.png';
 
 export default function Index() {
   const [showLogo, setShowLogo] = useState(true);
-  const [showFirstAnime, setShowFirstAnime] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const boxPy = isMobile ? 2 : 16;
 
@@ -54,136 +52,100 @@ export default function Index() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setShowLogo(false);
-    }, 2000); // 1秒表示 + 1秒待機
-    setTimeout(() => {
-      setShowFirstAnime(false);
-    }, 3000); // さらに1秒後にフェードアウト
-  }, []);
-
-  // TODO pdfのキャッシュクリアとページングの相互作用をどうするか？60〜120秒縛りを入れて、画像のタイムスタンプの秒以下を切り捨てる。
-
   return (
     <Container className={styles.root} maxWidth={true}>
       <Header />
 
-      {showFirstAnime && (
-        <div className={`${styles.keyVisualContainer} ${styles.blackLayer}`}>
-          <AnimatePresence>
-            {showLogo && (
-              <motion.div
-                  className={`absolute text-white text-3xl font-bold ${styles.keyVisualTitle}`}
-                  initial={{ opacity: 0, scale: 1 }}
-                  animate={{ opacity: 1, scale: 1.1 }}
-                  exit={{ opacity: 0, scale: 1 }}
-                  transition={{ opacity: { duration: 2 }, scale: { duration: 2 } }}
-              >
-                <Image src={keyVisualTitle} className={`${styles.keyVisualTitleImage} ${styles.invert}`} alt="第32回ジャパンカップビーチボール選手権"/>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      )}
-
-
-      {!showFirstAnime && (
-        <>
-          <div className={styles.keyVisualContainer}>
-            <AnimatePresence>
-              <motion.div
-                className="w-full h-full bg-white flex items-center justify-center"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 2 }}
-              >
-                <div className={styles.keyVisualTitle}>
-                  <Image src={keyVisualTitle} className={styles.keyVisualTitleImage} alt="第32回ジャパンカップビーチボール選手権"/>
-                </div>
-                <div className={styles.keyVisualFilter}>
-                  <video src="/keyVisualMovie.mp4" className={styles.keyVisualMovie} autoPlay loop muted playsInline>
-                  </video>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          <div className={styles.mainContent}>
-            <SnsBox />
-
-            {/* <Box py={8}>
-              <div className={styles.inline_container}>
-                <H1 title="大会速報" />
-
-                <Box className={styles.sexPanelContainer}>
-                  <div className={styles.sexPanel}>
-                    <h3 className={styles.femaleTitle}>女子</h3>
-                    <Box overflow="scroll" className={styles.quickResult}>
-                        <ResultMatchCards sex="Female" />
-                    </Box>
-                  </div>
-                  <div className={styles.sexPanel}>
-                    <h3 className={styles.maleTitle}>男子</h3>
-                    <Box overflow="scroll" className={styles.quickResult}>
-                        <ResultMatchCards sex="Male" />
-                    </Box>
-                  </div>
-                </Box>
+      <>
+        <div className={styles.keyVisualContainer}>
+              <div className={styles.keyVisualTitle}>
+                <Image src={keyVisualTitle} className={styles.keyVisualTitleImage} alt="第32回ジャパンカップビーチボール選手権"/>
               </div>
-            </Box> */}
+              <div className={styles.keyVisualFilter}>
+                <video src="/keyVisualMovie.mp4" className={styles.keyVisualMovie} autoPlay loop muted playsInline>
+                </video>
+              </div>
 
-            {/* <Parallax bgImage="assoc_flag.png" strength={500}> */}
-              <Box py={boxPy}>
-                <div className={styles.inline_container}>
-                  <H1 title="大会について" />
+        </div>
 
-                  <Grid2
-                    container
-                    direction="row"
-                    className={styles.container}
-                  >
-                    <Link href="/tournamentGuidelines" className={styles.inlineGrid}>
-                      <div className={styles.iconCircle}>
-                        <Description fontSize="large" className={styles.innerCircle} />
-                      </div>
-                      <p>{"大会要項"}</p>
-                    </Link>
+        <div className={styles.mainContent}>
 
-                    <Link href="/detailGuidelines" className={styles.inlineGrid}>
-                      <div className={styles.iconCircle}>
-                        <DescriptionOutlined fontSize="large" className={styles.innerCircle} />
-                      </div>
-                      <p>{"細部要項"}</p>
-                    </Link>
+          <AnimatedSection animationType="slideRight">
+            <SnsBox />
+          </AnimatedSection>
 
-                    <Link href="/accessMap" className={styles.inlineGrid}>
-                      <div className={styles.iconCircle}>
-                        <Map fontSize="large" className={styles.innerCircle} />
-                      </div>
-                      <p>{"アクセスマップ"}</p>
-                    </Link>
+          {/* <Box py={8}>
+            <div className={styles.inline_container}>
+              <H1 title="大会速報" />
 
-                    <Link href="/underConstruction" className={styles.inlineGrid}>
-                      <div className={styles.iconCircle} disabled>
-                        <Domain fontSize="large" className={styles.innerCircle} />
-                      </div>
-                      <p>{"会場図"}</p>
-                    </Link>
-
-                    <Link href="/variousGuides" className={styles.inlineGrid}>
-                      <div className={styles.iconCircle}>
-                        <ImportContacts fontSize="large" className={styles.innerCircle} />
-                      </div>
-                      <p>{"各種ご案内"}</p>
-                    </Link>
-                  </Grid2>
+              <Box className={styles.sexPanelContainer}>
+                <div className={styles.sexPanel}>
+                  <h3 className={styles.femaleTitle}>女子</h3>
+                  <Box overflow="scroll" className={styles.quickResult}>
+                      <ResultMatchCards sex="Female" />
+                  </Box>
+                </div>
+                <div className={styles.sexPanel}>
+                  <h3 className={styles.maleTitle}>男子</h3>
+                  <Box overflow="scroll" className={styles.quickResult}>
+                      <ResultMatchCards sex="Male" />
+                  </Box>
                 </div>
               </Box>
-            {/* </Parallax> */}
+            </div>
+          </Box> */}
 
-            <Box py={boxPy} className={styles.even_layer}>
+          <Box py={boxPy}>
+            <AnimatedSection animationType="fade">
+              <div className={styles.inline_container}>
+                <H1 title="大会について" />
+
+                <Grid2
+                  container
+                  direction="row"
+                  className={styles.container}
+                >
+                  <Link href="/tournamentGuidelines" className={styles.inlineGrid}>
+                    <div className={styles.iconCircle}>
+                      <Description fontSize="large" className={styles.innerCircle} />
+                    </div>
+                    <p>{"大会要項"}</p>
+                  </Link>
+
+                  <Link href="/detailGuidelines" className={styles.inlineGrid}>
+                    <div className={styles.iconCircle} disabled>
+                      <DescriptionOutlined fontSize="large" className={styles.innerCircle} />
+                    </div>
+                    <p>{"細部要項"}</p>
+                  </Link>
+
+                  <Link href="/accessMap" className={styles.inlineGrid}>
+                    <div className={styles.iconCircle} disabled>
+                      <Map fontSize="large" className={styles.innerCircle} />
+                    </div>
+                    <p>{"アクセスマップ"}</p>
+                  </Link>
+
+                  <Link href="/underConstruction" className={styles.inlineGrid}>
+                    <div className={styles.iconCircle} disabled>
+                      <Domain fontSize="large" className={styles.innerCircle} />
+                    </div>
+                    <p>{"会場図"}</p>
+                  </Link>
+
+                  <Link href="/variousGuides" className={styles.inlineGrid}>
+                    <div className={styles.iconCircle} disabled>
+                      <ImportContacts fontSize="large" className={styles.innerCircle} />
+                    </div>
+                    <p>{"各種ご案内"}</p>
+                  </Link>
+                </Grid2>
+              </div>
+            </AnimatedSection>
+          </Box>
+
+          <Box py={boxPy} className={styles.even_layer}>
+            <AnimatedSection animationType="slideLeft">
               {isMobile ?
                 <div className={`${styles.inline_container} ${styles.inline_container_left}`}>
                   <div className={styles.inline_container_2}>
@@ -239,9 +201,11 @@ export default function Index() {
                   <Image src={matchTable} className={styles.inline_container_2} alt="組み合わせ"/>
                 </div>
               }
-            </Box>
+            </AnimatedSection>
+          </Box>
 
-            <Box py={boxPy}>
+          <Box py={boxPy}>
+            <AnimatedSection animationType="slideRight">
               {isMobile ?
                 <div className={`${styles.inline_container} ${styles.inline_container_left}`}>
                   <div className={styles.inline_container_2}>
@@ -302,61 +266,63 @@ export default function Index() {
                 </div>
               </div>
               }
-            </Box>
+            </AnimatedSection>
+          </Box>
 
-            {/* <Parallax bgImage="battle_result.gif" strength={500}> */}
-              <Box py={boxPy} className={styles.even_layer}>
-                <div className={isMobile ? `${styles.inline_container} ${styles.inline_container_left}` : `${styles.inline_container}`}>
-                  <H1 title="大会結果" />
-                  <Grid2
-                    container
-                    direction="row"
-                    className={styles.container}
-                  >
-                    <div className={styles.inlineGrid}>
-                      <Link href="/resultMatchIndex?bf=league">
-                        <Image src={battleResultLeague} className={styles.buttonPhoto} alt="予選"/>
-                        <div className={styles.linkButton}>
-                          <p>{"予選リーグ結果"}</p>
-                          <NavigateNextIcon />
-                        </div>
-                      </Link>
-                      <p className={`${styles.description} ${styles.description2}`}>
-                        {"予選リーグの試合結果と順位、勝敗数や得失点差をリアルタイムに掲載しています。"}
-                      </p>
-                    </div>
+          <Box py={boxPy} className={styles.even_layer}>
+            <AnimatedSection animationType="slideUp">
+              <div className={isMobile ? `${styles.inline_container} ${styles.inline_container_left}` : `${styles.inline_container}`}>
+                <H1 title="大会結果" />
+                <Grid2
+                  container
+                  direction="row"
+                  className={styles.container}
+                >
+                  <div className={styles.inlineGrid}>
+                    <Link href="/resultMatchIndex?bf=league">
+                      <Image src={battleResultLeague} className={styles.buttonPhoto} alt="予選"/>
+                      <div className={styles.linkButton}>
+                        <p>{"予選リーグ結果"}</p>
+                        <NavigateNextIcon />
+                      </div>
+                    </Link>
+                    <p className={`${styles.description} ${styles.description2}`}>
+                      {"予選リーグの試合結果と順位、勝敗数や得失点差をリアルタイムに掲載しています。"}
+                    </p>
+                  </div>
 
-                    <div className={styles.inlineGrid}>
-                      <Link href="/resultMatchIndex?bf=tournament">
-                        <Image src={battleResultTournament} className={styles.buttonPhoto} alt="トーナメント"/>
-                        <div className={styles.linkButton}>
-                          <p>{"決勝トーナメント結果"}</p>
-                          <NavigateNextIcon />
-                        </div>
-                      </Link>
-                      <p className={`${styles.description} ${styles.description2}`}>
-                        {"決勝トーナメントの試合結果と順位をトーナメント形式でリアルタイムに掲載しています。"}
-                      </p>
-                    </div>
+                  <div className={styles.inlineGrid}>
+                    <Link href="/resultMatchIndex?bf=tournament">
+                      <Image src={battleResultTournament} className={styles.buttonPhoto} alt="トーナメント"/>
+                      <div className={styles.linkButton}>
+                        <p>{"決勝トーナメント結果"}</p>
+                        <NavigateNextIcon />
+                      </div>
+                    </Link>
+                    <p className={`${styles.description} ${styles.description2}`}>
+                      {"決勝トーナメントの試合結果と順位をトーナメント形式でリアルタイムに掲載しています。"}
+                    </p>
+                  </div>
 
-                    <div className={styles.inlineGrid}>
-                      <Link href="/memoriesPhotoGallery">
-                        <Image src={photoGallery} className={styles.buttonPhoto} alt="写真館"/>
-                        <div className={styles.linkButton}>
-                          <p>{"写真館"}</p>
-                          <NavigateNextIcon />
-                        </div>
-                      </Link>
-                      <p className={`${styles.description} ${styles.description2}`}>
-                        {"大会当日の熱戦の様子や表彰式や観客席など写真で大会の感動を伝えます。大会終了後、掲載まで暫しお時間をいただきます。"}
-                      </p>
-                    </div>
-                  </Grid2>
-                </div>
-              </Box>
-            {/* </Parallax> */}
+                  <div className={styles.inlineGrid}>
+                    <Link href="/memoriesPhotoGallery">
+                      <Image src={photoGallery} className={styles.buttonPhoto} alt="写真館"/>
+                      <div className={styles.linkButton}>
+                        <p>{"写真館"}</p>
+                        <NavigateNextIcon />
+                      </div>
+                    </Link>
+                    <p className={`${styles.description} ${styles.description2}`}>
+                      {"大会当日の熱戦の様子や表彰式や観客席など写真で大会の感動を伝えます。大会終了後、掲載まで暫しお時間をいただきます。"}
+                    </p>
+                  </div>
+                </Grid2>
+              </div>
+            </AnimatedSection>
+          </Box>
 
-            <Box py={boxPy}>
+          <Box py={boxPy}>
+            <AnimatedSection animationType="slideUp">
               <div className={styles.inline_container}>
                 <H1 title="スポンサー" />
                 <Grid2
@@ -413,12 +379,12 @@ export default function Index() {
                   </Link>
                 </Typography>
               </div>
-            </Box>
-          </div>
+            </AnimatedSection>
+          </Box>
+        </div>
 
-          <Footer />
-        </>
-      )}
+        <Footer isMobile={isMobile}/>
+      </>
     </Container>
   );
 }
