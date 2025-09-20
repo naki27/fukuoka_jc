@@ -43,50 +43,60 @@ export default function ButtonAppBar({isMobile}) {
             <MuiLink href="/tournamentGuidelines">
               <p>{"大会要項"}</p>
             </MuiLink>
-            <MuiLink href="/detailGuidelines">
+            {/* <MuiLink href="/detailGuidelines"> */}
+            <MuiLink href="/underConstruction">
               <p>{"細部要項"}</p>
             </MuiLink>
-            <MuiLink href="/accessMap">
+            {/* <MuiLink href="/accessMap"> */}
+            <MuiLink href="/underConstruction">
               <p>{"アクセスマップ"}</p>
             </MuiLink>
             <MuiLink href="/underConstruction">
               <p>{"会場図"}</p>
             </MuiLink>
-            <MuiLink href="/variousGuides">
+            {/* <MuiLink href="/variousGuides"> */}
+            <MuiLink href="/underConstruction">
               <p>{"各種ご案内"}</p>
             </MuiLink>
           </Box>
           <Box display="flex" flexDirection="column" mx={3}>
             <Box display="flex" flexDirection="column">
-              <MuiLink href="/matchTableIndex?sex=female">
+              {/* <MuiLink href="/matchTableIndex?sex=female"> */}
+              <MuiLink href="/underConstruction">
                 <p>{"組み合わせ（女子）"}</p>
               </MuiLink>
-              <MuiLink href="/matchTableIndex?sex=male">
+              {/* <MuiLink href="/matchTableIndex?sex=male"> */}
+              <MuiLink href="/underConstruction">
                 <p>{"組み合わせ（男子）"}</p>
               </MuiLink>
             </Box>
             <Divider sx={{ borderColor: 'white', margin: '16px 0'}}/>
             <Box display="flex" flexDirection="column">
-              <MuiLink href="/progressChart?bf=league">
+              {/* <MuiLink href="/progressChart?bf=league"> */}
+              <MuiLink href="/underConstruction">
                 <p>{"進行表（予選）"}</p>
               </MuiLink>
-              <MuiLink href="/progressChart?bf=tournament">
+              {/* <MuiLink href="/progressChart?bf=tournament"> */}
+              <MuiLink href="/underConstruction">
                 <p>{"進行表（決勝）"}</p>
               </MuiLink>
             </Box>
           </Box>
           <Box display="flex" flexDirection="column" mx={3}>
             <Box display="flex" flexDirection="column">
-              <MuiLink href="/progressChart?bf=league">
+              {/* <MuiLink href="/progressChart?bf=league"> */}
+              <MuiLink href="/underConstruction">
                 <p>{"大会結果（予選）"}</p>
               </MuiLink>
-              <MuiLink href="/progressChart?bf=tournament">
+              {/* <MuiLink href="/progressChart?bf=tournament"> */}
+              <MuiLink href="/underConstruction">
                 <p>{"大会結果（決勝）"}</p>
               </MuiLink>
             </Box>
             <Divider sx={{ borderColor: 'white', margin: '16px 0'}}/>
             <Box display="flex" flexDirection="column">
-              <MuiLink href="/sponsor">
+              {/* <MuiLink href="/sponsor"> */}
+              <MuiLink href="/underConstruction">
                 <p>{"スポンサー"}</p>
               </MuiLink>
             </Box>

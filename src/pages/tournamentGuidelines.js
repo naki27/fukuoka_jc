@@ -16,29 +16,15 @@ import { Padding } from '@mui/icons-material';
 const tournamentGuidelines = () => {
     const onGuidelineDownload = _ => {
         const link = document.createElement("a");
-        // https://drive.google.com/file/d/1GVgkLv3xPJjh7KTpSYEPRuOmvRFym-Sv/view?usp=sharing
-        link.href = "https://drive.google.com/uc?id=1GVgkLv3xPJjh7KTpSYEPRuOmvRFym-Sv&export=download&format=pdf";
+        // https://drive.google.com/file/d/1FV8yx_1oaS6oxvH7ZS51yWEsnMOZjI7x/view?usp=drive_link
+        link.href = "https://drive.google.com/uc?id=1FV8yx_1oaS6oxvH7ZS51yWEsnMOZjI7x&export=download&format=pdf";
         link.click();
     };
-    const onApplicationFormDownload = _ => {
+    const onGuideline2ndDownload = _ => {
         const link = document.createElement("a");
-        // https://docs.google.com/spreadsheets/d/1MuBYdQJo4wQpYIPwnXC0IkxUsso46OdO/edit?usp=sharing&ouid=102240011293136702046&rtpof=true&sd=true
-        link.href = "https://docs.google.com/spreadsheets/d/1MuBYdQJo4wQpYIPwnXC0IkxUsso46OdO/export?format=xlsx";
+        // https://drive.google.com/file/d/1Thj3x1bNgXySC_xYMANIpGD4wmz9tCWQ/view?usp=drive_link
+        link.href = "https://drive.google.com/uc?id=1Thj3x1bNgXySC_xYMANIpGD4wmz9tCWQ&export=download&format=pdf";
         link.click();
-    };
-    const onApplicationFormPdfDownload = _ => {
-        const link = document.createElement("a");
-        // https://drive.google.com/file/d/1BspvvKKRURHJoCO95uYJ7erC8avpLrO1/view?usp=sharingS
-        link.href = "https://drive.google.com/uc?id=1BspvvKKRURHJoCO95uYJ7erC8avpLrO1&export=download&format=pdf";
-        link.click();
-    };
-
-    const jumpToButtonArea = _ => {
-        const target = document.getElementById("buttonArea");
-        window.scrollTo({
-            top: target.offsetTop,
-            behavior: 'smooth'
-        });
     };
 
     return (
@@ -69,7 +55,7 @@ const tournamentGuidelines = () => {
                         </tr>
                         <tr>
                             <th>主管</th>
-                            <td>第２８回ジャパンカップビーチボール選手権 福岡大会実行委員会</td>
+                            <td>第３２回ジャパンカップビーチボール選手権 福岡大会実行委員会</td>
                         </tr>
                         <tr>
                             <th>共催</th>
@@ -78,18 +64,19 @@ const tournamentGuidelines = () => {
                         <tr>
                             <th>後援</th>
                             <td>
-                                <p>福岡県、春日市、春日市教育委員会、一般社団法人春日市体育協会</p>
-                                <p>ケーブルステーション福岡、西日本新聞社、毎日新聞社、読売新聞社、日本教育新聞社</p>
-                                <p>志免町ミニバレーボール協会、中間市ビーチボールバレー連盟、水巻町ビーチボールバレー愛好会</p>
+                                <p>福岡県、春日市、一般社団法人春日市スポーツ協会</p>
+                                <p>ケーブルステーション福岡、西日本新聞社、毎日新聞社、読売新聞社</p>
+                                <p>福岡市早良区ビーチボール協会、中間市ビーチボールバレー連盟</p>
+                                <p>水巻町ビーチボールバレー連盟 志免町ミニバレーボール協会 （予定）</p>
                             </td>
                         </tr>
                         <tr>
                             <th>協賛</th>
-                            <td>(一財）朝日町文化・体育振興公社、㈱ヨコブリシ、㈱ゴールドウイン</td>
+                            <td>（一財）朝日町文化・体育振興公社、㈱POS、㈱ヨコブリシ、㈱アルペン（予定）</td>
                         </tr>
                         <tr>
                             <th>開催日時</th>
-                            <td>令和４年３月１９日（土）・２０日（日）</td>
+                            <td>２０２６年（令和８年）２月２１日（土）・２２日（日）</td>
                         </tr>
                         <tr>
                             <th>会場</th>
@@ -99,31 +86,10 @@ const tournamentGuidelines = () => {
                                     {/* <a href="./accessMap">春日市総合スポーツセンター</a> */}
                                 </p>
                                 <p>住所：福岡県春日市大谷６丁目２８</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>申込方法</th>
-                            <td>
-                                <p>別紙参加申込様式に必要事項を記入の上、日本ビーチボール協会加盟都県は、都県協会でまとめて申し込みください。</p>
-                                <p>未加盟チームも下記事務局までメールにて申し込みください。</p>
-                                <p>第２８回ジャパンカップビーチボール選手権 福岡大会</p>
-                                <p>実行委員会　総務部　宛</p>
                                 <p>
-                                    Ｅメール:
-                                    <a href="mailto:fukuoka.beachball.assoc@gmail.com">fukuoka.beachball.assoc@gmail.com</a></p>
-                                <p>
-                                    <a className="swing" onClick={jumpToButtonArea} style={{ "color": "#C7243A"}}>
-                                        <GetAppIcon style={{"vertical-align": "bottom"}}/>
-                                        申込書はこちら
-                                    </a>
+                                    春日市立大谷小学校
                                 </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>申込期限</th>
-                            <td>
-                                <p>令和３年１０月２０日（水）</p>
-                                <p>※エントリー表提出期限となります。</p>
+                                <p>住所：福岡県春日市大谷４-１</p>
                             </td>
                         </tr>
                         <tr>
@@ -158,9 +124,8 @@ const tournamentGuidelines = () => {
                             <td>
                                 <ol className={styles.bulletPoint}>
                                     <li>協会並びに加盟団体より推薦を受けたチーム及び協会が特に出場を認めたチームとする。</li>
-                                    <li>選手は、令和３年４月１日現在の満年齢にて該当部門に参加できる。</li>
-                                    <li>チーム内には選手兼任審判員としてB級以上の審判員がいること。いない場合はB級以上の審判員を帯同すること。</li>
-                                    <li>本大会の感染対策事項に承認すること。</li>
+                                    <li>選手は、２０２５年（令和７年）４月１日現在の満年齢にて該当部門に参加できる。</li>
+                                    <li>審判は、兼任審判制とし、今大会に限りチーム内には選手兼任または帯同する<span className={styles.strong}>B 級以上１名を含む有資格者２名以上</span>がいること。いないチームは、<span className={styles.downloadSpan} onClick={onGuideline2ndDownload}>▶︎別途定める金額</span>を参加料と一緒に納めること。</li>
                                 </ol>
                             </td>
                         </tr>
@@ -170,7 +135,6 @@ const tournamentGuidelines = () => {
                                 <ol className={styles.bulletPoint}>
                                     <li>監督１名、選手６名以内をもってチーム編成とする。</li>
                                     <li>同一人物が監督及び選手として複数のチームで登録・参加はできない。</li>
-                                    <li>チームは、B級以上の審判員とC級以上の審判員を各１名帯同しなければならない。（協会未加盟チームについては、別途対応する）</li>
                                 </ol>
                             </td>
                         </tr>
@@ -195,9 +159,27 @@ const tournamentGuidelines = () => {
                             </td>
                         </tr>
                         <tr>
+                            <th>申込方法</th>
+                            <td>
+                                <p>パソコンもしくはスマートフォンにて、専用申込フォームに申し込む。</p>
+                                <p>チーム毎に入力願います。各協会へは登録状況をフィードバック致します。</p>
+                                <p>
+                                    <a href="https://forms.gle/CwNrqdspGUE5buHB8">専用申込フォームはこちら</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>申込期限</th>
+                            <td>
+                                <p>２０２５年（令和７年）１０ 月１５日（水）</p>
+                                <p>※エントリー表提出期限となります。</p>
+                            </td>
+                        </tr>
+                        <tr>
                             <th>振込先</th>
                             <td>
-                                <p>参加料は、都県協会ごとに取りまとめ協会名を記入のうえ、振り込みをお願いします。</p>
+                                <p>参加料は、<span className={styles.strong}>都県協会ごとに取りまとめのうえ</span>、振り込みをお願いします。</p>
+                                <p>振込の際は、必ず ・振込協会名・チーム数 の記載をお願い致します。</p>
                                 <p>申し込み後の辞退・棄権の場合の参加料は返却致しませんのでご了承ください。</p>
                                 <p>口座名義: ジャパンカップ福岡実行委員会</p>
                                 <p>ゆうちょ銀行の場合</p>
@@ -212,17 +194,16 @@ const tournamentGuidelines = () => {
                         <tr>
                             <th>振込期限</th>
                             <td>
-                                <p>令和３年１０月３１日（日）</p>
+                                <p>２０２５年（令和７年）１０ 月１５日（水）</p>
                             </td>
                         </tr>
                         <tr className="guidLineTable-last">
                             <th>問合せ先</th>
                             <td>
-                                <p>第28回ジャパンカップビーチボール選手権福岡大会　実行委員会</p>
-                                <p>理事長　西村澄子</p>
+                                <p>第３２回ジャパンカップビーチボール選手権 福岡大会実行委員会 総務部 宛</p>
                                 <p>
-                                    TEL：
-                                    <a href="tel:+81-90-4343-1926">090-4343-1926</a>
+                                    メールアドレス：
+                                    <a href="mailto:fukuoka.beachball.assoc@gmail.com">fukuoka.beachball.assoc@gmail.com</a>
                                 </p>
                             </td>
                         </tr>
@@ -239,17 +220,10 @@ const tournamentGuidelines = () => {
                     </Button>
                     <Button
                         className={styles.ExcelButton}
-                        onClick={onApplicationFormDownload}
+                        onClick={onGuideline2ndDownload}
                         variant="contained"
                         startIcon={<GetAppIcon />}>
-                            申込書(excel)をダウンロード
-                    </Button>
-                    <Button
-                        className={styles.ExcelPdfButton}
-                        onClick={onApplicationFormPdfDownload}
-                        variant="contained"
-                        startIcon={<GetAppIcon />}>
-                            申込書(PDF))をダウンロード
+                            大会要項 別紙(pdf)をダウンロード
                     </Button>
                 </div>
 
