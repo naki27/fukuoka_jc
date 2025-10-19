@@ -112,9 +112,8 @@ export default function Index() {
                     <p>{"細部要項"}</p>
                   </Link>
 
-                  {/* <Link href="/accessMap" className={styles.inlineGrid}> */}
-                  <Link href="/underConstruction" className={styles.inlineGrid}>
-                    <div className={styles.iconCircle} disabled>
+                  <Link href="/accessMap" className={styles.inlineGrid}>
+                    <div className={styles.iconCircle}>
                       <Map fontSize="large" className={styles.innerCircle} />
                     </div>
                     <p>{"アクセスマップ"}</p>

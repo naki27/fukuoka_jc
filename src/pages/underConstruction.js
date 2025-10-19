@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import Head from 'next/head';
 import styles from "./styles/underConstruction.module.scss";
 import { Container, Breadcrumbs, Typography, Button } from "@mui/material";
 
@@ -17,6 +18,9 @@ const underConstruction = () => {
     const isMobile = useContext(MobileContext);
     return (
         <>
+            <Head>
+                <meta name="robots" content="noindex" />
+            </Head>
             <Header />
             <Gutter />
             <Container maxWidth={false}>

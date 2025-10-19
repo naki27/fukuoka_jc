@@ -9,7 +9,8 @@ import Footer from "~/components/Footer";
 import Link from "~/components/Link";
 import Image from 'next/image';
 import kasugaSportCenter from '../../public/maps/kasugaSportCenter.jpg';
-import parkingMap from '../../public/maps/map_fk.jpg';
+import accessImageMap from '../../public/maps/map_am.png';
+import parkingMap from '../../public/maps/map_fk.png';
 import { MobileContext } from '~/contexts/MobileContext';
 
 const accessMap = () => {
@@ -63,6 +64,7 @@ const accessMap = () => {
                 </div>
 
                 <H1 title="駐車場周辺" />
+                <Image src={accessImageMap} className={styles.parkingMap}/>
                 <Image src={parkingMap} className={styles.parkingMap}/>
             </Container>
             <Footer isMobile={isMobile}/>

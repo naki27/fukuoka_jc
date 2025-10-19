@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /*
+Disallow: /underConstruction
 Disallow: /api/*
 Host: https://fukuokajc.vercel.app
 Sitemap: https://fukuokajc.vercel.app/sitemap.xml

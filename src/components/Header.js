@@ -93,8 +93,7 @@ export default function ButtonAppBar() {
             </ListItem>
             <ListItem key="accessMap">
               <ListItemIcon><Map /></ListItemIcon>
-              {/* <Link href="/accessMap"> */}
-              <Link href="/underConstruction">
+              <Link href="/accessMap">
                 <ListItemText primary="アクセスマップ" className="default-color"/>
               </Link>
             </ListItem>
