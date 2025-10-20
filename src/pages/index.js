@@ -42,6 +42,7 @@ import catchCopy from '../../public/catchcopy.png';
 export default function Index() {
   const [showLogo, setShowLogo] = useState(true);
   const isMobile = useContext(MobileContext);
+  const keyVisualMovie = isMobile ? "/keyVisualMovie_Mobile.mp4" : "/keyVisualMovie.mp4";
   const boxPy = isMobile ? 2 : 16;
 
   return (
@@ -54,7 +55,7 @@ export default function Index() {
                 <Image src={keyVisualTitle} className={styles.keyVisualTitleImage} alt="第32回ジャパンカップビーチボール選手権"/>
               </div>
               <div className={styles.keyVisualFilter}>
-                <video src="/keyVisualMovie.mp4" className={styles.keyVisualMovie} autoPlay loop muted playsInline>
+                <video src={keyVisualMovie} className={styles.keyVisualMovie} autoPlay loop muted playsInline>
                 </video>
               </div>
 
