@@ -10,9 +10,5 @@
   <loc>https://fukuokajc.vercel.app/tournamentGuidelines</loc>
   <priority>0.8</priority>
 </url>
-<url>
-  <loc>https://fukuokajc.vercel.app/underConstruction</loc>
-  <priority>0.8</priority>
-</url>
 
 </urlset>
