@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import Head from 'next/head';
 import { Container, Breadcrumbs, Typography, Button } from "@mui/material";
 import styles from "./styles/accessMap.module.scss";
 import LinkIcon from '@mui/icons-material/Link';
@@ -17,6 +18,10 @@ const accessMap = () => {
     const isMobile = useContext(MobileContext);
     return (
         <>
+            <Head>
+                <title>第32回ジャパンカップビーチボール選手権福岡大会 公式サイト - アクセスマップ</title>
+                <meta name="description" content="第32回ジャパンカップビーチボール選手権福岡大会の公式サイトのアクセスマップのページです。会場へのアクセスマップです。選手の方々はもちろん、応援に来られる方々もご確認ください。" />
+            </Head>
             <Header />
             <Gutter />
             <Container maxWidth="lg">

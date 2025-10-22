@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import styles from "./styles/tournamentGuidelines.module.scss";
+import Head from 'next/head';
 
 import { Container, Breadcrumbs, Typography, Button } from "@mui/material";
 import GetAppIcon from '@mui/icons-material/GetApp';
@@ -32,6 +33,10 @@ const tournamentGuidelines = () => {
 
     return (
         <>
+            <Head>
+                <title>第32回ジャパンカップビーチボール選手権福岡大会 公式サイト - 大会要項</title>
+                <meta name="description" content="第32回ジャパンカップビーチボール選手権福岡大会の公式サイトの大会要項ページです。どのような大会になるのか概要が記されています。ご参加の方々はご確認をお願いいたします。" />
+            </Head>
             <Header />
             <Gutter />
             <Container maxWidth="lg">

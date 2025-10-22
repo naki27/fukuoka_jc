@@ -68,6 +68,7 @@ export default function MyApp(props) {
         <Head>
           <title>第32回ジャパンカップビーチボール選手権福岡大会 公式サイト</title>
           <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+          <meta name="description" content="第32回ジャパンカップビーチボール選手権福岡大会の公式サイトです。2026/2/20〜21に開催されます。ビーチボールという競技の全国大会は初めて福岡で開催されます。" />
         </Head>
         <CacheProvider value={emotionCache}>
           <ThemeProvider theme={theme}>
