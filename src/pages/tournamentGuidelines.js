@@ -20,8 +20,8 @@ const tournamentGuidelines = () => {
 
     const onGuidelineDownload = _ => {
         const link = document.createElement("a");
-        // https://drive.google.com/file/d/1FV8yx_1oaS6oxvH7ZS51yWEsnMOZjI7x/view?usp=drive_link
-        link.href = "https://drive.google.com/uc?id=1FV8yx_1oaS6oxvH7ZS51yWEsnMOZjI7x&export=download&format=pdf";
+        // https://drive.google.com/file/d/1P1I97vmHTPzV8mBkBpujjQag1hyi4har/view?usp=sharing
+        link.href = "https://drive.google.com/uc?id=1P1I97vmHTPzV8mBkBpujjQag1hyi4har&export=download&format=pdf";
         link.click();
     };
     const onGuideline2ndDownload = _ => {
@@ -73,14 +73,13 @@ const tournamentGuidelines = () => {
                             <th>後援</th>
                             <td>
                                 <p>福岡県、春日市、一般社団法人春日市スポーツ協会</p>
-                                <p>ケーブルステーション福岡、西日本新聞社、毎日新聞社、読売新聞社</p>
-                                <p>福岡市早良区ビーチボール協会、中間市ビーチボールバレー連盟</p>
-                                <p>水巻町ビーチボールバレー連盟 志免町ミニバレーボール協会 （予定）</p>
+                                <p>ケーブルステーション福岡、福岡市早良区ビーチボール協会、中間市ビーチボールバレー連盟</p>
+                                <p>水巻町ビーチボールバレー連盟 志免町ミニバレーボール協会</p>
                             </td>
                         </tr>
                         <tr>
                             <th>協賛</th>
-                            <td>（一財）朝日町文化・体育振興公社、㈱POS、㈱ヨコブリシ、㈱アルペン（予定）</td>
+                            <td>（一財）朝日町文化・体育振興公社、㈱POS、㈱アルペン、㈱ヨコブリシ</td>
                         </tr>
                         <tr>
                             <th>開催日時</th>
