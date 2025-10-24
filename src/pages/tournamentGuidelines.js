@@ -111,6 +111,7 @@ const tournamentGuidelines = () => {
                                             <li>４０歳以上の部</li>
                                             <li>５０歳以上の部</li>
                                             <li>６０歳以上の部</li>
+                                            <li>７０歳以上の部</li>
                                         </ul>
                                     </div>
                                     <div style={{margin: '8px'}}>
@@ -121,6 +122,7 @@ const tournamentGuidelines = () => {
                                             <li>４０歳以上の部</li>
                                             <li>５０歳以上の部</li>
                                             <li>６０歳以上の部</li>
+                                            <li>７０歳以上の部</li>
                                         </ul>
                                     </div>
                                 </div>
