@@ -13,6 +13,7 @@ import Link from "~/components/Link";
 import Image from 'next/image';
 import { Document, Page, pdfjs } from "react-pdf";
 import { MobileContext } from '~/contexts/MobileContext';
+import { motion } from "framer-motion";
 
 const resultMatch = () => {
     const [params, setParams] = useState({
@@ -25,6 +26,7 @@ const resultMatch = () => {
     const [fileExists, setFileExists] = useState(null); // null: unknown, true/false
     const [cacheBuster, setCacheBuster] = useState(Date.now());
     const [checkingFile, setCheckingFile] = useState(false);
+    const [pdfLoaded, setPdfLoaded] = useState(false);
     const isMobile = useContext(MobileContext);
 
     useEffect(() => {
@@ -81,10 +83,12 @@ const resultMatch = () => {
     function onDocumentLoadSuccess({ numPages }) {
         setNumPages(numPages);
         setPageNumber(1);
+        setPdfLoaded(true);
     }
 
     function changePage(offset) {
         setPageNumber(prevPageNumber => prevPageNumber + offset);
+        setPdfLoaded(false);
     }
 
     function previousPage() {
@@ -171,15 +175,23 @@ const resultMatch = () => {
                             <Typography>大会結果はまだ公開されていません。公開されるまでしばらくお待ちください。</Typography>
                         </Box>
                     ) : (
-                        <Document
-                            file={pdfFilePath} // PDFファイルのパスを指定
-                            onLoadSuccess={onDocumentLoadSuccess}
-                            onLoadError={(error) => console.error("PDF読み込みエラー:", error)}
+                        <motion.div
+                            key={pageNumber}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: pdfLoaded ? 1 : 0 }}
+                            transition={{ duration: 0.8 }}
                         >
-                            <Page key={pageNumber} pageNumber={pageNumber}
-                                renderTextLayer={false}
-                                renderAnnotationLayer={false}/>
-                        </Document>
+                            <Document
+                                key={cacheBuster}
+                                file={pdfFilePath} // PDFファイルのパスを指定
+                                onLoadSuccess={onDocumentLoadSuccess}
+                                onLoadError={(error) => console.error("PDF読み込みエラー:", error)}
+                            >
+                                <Page key={pageNumber} pageNumber={pageNumber}
+                                    renderTextLayer={false}
+                                    renderAnnotationLayer={false}/>
+                            </Document>
+                        </motion.div>
                     )}
                 </Box>
             </Container>

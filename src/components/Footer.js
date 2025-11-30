@@ -86,10 +86,10 @@ export default function ButtonAppBar({isMobile}) {
             </Box>
             <Box display="flex" flexDirection="column" mx={3}>
               <Box display="flex" flexDirection="column">
-                <MuiLink href="/progressChart?bf=league">
+                <MuiLink href="/resultMatchIndex?bf=league">
                   <p>{"大会結果（予選）"}</p>
                 </MuiLink>
-                <MuiLink href="/progressChart?bf=tournament">
+                <MuiLink href="/resultMatchIndex?bf=tournament">
                   <p>{"大会結果（決勝）"}</p>
                 </MuiLink>
               </Box>
