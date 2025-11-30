@@ -4,6 +4,7 @@ import createEmotionServer from '@emotion/server/create-instance';
 import createCache from '@emotion/cache';
 import theme from '~/components/theme';
 import { existsGaId, GA_ID } from '~/libs/gtag';
+import { Insights } from './insights';
 
 function createEmotionCache() {
   return createCache({ key: 'css', prepend: true });
@@ -79,6 +80,7 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <Insights />
         </body>
       </Html>
     );
