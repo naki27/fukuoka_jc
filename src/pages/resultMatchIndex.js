@@ -41,22 +41,23 @@ const resultTableIndex = () => {
                     <H2 title={"女子"} />
                     <div className={styles.linkOutline}>
                         <Link href={`/resultMatch?bf=${params.battleFormat}&sex=female&age=18`} className={styles.link}>
-                            <p>{"⚫︎18歳以上の部"}</p>
+                            {/* <p>{"⚫︎18歳以上の部"}</p> */}
+                            <p>{"⚫︎フリーの部"}</p>
                         </Link>
                     </div>
 
-                    <div className={styles.linkOutline}>
+                    {/* <div className={styles.linkOutline}>
                         <Link href={`/resultMatch?bf=${params.battleFormat}&sex=female&age=30`} className={styles.link}>
                             <p>{"⚫︎30歳以上の部"}</p>
                         </Link>
-                    </div>
+                    </div> */}
 
                     <div className={styles.linkOutline}>
                         <Link href={`/resultMatch?bf=${params.battleFormat}&sex=female&age=40`} className={styles.link}>
                             <p>{"⚫︎40歳以上の部"}</p>
                         </Link>
                     </div>
-
+{/*
                     <div className={styles.linkOutline}>
                         <Link href={`/resultMatch?bf=${params.battleFormat}&sex=female&age=50`} className={styles.link}>
                             <p>{"⚫︎50歳以上の部"}</p>
@@ -73,22 +74,23 @@ const resultTableIndex = () => {
                         <Link href={`/resultMatch?bf=${params.battleFormat}&sex=female&age=70`} className={styles.link}>
                             <p>{"⚫︎70歳以上の部"}</p>
                         </Link>
-                    </div>
+                    </div> */}
                 </Box>
 
                 <Box paddingBottom={8}>
                     <H2 title={"男子"} />
                     <div className={styles.linkOutline}>
                         <Link href={`/resultMatch?bf=${params.battleFormat}&sex=male&age=18`} className={styles.link}>
-                            <p>{"⚫︎18歳以上の部"}</p>
+                            {/* <p>{"⚫︎18歳以上の部"}</p> */}
+                            <p>{"⚫︎フリーの部"}</p>
                         </Link>
                     </div>
 
-                    <div className={styles.linkOutline}>
+                    {/* <div className={styles.linkOutline}>
                         <Link href={`/resultMatch?bf=${params.battleFormat}&sex=male&age=30`} className={styles.link}>
                             <p>{"⚫︎30歳以上の部"}</p>
                         </Link>
-                    </div>
+                    </div> */}
 
                     <div className={styles.linkOutline}>
                         <Link href={`/resultMatch?bf=${params.battleFormat}&sex=male&age=40`} className={styles.link}>
@@ -96,7 +98,7 @@ const resultTableIndex = () => {
                         </Link>
                     </div>
 
-                    <div className={styles.linkOutline}>
+                    {/* <div className={styles.linkOutline}>
                         <Link href={`/resultMatch?bf=${params.battleFormat}&sex=male&age=50`} className={styles.link}>
                             <p>{"⚫︎50歳以上の部"}</p>
                         </Link>
@@ -111,6 +113,21 @@ const resultTableIndex = () => {
                     <div className={styles.linkOutline}>
                         <Link href={`/resultMatch?bf=${params.battleFormat}&sex=male&age=70`} className={styles.link}>
                             <p>{"⚫︎70歳以上の部"}</p>
+                        </Link>
+                    </div> */}
+                </Box>
+
+                <Box paddingBottom={8}>
+                    <H2 title={"混合"} />
+                    <div className={styles.linkOutline}>
+                        <Link href={`/resultMatch?bf=${params.battleFormat}&sex=mix&age=18`} className={styles.link}>
+                            <p>{"⚫︎フリーの部"}</p>
+                        </Link>
+                    </div>
+
+                    <div className={styles.linkOutline}>
+                        <Link href={`/resultMatch?bf=${params.battleFormat}&sex=mix&age=40`} className={styles.link}>
+                            <p>{"⚫︎40歳以上の部"}</p>
                         </Link>
                     </div>
                 </Box>

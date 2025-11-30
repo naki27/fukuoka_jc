@@ -18,6 +18,7 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.7",
     "@mui/material": "^6.4.7",
+    "@vercel/blob": "^2.0.0",
     "@vercel/speed-insights": "^1.2.0",
     "apollo-boost": "^0.4.9",
     "apollo-link-context": "^1.0.20",
@@ -25,6 +26,7 @@
     "graphql": "^15.5.1",
     "luxon": "^1.27.0",
     "next": "^15.2.1",
+    "raw-body": "^2.5.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.54.2",
@@ -32,7 +34,8 @@
     "react-pdf": "^9.2.1",
     "sass": "^1.85.1",
     "scroll-behavior-polyfill": "^2.0.13",
-    "serverless-mysql": "^1.5.4"
+    "serverless-mysql": "^1.5.4",
+    "vercel": "^48.12.0"
   },
   "main": "index.js",
   "repository": "git@github.com:naki27/fukuoka_jc.git",

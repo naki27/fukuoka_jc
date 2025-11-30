@@ -149,15 +149,13 @@ export default function ButtonAppBar() {
         <List>
           <ListItem key="resultMatchIndex1">
             <ListItemIcon><EmojiEvents /></ListItemIcon>
-            {/* <Link href="/resultMatchIndex?bf=league"> */}
-            <Link href="/underConstruction">
+            <Link href="/resultMatchIndex?bf=league">
               <ListItemText primary="大会結果（予選）" className="default-color"/>
             </Link>
           </ListItem>
           <ListItem key="resultMatchIndex2">
             <ListItemIcon><EmojiEvents /></ListItemIcon>
-            {/* <Link href="/resultMatchIndex?bf=tournament"> */}
-            <Link href="/underConstruction">
+            <Link href="/resultMatchIndex?bf=tournament">
               <ListItemText primary="大会結果（決勝）" className="default-color"/>
             </Link>
           </ListItem>
@@ -166,8 +164,7 @@ export default function ButtonAppBar() {
         <List>
           <ListItem key="sponsor">
             <ListItemIcon><SupervisorAccount /></ListItemIcon>
-            {/* <Link href="/sponsor"> */}
-            <Link href="/underConstruction">
+            <Link href="/sponsor">
               <ListItemText primary="スポンサー" className="default-color"/>
             </Link>
           </ListItem>

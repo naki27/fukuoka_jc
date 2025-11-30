@@ -278,36 +278,30 @@ export default function Index() {
                   className={styles.container}
                 >
                   <div className={styles.inlineGrid}>
-                    {/* <Link href="/resultMatchIndex?bf=league">
+                    <Link href="/resultMatchIndex?bf=league">
                       <Image src={battleResultLeague} className={styles.buttonPhoto} alt="予選"/>
                       <div className={styles.linkButton}>
                         <p>{"予選リーグ結果"}</p>
                         <NavigateNextIcon />
                       </div>
-                    </Link> */}
-                    <div className={styles.inlineGrid}>
-                      <Image src={battleResultLeague} className={styles.buttonPhoto} alt="予選"/>
-                    </div>
+                    </Link>
                     <p className={`${styles.description} ${styles.description2}`}>
-                      {"大会当日には予選リーグの試合結果と順位、勝敗数や得失点差をリアルタイムに掲載していく予定です。"}
-                      {/* {"予選リーグの試合結果と順位、勝敗数や得失点差をリアルタイムに掲載しています。"} */}
+                      {/* {"大会当日には予選リーグの試合結果と順位、勝敗数や得失点差をリアルタイムに掲載していく予定です。"} */}
+                      {"予選リーグの試合結果と順位、勝敗数や得失点差をリアルタイムに掲載しています。"}
                     </p>
                   </div>
 
                   <div className={styles.inlineGrid}>
-                    {/* <Link href="/resultMatchIndex?bf=tournament">
+                    <Link href="/resultMatchIndex?bf=tournament">
                       <Image src={battleResultTournament} className={styles.buttonPhoto} alt="トーナメント"/>
                       <div className={styles.linkButton}>
                         <p>{"決勝トーナメント結果"}</p>
                         <NavigateNextIcon />
                       </div>
-                    </Link> */}
-                    <div className={styles.inlineGrid}>
-                      <Image src={battleResultTournament} className={styles.buttonPhoto} alt="予選"/>
-                    </div>
+                    </Link>
                     <p className={`${styles.description} ${styles.description2}`}>
                       {"同じく大会当日には決勝トーナメントの試合結果と順位をトーナメント形式でリアルタイムに掲載していく予定です。"}
-                      {/* {"決勝トーナメントの試合結果と順位をトーナメント形式でリアルタイムに掲載しています。"} */}
+                      {"決勝トーナメントの試合結果と順位をトーナメント形式でリアルタイムに掲載しています。"}
                     </p>
                   </div>
 
@@ -335,18 +329,7 @@ export default function Index() {
             <AnimatedSection animationType="slideUp">
               <div className={styles.inline_container}>
                 <H1 title="スポンサー" />
-                <p className={`${styles.description} ${styles.description3}`}>
-                  {"現在、当大会には 企業・個人・団体あわせて15件のご協賛 をいただいております（2025年9月時点）。"}
-                  {"ご支援いただいた皆さまには、こちらのWebサイトにて感謝の意を込めて宣伝させていただきます。"}
-                  {"なお、協賛の受付が締め切られた後、すべての協賛先を一覧で公開いたします。"}
-                  {"協賛は 随時募集しております。ご興味をお持ちの方は、ぜひ"}
-                  <Link href="/tournamentGuidelines" className={`${styles.link}`}>
-                    {"大会要項"}
-                  </Link>
-                  {"に記載の問い合わせ先までご連絡ください。"}
-                  {"皆さまの温かいご支援を心よりお待ちしております。"}
-                </p>
-                {/* <Grid2
+                <Grid2
                   container
                   direction="row"
                   className={styles.sponsorContainer}
@@ -398,7 +381,7 @@ export default function Index() {
                           <NavigateNextIcon />
                       </span>
                   </Link>
-                </Typography> */}
+                </Typography>
               </div>
             </AnimatedSection>
           </Box>

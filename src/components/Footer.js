@@ -86,19 +86,16 @@ export default function ButtonAppBar({isMobile}) {
             </Box>
             <Box display="flex" flexDirection="column" mx={3}>
               <Box display="flex" flexDirection="column">
-                {/* <MuiLink href="/progressChart?bf=league"> */}
-                <MuiLink href="/underConstruction">
+                <MuiLink href="/progressChart?bf=league">
                   <p>{"大会結果（予選）"}</p>
                 </MuiLink>
-                {/* <MuiLink href="/progressChart?bf=tournament"> */}
-                <MuiLink href="/underConstruction">
+                <MuiLink href="/progressChart?bf=tournament">
                   <p>{"大会結果（決勝）"}</p>
                 </MuiLink>
               </Box>
               <Divider sx={{ borderColor: 'white', margin: '16px 0'}}/>
               <Box display="flex" flexDirection="column">
-                {/* <MuiLink href="/sponsor"> */}
-                <MuiLink href="/underConstruction">
+                <MuiLink href="/sponsor">
                   <p>{"スポンサー"}</p>
                 </MuiLink>
               </Box>
