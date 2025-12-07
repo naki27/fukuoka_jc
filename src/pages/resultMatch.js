@@ -88,7 +88,6 @@ const resultMatch = () => {
 
     function changePage(offset) {
         setPageNumber(prevPageNumber => prevPageNumber + offset);
-        setPdfLoaded(false);
     }
 
     function previousPage() {
@@ -176,18 +175,17 @@ const resultMatch = () => {
                         </Box>
                     ) : (
                         <motion.div
-                            key={pageNumber}
+                            key={cacheBuster}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: pdfLoaded ? 1 : 0 }}
                             transition={{ duration: 0.8 }}
                         >
                             <Document
-                                key={cacheBuster}
-                                file={pdfFilePath} // PDFファイルのパスを指定
+                                file={pdfFilePath}
                                 onLoadSuccess={onDocumentLoadSuccess}
                                 onLoadError={(error) => console.error("PDF読み込みエラー:", error)}
                             >
-                                <Page key={pageNumber} pageNumber={pageNumber}
+                                <Page pageNumber={pageNumber}
                                     renderTextLayer={false}
                                     renderAnnotationLayer={false}/>
                             </Document>
