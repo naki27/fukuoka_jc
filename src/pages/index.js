@@ -24,12 +24,12 @@ import {
 } from "@mui/icons-material";
 
 import keyVisualTitle from '../../public/keyVisualTitle.png';
-import hiragumi from '../../public/sponsor/hiragumi.gif';
-import canadianCamp from '../../public/sponsor/canadian-camp.png';
-import cafeCaprice from '../../public/sponsor/cafe-caprice.webp';
-import mikiya from '../../public/sponsor/mikiya.svg';
-import foodium from '../../public/sponsor/foodium.png';
-import sumitoul from '../../public/sponsor/sumitoul.jpg';
+import calico from '../../public/sponsor/calico.jpg';
+import shirakiudon from '../../public/sponsor/shirakiudon.jpg';
+import hakkouunnyu from '../../public/sponsor/hakkouunnyu.jpg';
+import pos from '../../public/sponsor/pos.jpg';
+import bijurie from '../../public/sponsor/bijurie.jpg';
+import shiikichaya from '../../public/sponsor/shiikichaya.jpg';
 import matchTable from '../../public/match-table.png';
 import progressChart from '../../public/progress-chart.png';
 import progressChartLeague from '../../public/progress-chart-league.jpg';
@@ -335,18 +335,18 @@ export default function Index() {
                   className={styles.sponsorContainer}
                 >
                   <Grid2 className={styles.sponsor}>
-                      <Link href="http://taira-gumi.com/" target="_blank">
-                          <Image src={hiragumi} alt="株式会社平組"/>
+                      <Link href="https://calicohd.jp/sub01.html" target="_blank">
+                          <Image src={calico} alt="calico"/>
                       </Link>
                   </Grid2>
                   <Grid2 className={styles.sponsor}>
-                      <Link href="https://tsuku2.jp/sumitall/" target="_blank">
-                          <Image src={sumitoul} alt="すみとーる"/>
+                      <Link href="https://udonshiraki.com/" target="_blank">
+                          <Image src={shirakiudon} alt="うどん白木商店"/>
                       </Link>
                   </Grid2>
                   <Grid2 className={styles.sponsor}>
-                      <Link href="https://foodium.co.jp/" target="_blank">
-                          <Image src={foodium} alt="foodium tokunaga"/>
+                      <Link href="https://hakkou3058.wixsite.com/0922913180" target="_blank">
+                          <Image src={hakkouunnyu} alt="博光運輸株式会社"/>
                       </Link>
                   </Grid2>
                 </Grid2>
@@ -356,18 +356,18 @@ export default function Index() {
                   className={styles.sponsorContainer}
                 >
                   <Grid2 className={styles.sponsor}>
-                      <Link href="https://miki-ya.co.jp/" target="_blank">
-                          <Image src={mikiya} alt="株式会社ミキヤ"/>
+                      <Link href="https://www.pos-japan.com/" target="_blank">
+                          <Image src={pos} alt="株式会社POS"/>
                       </Link>
                   </Grid2>
                   <Grid2 className={styles.sponsor}>
-                      <Link href="https://th-542gg.wixsite.com/mysite-1" target="_blank">
-                          <Image src={cafeCaprice} alt="cafeCaprice"/>
+                      <Link href="https://shiikichaya.com/" target="_blank">
+                          <Image src={shiikichaya} alt="椎木茶屋"/>
                       </Link>
                   </Grid2>
                   <Grid2 className={styles.sponsor}>
-                      <Link href="http://www.canacan.jp/" target="_blank">
-                          <Image src={canadianCamp} alt="カナディアンキャンプ乗馬クラブ"/>
+                      <Link href="https://www.instagram.com/bijourie.befu/" target="_blank">
+                          <Image src={bijurie} alt="ビジュリエ"/>
                       </Link>
                   </Grid2>
                 </Grid2>
