@@ -35,6 +35,8 @@ import oogapharmacy from '../../public/sponsor/oogapharmacy.png';
 import union from '../../public/sponsor/union.jpg';
 import ones from '../../public/sponsor/ones.png';
 import maruru from '../../public/sponsor/maruru.jpg';
+import faceact from '../../public/sponsor/faceact.png';
+import saga from '../../public/sponsor/saga.png';
 import dummy from '../../public/sponsor/dummy.png';
 
 const sponsor = () => {
@@ -102,9 +104,9 @@ const sponsor = () => {
                     description="この度、ジャパンカップ福岡大会の公式ページを担当させていただきました。webだけではなく、インフラやプロジェクト管理等も可能です。なにかITでお困りであれば、まずはご一報ください！" />
                 <Sponsor name="Maruru Laser Printing" logo={maruru} url="https://www.instagram.com/maruru_laser_printing?igsh=bHd2bXJmYzN6Ymhn&utm_source=qr"
                     description="チームの「思い」をカタチに" />
-                <Sponsor name="株式会社フェイス・アクト" logo={dummy} url=""
+                <Sponsor name="株式会社フェイス・アクト" logo={faceact} url=""
                     description="精一杯楽しんで怪我のないように頑張ってください！" />
-                <Sponsor name="佐賀県ミニバレー協会" logo={dummy} url=""
+                <Sponsor name="佐賀県ミニバレー協会" logo={saga} url=""
                     description="出場される選手の皆様のご健闘をお祈りいたします。" />
 
             </Container>
