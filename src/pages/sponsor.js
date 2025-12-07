@@ -74,7 +74,7 @@ const sponsor = () => {
                     description="創業から70年以上、伝統を守り続ける香ばしくも優しい甘さの梅ヶ枝餅餅と餡の絶妙な味わいにこだわっています。" />
                 <Sponsor name="ヴィーナスギャラリー" logo={venusgallery} url="https://www.p-world.co.jp/fukuoka/vg-nishijin.htm"
                     description="市営地下鉄西新駅から徒歩1分！【ブログ必見!!】毎日更新の当店ブログをご覧くださいませ♪" />
-                <Sponsor name="博多一番太鼓" logo={venusgallery} url="https://www.instagram.com/hakatawarabi/"
+                <Sponsor name="博多一番太鼓" logo={hakataichibandaiko} url="https://www.instagram.com/hakatawarabi/"
                     description="市営地下鉄西新駅から徒歩1分！【ブログ必見!!】毎日更新の当店ブログをご覧くださいませ♪" />
                 <Sponsor name="Look's 株式会社" logo={looks} url="https://looks.co.jp/"
                     description="「お客様にとって最良の一台を」という想いのもと、厳しい基準で選定した車両のみを仕入れ、入念な整備・点検を経てご提供しております。" />
