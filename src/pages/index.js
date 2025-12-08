@@ -278,30 +278,30 @@ export default function Index() {
                   className={styles.container}
                 >
                   <div className={styles.inlineGrid}>
-                    <Link href="/resultMatchIndex?bf=league">
+                    {/* <Link href="/resultMatchIndex?bf=league"> */}
                       <Image src={battleResultLeague} className={styles.buttonPhoto} alt="予選"/>
-                      <div className={styles.linkButton}>
-                        <p>{"予選リーグ結果"}</p>
-                        <NavigateNextIcon />
-                      </div>
-                    </Link>
+                      {/* <div className={styles.linkButton}> */}
+                        {/* <p>{"予選リーグ結果"}</p> */}
+                        {/* <NavigateNextIcon /> */}
+                      {/* </div> */}
+                    {/* </Link> */}
                     <p className={`${styles.description} ${styles.description2}`}>
-                      {/* {"大会当日には予選リーグの試合結果と順位、勝敗数や得失点差をリアルタイムに掲載していく予定です。"} */}
-                      {"予選リーグの試合結果と順位、勝敗数や得失点差をリアルタイムに掲載しています。"}
+                      {"大会当日には予選リーグの試合結果と順位、勝敗数や得失点差をリアルタイムに掲載していく予定です。"}
+                      {/* {"予選リーグの試合結果と順位、勝敗数や得失点差をリアルタイムに掲載しています。"} */}
                     </p>
                   </div>
 
                   <div className={styles.inlineGrid}>
-                    <Link href="/resultMatchIndex?bf=tournament">
+                    {/* <Link href="/resultMatchIndex?bf=tournament"> */}
                       <Image src={battleResultTournament} className={styles.buttonPhoto} alt="トーナメント"/>
-                      <div className={styles.linkButton}>
+                      {/* <div className={styles.linkButton}>
                         <p>{"決勝トーナメント結果"}</p>
                         <NavigateNextIcon />
-                      </div>
-                    </Link>
+                      </div> */}
+                    {/* </Link> */}
                     <p className={`${styles.description} ${styles.description2}`}>
                       {"同じく大会当日には決勝トーナメントの試合結果と順位をトーナメント形式でリアルタイムに掲載していく予定です。"}
-                      {"決勝トーナメントの試合結果と順位をトーナメント形式でリアルタイムに掲載しています。"}
+                      {/* {"決勝トーナメントの試合結果と順位をトーナメント形式でリアルタイムに掲載しています。"} */}
                     </p>
                   </div>
 
@@ -314,7 +314,7 @@ export default function Index() {
                       </div>
                     </Link> */}
                     <div className={styles.inlineGrid}>
-                      <Image src={photoGallery} className={styles.buttonPhoto} alt="予選"/>
+                      <Image src={photoGallery} className={styles.buttonPhoto} alt="写真館"/>
                     </div>
                     <p className={`${styles.description} ${styles.description2}`}>
                       {"大会当日の熱戦の様子や表彰式や観客席など写真で大会の感動を伝えます。大会終了後、掲載まで暫しお時間をいただきます。"}
