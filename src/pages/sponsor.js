@@ -70,13 +70,13 @@ const sponsor = () => {
                 <Sponsor name="株式会社POS" logo={pos} url="https://www.pos-japan.com/"
                     description="オリジナルプリント承ります！Tシャツ・ポロシャツ・・ウインドブレーカー等、短納期で安価にご対応させていただきます。" />
                 <Sponsor name="飯倉＆ビジュリエ" logo={bijurie} url="https://www.instagram.com/bijourie.befu/"
-                    description="ビーチはいいくら、ケーキはビジュリエ。季節のフルーツを楽しめる手作りのお菓子をご用意しています！飯倉所属のみゆきがいつでもいますので、ぜひ遊びに来てください♡イートインできるのでおしゃべりしましょう～♡" />
+                    description="ビーチはいいくら、ケーキはビジュリエ。練習は金曜19:30〜原中体育館です！ビジュリエでは、季節のフルーツを楽しめる手作りのケーキや焼き菓子をご用意しています。飯倉所属のパティシエみゆきが皆様のお越しをお待ちしております。ケーキバイキング・アフタヌーンティーも大好評です♡練習へのご参加・お店へのご来店お待ちしています♡" />
                 <Sponsor name="椎木茶屋" logo={shiikichaya} url="https://shiikichaya.com/"
                     description="創業から70年以上、伝統を守り続ける香ばしくも優しい甘さの梅ヶ枝餅餅と餡の絶妙な味わいにこだわっています。" />
                 <Sponsor name="ヴィーナスギャラリー" logo={venusgallery} url="https://www.p-world.co.jp/fukuoka/vg-nishijin.htm"
                     description="忙しい毎日の生活の中で、たくさんの人にワクワクドキドキを届けたい。最高のおもてなしで皆さまのご来店をお待ちしております。" />
                 <Sponsor name="博多一番太鼓" logo={hakataichibandaiko} url="https://www.instagram.com/hakatawarabi/"
-                    description="創業７８年、店舗（南区長住）・リヤカーにて販売しています。子どもと地球の未来を守る活動として、月に一度子ども食堂も開催しています。インスタグラムにて情報を発信していますので、ご覧ください。インスタグラム（＠hakatawarabi）で出店情報等お知らせしています" />
+                    description="創業７８年、店舗（南区長住）・リヤカーにて販売しています。子どもと地球の未来を守る活動として、月に一度子ども食堂も開催しています。インスタグラムにて情報を発信していますので、ご覧ください。インスタグラム（＠hakatawarabi）で出店情報等お知らせしています。" />
                 <Sponsor name="Look's 株式会社" logo={looks} url="https://looks.co.jp/"
                     description="北海道から沖縄まで全国納車可能！車検・点検・修理・板金・タイヤ交換からコーティング、カスタムまで幅広く対応！理想の一台をLook'sがカタチにします！お気軽にご相談ください。" />
                 <Sponsor name="明治安田生命保険相互会社 福岡支社" logo={meijiyasuda} url="https://www.meijiyasuda.co.jp/"
