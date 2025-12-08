@@ -74,7 +74,7 @@ const sponsor = () => {
                 <Sponsor name="椎木茶屋" logo={shiikichaya} url="https://shiikichaya.com/"
                     description="創業から70年以上、伝統を守り続ける香ばしくも優しい甘さの梅ヶ枝餅餅と餡の絶妙な味わいにこだわっています。" />
                 <Sponsor name="ヴィーナスギャラリー" logo={venusgallery} url="https://www.p-world.co.jp/fukuoka/vg-nishijin.htm"
-                    description="市営地下鉄西新駅から徒歩1分！【ブログ必見!!】毎日更新の当店ブログをご覧くださいませ♪" />
+                    description="忙しい毎日の生活の中で、たくさんの人にワクワクドキドキを届けたい。最高のおもてなしで皆さまのご来店をお待ちしております。" />
                 <Sponsor name="博多一番太鼓" logo={hakataichibandaiko} url="https://www.instagram.com/hakatawarabi/"
                     description="創業７８年、店舗（南区長住）・リヤカーにて販売しています。子どもと地球の未来を守る活動として、月に一度子ども食堂も開催しています。インスタグラムにて情報を発信していますので、ご覧ください。インスタグラム（＠hakatawarabi）で出店情報等お知らせしています" />
                 <Sponsor name="Look's 株式会社" logo={looks} url="https://looks.co.jp/"
