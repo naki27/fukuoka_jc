@@ -85,7 +85,7 @@ const sponsor = () => {
                 <Sponsor name="ティエムフォート（有）" logo={tmfort} url=""
                     description="" />
                 <Sponsor name="ゆり工房" logo={yurikoubou} url="https://saifu-fukushikai.com/yurikobo.html"
-                    description="就労を希望する障がいのある人に、生産活動を中心に、就労にあたっての知識・技術の向上、職場体験や、その他の活動の場と機会を提供するとともに、地域において自立した生活がおくれることを目指しています。" />
+                    description="障がいのある方々が就労や社会参加、地域で暮らしていくことを目指して作業や活動に取り組んでいます。素朴で飽きのこない商品や様々な作品を取り揃えています。" />
                 <Sponsor name="ぶどうの庭" logo={budouno} url="https://budounoniwa.com/"
                     description="春日まちづくり支援センター・ぶどうの庭はおとなもこどもも楽しく過ごせる市の施設です。公益的な活動を行う個人や団体に、会議室などを貸して活動支援をしたりしています。カフェもありますので是非一度遊びに来てください。" />
                 <Sponsor name="BME株式会社 NOSIDE" logo={noside} url="https://bme-noside.com/"
