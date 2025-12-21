@@ -37,6 +37,7 @@ import ones from '../../public/sponsor/ones.png';
 import maruru from '../../public/sponsor/maruru.jpg';
 import faceact from '../../public/sponsor/faceact.png';
 import saga from '../../public/sponsor/saga.png';
+import imamaru from '../../public/sponsor/imamaru.png';
 import dummy from '../../public/sponsor/dummy.png';
 
 const sponsor = () => {
@@ -109,6 +110,8 @@ const sponsor = () => {
                     description="精一杯楽しんで怪我のないように頑張ってください！" />
                 <Sponsor name="佐賀県ミニバレー協会" logo={saga} url=""
                     description="出場される選手の皆様のご健闘をお祈りいたします。" />
+                <Sponsor name="IMAMARU春日" logo={imamaru} url="https://www.instagram.com/imamarukasuga/"
+                    description="春日市で“まぁるくつながる”マルシェを企画運営。IMAMARU春日は、まちの賑わいを創出し、地域を元気にするまちづくりを目指します。さくらマルシェin白水大池公園2026年4月3日（金）16:00-21:00 4月4日（土）10:00-15:00" />
 
             </Container>
             <Footer isMobile={isMobile}/>
