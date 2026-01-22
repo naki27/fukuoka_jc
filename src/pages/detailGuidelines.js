@@ -75,46 +75,49 @@ const detailGuidelines = () => {
                 </Breadcrumbs>
                 <H1 title="細部要項" />
 
-                <Box paddingY={3}>
-                    <H2 title="ダウンロード／プレビュー" />
-
-                    <Box display="flex" justifyContent="space-between" alignItems="center" className={`${styles.ButtonArea}`}>
-                        <div>
-                            <Button
-                                className={`${styles.InfoButton}`}
-                                onClick={handleDownload}
-                                variant="contained"
-                                startIcon={<GetAppIcon />}>
+                <Box paddingY={isMobile ? 0 : 3}>
+                    <Box
+                        display="flex"
+                        flexDirection={isMobile ? 'column' : 'row'}
+                        justifyContent={isMobile ? 'flex-start' : 'space-between'}
+                        alignItems="center"
+                        gap={isMobile ? 2 : 0}
+                        className={`${styles.ButtonArea}`}
+                    >
+                        <Box display="flex" flexDirection={isMobile ? 'column' : 'row'} alignItems={isMobile ? 'stretch' : 'center'}>
+                            {!isMobile && (
+                                <Button
+                                    className={`${styles.InfoButton}`}
+                                    onClick={handleDownload}
+                                    variant="contained"
+                                    startIcon={<GetAppIcon />}
+                                    fullWidth={isMobile}
+                                >
                                     PDFをダウンロード
-                            </Button>
+                                </Button>
+                            )}
+                        </Box>
 
-                            <Button
-                                className={`${styles.InfoButton}`}
-                                onClick={reloadPdf}
-                                variant="outlined"
-                                style={{ marginLeft: 8 }}>
-                                    再読み込み
-                            </Button>
-                        </div>
-
-                        <Box display="flex" alignItems="center" className={`${styles.PageNav}`}>
+                        <Box display="flex" alignItems="center" className={`${styles.PageNav}`} sx={{ mt: isMobile ? 1 : 0, alignSelf: isMobile ? 'flex-end' : 'auto' }}>
                             <Button
                                 disabled={pageNumber <= 1}
                                 onClick={previousPage}
                                 startIcon={<ArrowBackIosNewIcon />}
                                 style={{ color: '#333' }}
+                                size={isMobile ? 'small' : 'medium'}
                             >
-                                前のページ
+                                {isMobile ? "前" : "前のページ"}
                             </Button>
                             <Button
                                 disabled={pageNumber >= (numPages || 1)}
                                 onClick={nextPage}
                                 endIcon={<ArrowForwardIosIcon />}
-                                style={{ color: '#333', marginLeft: 8 }}
+                                style={{ color: '#333', marginLeft: isMobile ? 6 : 8 }}
+                                size={isMobile ? 'small' : 'medium'}
                             >
-                                次のページ
+                                {isMobile ? "次" : "次のページ"}
                             </Button>
-                            <Typography style={{ marginLeft: 12, color: '#333' }}>{pageNumber} / {numPages || '--'}</Typography>
+                            <Typography style={{ marginLeft: 12, color: '#333', fontSize: isMobile ? '0.9rem' : '1rem' }}>{pageNumber} / {numPages || '--'}</Typography>
                         </Box>
                     </Box>
 
