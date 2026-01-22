@@ -86,8 +86,7 @@ export default function ButtonAppBar() {
             </ListItem>
             <ListItem key="detailGuidelines">
               <ListItemIcon><DescriptionOutlined /></ListItemIcon>
-              {/* <Link href="/detailGuidelines"> */}
-              <Link href="/underConstruction">
+              <Link href="/detailGuidelines">
                 <ListItemText primary="細部要項" className="default-color"/>
               </Link>
             </ListItem>
@@ -115,35 +114,37 @@ export default function ButtonAppBar() {
         <List>
           <ListItem key="matchTableIndex1">
             <ListItemIcon><JoinInner /></ListItemIcon>
-            {/* <Link href="/matchTableIndex?sex=female"> */}
-            <Link href="/underConstruction">
-              <ListItemText primary="組み合わせ（女子）" className="default-color"/>
+            <Link href="/matchAllTables">
+              <ListItemText primary="組み合わせ" className="default-color"/>
             </Link>
+            {/* <Link href="/matchTableIndex?sex=female">
+              <ListItemText primary="組み合わせ（女子）" className="default-color"/>
+            </Link> */}
           </ListItem>
-          <ListItem key="matchTableIndex2">
+          {/* <ListItem key="matchTableIndex2">
             <ListItemIcon><JoinInner /></ListItemIcon>
-            {/* <Link href="/matchTableIndex?sex=male"> */}
-            <Link href="/underConstruction">
+            <Link href="/matchTableIndex?sex=male">
               <ListItemText primary="組み合わせ（男子）" className="default-color"/>
             </Link>
-          </ListItem>
+          </ListItem> */}
         </List>
         <Divider />
         <List>
           <ListItem key="progressChart1">
             <ListItemIcon><Subject /></ListItemIcon>
-            {/* <Link href="/progressChart?bf=league"> */}
-            <Link href="/underConstruction">
+              <Link href="/progressAllChart">
+                <ListItemText primary="進行表" className="default-color"/>
+              </Link>
+            {/* <Link href="/progressChart?bf=league">
               <ListItemText primary="進行表（予選）" className="default-color"/>
-            </Link>
+            </Link> */}
           </ListItem>
-          <ListItem key="progressChart2">
+          {/* <ListItem key="progressChart2">
             <ListItemIcon><Subject /></ListItemIcon>
-            {/* <Link href="/progressChart?bf=tournament"> */}
-            <Link href="/underConstruction">
+            <Link href="/progressChart?bf=tournament">
               <ListItemText primary="進行表（決勝）" className="default-color"/>
             </Link>
-          </ListItem>
+          </ListItem> */}
         </List>
         <Divider />
         <List>

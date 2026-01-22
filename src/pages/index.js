@@ -102,9 +102,8 @@ export default function Index() {
                     <p>{"大会要項"}</p>
                   </Link>
 
-                  {/* <Link href="/detailGuidelines" className={styles.inlineGrid}> */}
-                  <Link href="/underConstruction" className={styles.inlineGrid}>
-                    <div className={styles.iconCircle} disabled>
+                  <Link href="/detailGuidelines" className={styles.inlineGrid}>
+                    <div className={styles.iconCircle}>
                       <DescriptionOutlined fontSize="large" className={styles.innerCircle} />
                     </div>
                     <p>{"細部要項"}</p>
@@ -143,20 +142,26 @@ export default function Index() {
                   <div className={styles.inline_container_2}>
                     <H1 title="組み合わせ" />
                     <Image src={matchTable} className={styles.inline_container_2} alt="組み合わせ"/>
-                    <p className={styles.description}>{"対戦の組み合わせです。"}<br/>{"各カテゴリ別のご確認いただける予定です。"}</p>
+                    <p className={styles.description}>{"対戦の組み合わせです。"}<br/>{"各カテゴリ別のご確認いただけます。"}</p>
                     <Grid2
                       container
                       direction="row"
                       className={`${styles.container} ${styles.container_column}`}
                     >
+                      <Link href="/matchAllTables" className={styles.inlineGrid}>
+                        <div className={styles.linkButton}>
+                          <p>{"組み合わせはこちら"}</p>
+                          <NavigateNextIcon />
+                        </div>
+                      </Link>
                       {/* <Link href="/matchTableIndex?sex=female" className={styles.inlineGrid}>
                         <div className={styles.linkButton}>
                           <p>{"女子はこちら"}</p>
                           <NavigateNextIcon />
                         </div>
-                      </Link> */}
+                      </Link>
 
-                      {/* <Link href="/matchTableIndex?sex=male" className={styles.inlineGrid}>
+                      <Link href="/matchTableIndex?sex=male" className={styles.inlineGrid}>
                         <div className={styles.linkButton}>
                           <p>{"男子はこちら"}</p>
                           <NavigateNextIcon />
@@ -169,20 +174,26 @@ export default function Index() {
               <div className={`${styles.inline_container} ${styles.inline_container_left}`}>
                   <div className={styles.inline_container_2}>
                     <H1 title="組み合わせ" type={H1Style.inlineLeft} />
-                    <p className={styles.description}>{"対戦の組み合わせです。"}<br/>{"各カテゴリ別のご確認いただける予定です。"}</p>
+                    <p className={styles.description}>{"対戦の組み合わせです。"}<br/>{"各カテゴリ別のご確認いただけます。"}</p>
                     <Grid2
                       container
                       direction="row"
                       className={`${styles.container} ${styles.container_column}`}
                     >
+                      <Link href="/matchAllTables" className={styles.inlineGrid}>
+                        <div className={styles.linkButton}>
+                          <p>{"組み合わせはこちら"}</p>
+                          <NavigateNextIcon />
+                        </div>
+                      </Link>
                       {/* <Link href="/matchTableIndex?sex=female" className={styles.inlineGrid}>
                         <div className={styles.linkButton}>
                           <p>{"女子はこちら"}</p>
                           <NavigateNextIcon />
                         </div>
-                      </Link> */}
+                      </Link>
 
-                      {/* <Link href="/matchTableIndex?sex=male" className={styles.inlineGrid}>
+                      <Link href="/matchTableIndex?sex=male" className={styles.inlineGrid}>
                         <div className={styles.linkButton}>
                           <p>{"男子はこちら"}</p>
                           <NavigateNextIcon />
@@ -209,15 +220,13 @@ export default function Index() {
                       direction="row"
                       className={`${styles.container} ${styles.container_column}`}
                     >
-                      {/* <Link href="/progressChart?bf=league" className={styles.inlineGrid}>
-                        <div className={styles.linkButton}>
-                          <p>{"予選リーグ"}</p>
-                          <NavigateNextIcon />
-                        </div>
-                      </Link>
-                       */}
-                      <p className={styles.description}>{"予選リーグの試合進行予定や、決勝トーナメントの試合進行予定をご確認いただける予定です。"}</p>
-                      {/* <p className={styles.description}>{"予選リーグの試合進行予定をご確認いただけます。"}<br/>{"各コートの試合スケジュールを時系列で掲載しています。"}</p> */}
+                    <p className={styles.description}>{"予選リーグの試合進行予定や、決勝トーナメントの試合進行予定をご確認いただけます。"}</p>
+                    <Link href="/progressAllChart" className={styles.inlineGrid}>
+                      <div className={styles.linkButton}>
+                        <p>{"予選・決勝進行表"}</p>
+                        <NavigateNextIcon />
+                      </div>
+                    </Link>
 
                       {/* <Link href="/progressChart?bf=tournament" className={styles.inlineGrid}>
                         <div className={styles.linkButton}>
@@ -242,14 +251,13 @@ export default function Index() {
                   >
                     <H1 title="進行表" type={H1Style.inlineLeft} />
 
-                    {/* <Link href="/progressChart?bf=league" className={styles.inlineGrid}>
+                    <p className={styles.description}>{"予選リーグの試合進行予定や、決勝トーナメントの試合進行予定をご確認いただけます。"}</p>
+                    <Link href="/progressAllChart" className={styles.inlineGrid}>
                       <div className={styles.linkButton}>
-                        <p>{"予選リーグ"}</p>
+                        <p>{"予選・決勝進行表"}</p>
                         <NavigateNextIcon />
                       </div>
-                    </Link> */}
-                    <p className={styles.description}>{"予選リーグの試合進行予定や、決勝トーナメントの試合進行予定をご確認いただける予定です。"}</p>
-                    {/* <p className={styles.description}>{"予選リーグの試合進行予定をご確認いただけます。"}<br/>{"各コートの試合スケジュールを時系列で掲載しています。"}</p> */}
+                    </Link>
 
                     {/* <Link href="/progressChart?bf=tournament" className={styles.inlineGrid}>
                       <div className={styles.linkButton}>

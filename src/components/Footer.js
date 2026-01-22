@@ -46,8 +46,7 @@ export default function ButtonAppBar({isMobile}) {
               <MuiLink href="/tournamentGuidelines">
                 <p>{"大会要項"}</p>
               </MuiLink>
-              {/* <MuiLink href="/detailGuidelines"> */}
-              <MuiLink href="/underConstruction">
+              <MuiLink href="/detailGuidelines">
                 <p>{"細部要項"}</p>
               </MuiLink>
               <MuiLink href="/accessMap">
@@ -63,25 +62,27 @@ export default function ButtonAppBar({isMobile}) {
             </Box>
             <Box display="flex" flexDirection="column" mx={3}>
               <Box display="flex" flexDirection="column">
-                {/* <MuiLink href="/matchTableIndex?sex=female"> */}
-                <MuiLink href="/underConstruction">
+                <MuiLink href="/matchAllTables">
+                  <p>{"組み合わせ"}</p>
+                </MuiLink>
+                {/* <MuiLink href="/matchTableIndex?sex=female">
                   <p>{"組み合わせ（女子）"}</p>
                 </MuiLink>
-                {/* <MuiLink href="/matchTableIndex?sex=male"> */}
-                <MuiLink href="/underConstruction">
+                <MuiLink href="/matchTableIndex?sex=male">
                   <p>{"組み合わせ（男子）"}</p>
-                </MuiLink>
+                </MuiLink> */}
               </Box>
               <Divider sx={{ borderColor: 'white', margin: '16px 0'}}/>
               <Box display="flex" flexDirection="column">
-                {/* <MuiLink href="/progressChart?bf=league"> */}
-                <MuiLink href="/underConstruction">
+                <MuiLink href="/progressAllChart">
+                  <p>{"大会進行表"}</p>
+                </MuiLink>
+                {/* <MuiLink href="/progressChart?bf=league">
                   <p>{"進行表（予選）"}</p>
-                </MuiLink>
-                {/* <MuiLink href="/progressChart?bf=tournament"> */}
-                <MuiLink href="/underConstruction">
+                </MuiLink> */}
+                {/* <MuiLink href="/progressChart?bf=tournament">
                   <p>{"進行表（決勝）"}</p>
-                </MuiLink>
+                </MuiLink> */}
               </Box>
             </Box>
             <Box display="flex" flexDirection="column" mx={3}>

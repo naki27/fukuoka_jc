@@ -62,7 +62,7 @@ const sponsor = () => {
                     description="皆様のご健闘をお祈りします！※特にCALICO" />
                 <Sponsor name="須恵町ビーチボールバレー同好会" logo={sue} url=""
                     description="ビーチボールバレーが仲間とできる喜びを大切に！全力プレイとチームワークで必勝＆必笑" />
-                <Sponsor name="SuMiと〜る" logo={sumitoul} url="https://tsuku2.jp/sumitall/"
+                <Sponsor name="SuMiと〜る" logo={sumitoul} url="https://www.instagram.com/sumitoru_cafe?igsh=ZjlvYWJoOTE1M2Iz&utm_source=qr"
                     description="昭和レトロ漂うカフェ。珈琲・ナポリタン・キーマカレーなど、懐かしさ漂う空間に包まれませんか。" />
                 <Sponsor name="うどん白木商店" logo={shirakiudon} url="https://udonshiraki.com/"
                     description="生地は2日間かけて熟成。しっかりと熟成した麺は黄色味を帯びているのが特徴。注文が入ってから麺を切り出して茹でます。やや太めでコシを強く仕上げています。出汁に使う材料はそのままに、その「取り方」に一工夫を加え、より旨みを引き出せるように仕上げています。" />
