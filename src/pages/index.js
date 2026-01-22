@@ -32,12 +32,9 @@ import bijurie from '../../public/sponsor/bijurie.jpg';
 import shiikichaya from '../../public/sponsor/shiikichaya.jpg';
 import matchTable from '../../public/match-table.png';
 import progressChart from '../../public/progress-chart.png';
-import progressChartLeague from '../../public/progress-chart-league.jpg';
-import progressChartTournament from '../../public/progress-chart-tournament.jpg';
-import battleResultLeague from '../../public/battle-result-league.jpg';
-import battleResultTournament from '../../public/battle-result-tournament.jpg';
-import photoGallery from '../../public/photo-gallery.jpg';
-import catchCopy from '../../public/catchcopy.png';
+import battleResultLeague from '../../public/battle-result-league.png';
+import battleResultTournament from '../../public/battle-result-tournament.png';
+import photoGallery from '../../public/photo-gallery.png';
 
 export default function Index() {
   const [showLogo, setShowLogo] = useState(true);
