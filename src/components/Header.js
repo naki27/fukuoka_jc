@@ -104,8 +104,7 @@ export default function ButtonAppBar() {
             </ListItem>
             <ListItem key="variousGuides">
               <ListItemIcon><ImportContacts /></ListItemIcon>
-              {/* <Link href="/variousGuides"> */}
-              <Link href="/underConstruction">
+              <Link href="/variousGuides">
                 <ListItemText primary="各種ご案内" className="default-color"/>
               </Link>
             </ListItem>

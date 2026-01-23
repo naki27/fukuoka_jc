@@ -25,3 +25,26 @@ color:#fff
   font-size: 1.1rem;
   text-align: center;
 }
+
+.flyerWrapper {
+  margin: 24px auto;
+  text-align: center;
+}
+.flyer {
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 600px) {
+  .flyerWrapper {
+    padding: 0 12px;
+  }
+  .flyer {
+    max-width: 100%;
+  }
+}

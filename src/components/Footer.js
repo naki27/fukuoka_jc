@@ -55,8 +55,7 @@ export default function ButtonAppBar({isMobile}) {
               <MuiLink href="/venueMap">
                 <p>{"会場図"}</p>
               </MuiLink>
-              {/* <MuiLink href="/variousGuides"> */}
-              <MuiLink href="/underConstruction">
+              <MuiLink href="/variousGuides">
                 <p>{"各種ご案内"}</p>
               </MuiLink>
             </Box>

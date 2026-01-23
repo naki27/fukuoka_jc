@@ -123,9 +123,8 @@ export default function Index() {
                     <p>{"会場図"}</p>
                   </Link>
 
-                  {/* <Link href="/variousGuides" className={styles.inlineGrid}> */}
-                  <Link href="/underConstruction" className={styles.inlineGrid}>
-                    <div className={styles.iconCircle} disabled>
+                  <Link href="/variousGuides" className={styles.inlineGrid}>
+                    <div className={styles.iconCircle}>
                       <ImportContacts fontSize="large" className={styles.innerCircle} />
                     </div>
                     <p>{"各種ご案内"}</p>
