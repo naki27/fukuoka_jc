@@ -116,8 +116,8 @@ export default function Index() {
                     <p>{"アクセスマップ"}</p>
                   </Link>
 
-                  <Link href="/underConstruction" className={styles.inlineGrid}>
-                    <div className={styles.iconCircle} disabled>
+                  <Link href="/venueMap" className={styles.inlineGrid}>
+                    <div className={styles.iconCircle}>
                       <Domain fontSize="large" className={styles.innerCircle} />
                     </div>
                     <p>{"会場図"}</p>

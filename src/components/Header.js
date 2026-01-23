@@ -96,9 +96,9 @@ export default function ButtonAppBar() {
                 <ListItemText primary="アクセスマップ" className="default-color"/>
               </Link>
             </ListItem>
-            <ListItem key="underConstruction">
+            <ListItem key="venueMap">
               <ListItemIcon><Domain /></ListItemIcon>
-              <Link href="/underConstruction">
+              <Link href="/venueMap">
                 <ListItemText primary="会場図" className="default-color"/>
               </Link>
             </ListItem>
