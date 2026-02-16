@@ -13,7 +13,7 @@ import { MobileContext } from '~/contexts/MobileContext';
 
 const memoriesPhotoGallery = () => {
     const isMobile = useContext(MobileContext);
-    const PASSWORD = "r7K6z/gd";
+    const PASSWORD = "u9TE6V2f";
 
     useEffect(_ => {
       const password = document.getElementById('password');
@@ -64,13 +64,15 @@ const memoriesPhotoGallery = () => {
                   </div>
 
                   <div id="body" className={styles.init}>
-                    <a href="https://photos.app.goo.gl/st3j8SQLDvfP1Anz8" className={styles.photoLink}>
+                    <p>大会終了後に写真を公開します。</p>
+                    <p>公開までしばらくお待ちください。</p>
+                    {/* <a href="https://photos.app.goo.gl/st3j8SQLDvfP1Anz8" className={styles.photoLink}>
                       男子はこちら
                     </a>
 
                     <a href="https://photos.app.goo.gl/M9rJDKDxNpxL4frZA" className={styles.photoLink}>
                       女子はこちら
-                    </a>
+                    </a> */}
                   </div>
                 </Container>
             </Container>
