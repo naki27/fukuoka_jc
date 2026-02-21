@@ -149,8 +149,7 @@ export default function ButtonAppBar() {
         <List>
           <ListItem key="resultMatchIndex1">
             <ListItemIcon><EmojiEvents /></ListItemIcon>
-            {/* <Link href="/resultMatchIndex?bf=league"> */}
-            <Link href="/underConstruction">
+            <Link href="/resultMatchIndex?bf=league">
               <ListItemText primary="大会結果（予選）" className="default-color"/>
             </Link>
           </ListItem>

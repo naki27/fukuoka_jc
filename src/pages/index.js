@@ -282,16 +282,16 @@ export default function Index() {
                   className={styles.container}
                 >
                   <div className={styles.inlineGrid}>
-                    {/* <Link href="/resultMatchIndex?bf=league"> */}
+                    <Link href="/resultMatchIndex?bf=league">
                       <Image src={battleResultLeague} className={styles.buttonPhoto} alt="予選"/>
-                      {/* <div className={styles.linkButton}> */}
-                        {/* <p>{"予選リーグ結果"}</p> */}
-                        {/* <NavigateNextIcon /> */}
-                      {/* </div> */}
-                    {/* </Link> */}
+                      <div className={styles.linkButton}>
+                        <p>{"予選リーグ結果"}</p>
+                        <NavigateNextIcon />
+                      </div>
+                    </Link>
                     <p className={`${styles.description} ${styles.description2}`}>
-                      {"大会当日には予選リーグの試合結果と順位、勝敗数や得失点差をリアルタイムに掲載していく予定です。"}
-                      {/* {"予選リーグの試合結果と順位、勝敗数や得失点差をリアルタイムに掲載しています。"} */}
+                      {/* {"大会当日には予選リーグの試合結果と順位、勝敗数や得失点差をリアルタイムに掲載していく予定です。"} */}
+                      {"予選リーグの試合結果と順位、勝敗数や得失点差をリアルタイムに掲載しています。"}
                     </p>
                   </div>
 
