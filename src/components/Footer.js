@@ -62,26 +62,20 @@ export default function ButtonAppBar({isMobile}) {
             <Box display="flex" flexDirection="column" mx={3}>
               <Box display="flex" flexDirection="column">
                 <MuiLink href="/matchAllTables">
-                  <p>{"組み合わせ"}</p>
+                  <p>{"予選組み合わせ"}</p>
                 </MuiLink>
-                {/* <MuiLink href="/matchTableIndex?sex=female">
-                  <p>{"組み合わせ（女子）"}</p>
+                <MuiLink href="/matchAllTablesTournamentMale">
+                  <p>{"決勝トーナメント（男子）組み合わせ"}</p>
                 </MuiLink>
-                <MuiLink href="/matchTableIndex?sex=male">
-                  <p>{"組み合わせ（男子）"}</p>
-                </MuiLink> */}
+                <MuiLink href="/matchAllTablesTournamentFemale">
+                  <p>{"決勝トーナメント（女子）組み合わせ"}</p>
+                </MuiLink>
               </Box>
               <Divider sx={{ borderColor: 'white', margin: '16px 0'}}/>
               <Box display="flex" flexDirection="column">
                 <MuiLink href="/progressAllChart">
-                  <p>{"大会進行表"}</p>
+                  <p>{"大会進行表（決勝）"}</p>
                 </MuiLink>
-                {/* <MuiLink href="/progressChart?bf=league">
-                  <p>{"進行表（予選）"}</p>
-                </MuiLink> */}
-                {/* <MuiLink href="/progressChart?bf=tournament">
-                  <p>{"進行表（決勝）"}</p>
-                </MuiLink> */}
               </Box>
             </Box>
             <Box display="flex" flexDirection="column" mx={3}>
@@ -89,7 +83,6 @@ export default function ButtonAppBar({isMobile}) {
                 <MuiLink href="/resultMatchIndex?bf=league">
                   <p>{"大会結果（予選）"}</p>
                 </MuiLink>
-                {/* <MuiLink href="/resultMatchIndex?bf=tournament"> */}
                 <MuiLink href="/underConstruction">
                   <p>{"大会結果（決勝）"}</p>
                 </MuiLink>

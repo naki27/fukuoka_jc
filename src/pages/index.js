@@ -149,23 +149,23 @@ export default function Index() {
                     >
                       <Link href="/matchAllTables" className={styles.inlineGrid}>
                         <div className={styles.linkButton}>
-                          <p>{"組み合わせはこちら"}</p>
+                          <p>{"予選組み合わせはこちら"}</p>
                           <NavigateNextIcon />
                         </div>
                       </Link>
-                      {/* <Link href="/matchTableIndex?sex=female" className={styles.inlineGrid}>
+                      <Link href="/matchAllTablesTournamentMale" className={styles.inlineGrid}>
                         <div className={styles.linkButton}>
-                          <p>{"女子はこちら"}</p>
+                          <p>{"決勝トーナメント（男子）組み合わせはこちら"}</p>
+                          <NavigateNextIcon />
+                        </div>
+                      </Link>
+                      <Link href="/matchAllTablesTournamentFemale" className={styles.inlineGrid}>
+                        <div className={styles.linkButton}>
+                          <p>{"決勝トーナメント（女子）組み合わせはこちら"}</p>
                           <NavigateNextIcon />
                         </div>
                       </Link>
 
-                      <Link href="/matchTableIndex?sex=male" className={styles.inlineGrid}>
-                        <div className={styles.linkButton}>
-                          <p>{"男子はこちら"}</p>
-                          <NavigateNextIcon />
-                        </div>
-                      </Link> */}
                     </Grid2>
                   </div>
                 </div>
@@ -181,23 +181,23 @@ export default function Index() {
                     >
                       <Link href="/matchAllTables" className={styles.inlineGrid}>
                         <div className={styles.linkButton}>
-                          <p>{"組み合わせはこちら"}</p>
+                          <p>{"予選組み合わせはこちら"}</p>
                           <NavigateNextIcon />
                         </div>
                       </Link>
-                      {/* <Link href="/matchTableIndex?sex=female" className={styles.inlineGrid}>
+                      <Link href="/matchAllTablesTournamentMale" className={styles.inlineGrid}>
                         <div className={styles.linkButton}>
-                          <p>{"女子はこちら"}</p>
+                          <p>{"決勝トーナメント（男子）組み合わせはこちら"}</p>
+                          <NavigateNextIcon />
+                        </div>
+                      </Link>
+                      <Link href="/matchAllTablesTournamentFemale" className={styles.inlineGrid}>
+                        <div className={styles.linkButton}>
+                          <p>{"決勝トーナメント（女子）組み合わせはこちら"}</p>
                           <NavigateNextIcon />
                         </div>
                       </Link>
 
-                      <Link href="/matchTableIndex?sex=male" className={styles.inlineGrid}>
-                        <div className={styles.linkButton}>
-                          <p>{"男子はこちら"}</p>
-                          <NavigateNextIcon />
-                        </div>
-                      </Link> */}
                     </Grid2>
                   </div>
                   <Image src={matchTable} className={styles.inline_container_2} alt="組み合わせ"/>
@@ -222,7 +222,7 @@ export default function Index() {
                     <p className={styles.description}>{"予選リーグの試合進行予定や、決勝トーナメントの試合進行予定をご確認いただけます。"}</p>
                     <Link href="/progressAllChart" className={styles.inlineGrid}>
                       <div className={styles.linkButton}>
-                        <p>{"予選・決勝進行表"}</p>
+                        <p>{"大会進行表（決勝）"}</p>
                         <NavigateNextIcon />
                       </div>
                     </Link>
@@ -253,7 +253,7 @@ export default function Index() {
                     <p className={styles.description}>{"予選リーグの試合進行予定や、決勝トーナメントの試合進行予定をご確認いただけます。"}</p>
                     <Link href="/progressAllChart" className={styles.inlineGrid}>
                       <div className={styles.linkButton}>
-                        <p>{"予選・決勝進行表"}</p>
+                        <p>{"大会進行表（決勝）"}</p>
                         <NavigateNextIcon />
                       </div>
                     </Link>

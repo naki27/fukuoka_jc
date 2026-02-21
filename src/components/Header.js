@@ -114,25 +114,28 @@ export default function ButtonAppBar() {
           <ListItem key="matchTableIndex1">
             <ListItemIcon><JoinInner /></ListItemIcon>
             <Link href="/matchAllTables">
-              <ListItemText primary="組み合わせ" className="default-color"/>
+              <ListItemText primary="予選組み合わせ" className="default-color"/>
             </Link>
-            {/* <Link href="/matchTableIndex?sex=female">
-              <ListItemText primary="組み合わせ（女子）" className="default-color"/>
-            </Link> */}
           </ListItem>
-          {/* <ListItem key="matchTableIndex2">
+          <ListItem key="matchTableIndex1">
             <ListItemIcon><JoinInner /></ListItemIcon>
-            <Link href="/matchTableIndex?sex=male">
-              <ListItemText primary="組み合わせ（男子）" className="default-color"/>
+            <Link href="/matchAllTablesTournamentMale">
+              <ListItemText primary="決勝トーナメント（男子）組み合わせ" className="default-color"/>
             </Link>
-          </ListItem> */}
+          </ListItem>
+          <ListItem key="matchTableIndex2">
+            <ListItemIcon><JoinInner /></ListItemIcon>
+            <Link href="/matchAllTablesTournamentFemale">
+              <ListItemText primary="決勝トーナメント（女子）組み合わせ" className="default-color"/>
+            </Link>
+          </ListItem>
         </List>
         <Divider />
         <List>
           <ListItem key="progressChart1">
             <ListItemIcon><Subject /></ListItemIcon>
               <Link href="/progressAllChart">
-                <ListItemText primary="進行表" className="default-color"/>
+                <ListItemText primary="大会進行表（決勝）" className="default-color"/>
               </Link>
             {/* <Link href="/progressChart?bf=league">
               <ListItemText primary="進行表（予選）" className="default-color"/>
