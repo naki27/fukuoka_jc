@@ -74,7 +74,7 @@ export default function ButtonAppBar({isMobile}) {
               <Divider sx={{ borderColor: 'white', margin: '16px 0'}}/>
               <Box display="flex" flexDirection="column">
                 <MuiLink href="/progressAllChart">
-                  <p>{"大会進行表（決勝）"}</p>
+                  <p>{"大会進行表（２日目）"}</p>
                 </MuiLink>
               </Box>
             </Box>

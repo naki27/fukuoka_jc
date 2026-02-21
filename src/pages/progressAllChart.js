@@ -69,10 +69,10 @@ const progressAllChart = () => {
                     <Link underline="hover" color="inherit" href="/">
                         トップ
                     </Link>
-                    <Typography color="textPrimary">大会進行表</Typography>
+                    <Typography color="textPrimary">大会進行表（２日目）</Typography>
                 </Breadcrumbs>
 
-                <H1 title="大会進行表" />
+                <H1 title="大会進行表（２日目）" />
 
                 <Box paddingY={3}>
                     <Box

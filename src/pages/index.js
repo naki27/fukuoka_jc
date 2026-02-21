@@ -222,7 +222,7 @@ export default function Index() {
                     <p className={styles.description}>{"予選リーグの試合進行予定や、決勝トーナメントの試合進行予定をご確認いただけます。"}</p>
                     <Link href="/progressAllChart" className={styles.inlineGrid}>
                       <div className={styles.linkButton}>
-                        <p>{"大会進行表（決勝）"}</p>
+                        <p>{"大会進行表（２日目）"}</p>
                         <NavigateNextIcon />
                       </div>
                     </Link>
@@ -253,7 +253,7 @@ export default function Index() {
                     <p className={styles.description}>{"予選リーグの試合進行予定や、決勝トーナメントの試合進行予定をご確認いただけます。"}</p>
                     <Link href="/progressAllChart" className={styles.inlineGrid}>
                       <div className={styles.linkButton}>
-                        <p>{"大会進行表（決勝）"}</p>
+                        <p>{"大会進行表（２日目）"}</p>
                         <NavigateNextIcon />
                       </div>
                     </Link>

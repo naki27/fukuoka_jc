@@ -135,7 +135,7 @@ export default function ButtonAppBar() {
           <ListItem key="progressChart1">
             <ListItemIcon><Subject /></ListItemIcon>
               <Link href="/progressAllChart">
-                <ListItemText primary="大会進行表（決勝）" className="default-color"/>
+                <ListItemText primary="大会進行表（２日目）" className="default-color"/>
               </Link>
             {/* <Link href="/progressChart?bf=league">
               <ListItemText primary="進行表（予選）" className="default-color"/>
