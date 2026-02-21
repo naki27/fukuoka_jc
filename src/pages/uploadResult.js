@@ -41,12 +41,15 @@ const AnimatedCheckIcon = () => (
 const categories = [
   { label: '女子', value: 'female' },
   { label: '男子', value: 'male' },
-  { label: '混合', value: 'mix' },
 ];
 
 const ages = [
-  { label: 'フリー', value: '18' },
+  { label: '18歳以上', value: '18' },
+  { label: '30歳以上', value: '30' },
   { label: '40歳以上', value: '40' },
+  { label: '50歳以上', value: '50' },
+  { label: '60歳以上', value: '60' },
+  { label: '70歳以上', value: '70' },
 ];
 
 const formats = [
