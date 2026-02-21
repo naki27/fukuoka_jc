@@ -136,7 +136,8 @@ const resultMatch = () => {
                 <H1 title={`大会結果-${sexName}（${battleFormatName}）`} />
 
                 <Box paddingBottom={3}>
-                    <H2 title={params.age === "18" ? "フリーの部" : `${params.age}歳以上の部`} />
+                    {/* <H2 title={params.age === "18" ? "フリーの部" : `${params.age}歳以上の部`} /> */}
+                    <H2 title={`${params.age}歳以上の部`} />
 
                     <div className={`${styles.ButtonArea}`}>
                         <Button
