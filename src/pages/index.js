@@ -219,22 +219,13 @@ export default function Index() {
                       direction="row"
                       className={`${styles.container} ${styles.container_column}`}
                     >
-                    <p className={styles.description}>{"予選リーグの試合進行予定や、決勝トーナメントの試合進行予定をご確認いただけます。"}</p>
-                    <Link href="/progressAllChart" className={styles.inlineGrid}>
-                      <div className={styles.linkButton}>
-                        <p>{"大会進行表（２日目）"}</p>
-                        <NavigateNextIcon />
-                      </div>
-                    </Link>
-
-                      {/* <Link href="/progressChart?bf=tournament" className={styles.inlineGrid}>
+                      <p className={styles.description}>{"予選リーグの試合進行予定や、決勝トーナメントの試合進行予定をご確認いただけます。"}</p>
+                      <Link href="/progressAllChart" className={styles.inlineGrid}>
                         <div className={styles.linkButton}>
-                          <p>{"決勝トーナメント"}</p>
+                          <p>{"大会進行表（２日目）"}</p>
                           <NavigateNextIcon />
                         </div>
                       </Link>
-                      */}
-                      {/* <p className={styles.description}>{"決勝トーナメントの試合進行予定をご確認いただけます。"}<br/>{"勝ち上がりチームの対戦カードを随時更新します。"}</p> */}
                     </Grid2>
                   </div>
                 </div>
@@ -257,14 +248,6 @@ export default function Index() {
                         <NavigateNextIcon />
                       </div>
                     </Link>
-
-                    {/* <Link href="/progressChart?bf=tournament" className={styles.inlineGrid}>
-                      <div className={styles.linkButton}>
-                        <p>{"決勝トーナメント"}</p>
-                        <NavigateNextIcon />
-                      </div>
-                    </Link> */}
-                    {/* <p className={styles.description}>{"決勝トーナメントの試合進行予定をご確認いただけます。"}<br/>{"勝ち上がりチームの対戦カードを随時更新します。"}</p> */}
                   </Grid2>
                 </div>
               </div>
@@ -290,22 +273,20 @@ export default function Index() {
                       </div>
                     </Link>
                     <p className={`${styles.description} ${styles.description2}`}>
-                      {/* {"大会当日には予選リーグの試合結果と順位、勝敗数や得失点差をリアルタイムに掲載していく予定です。"} */}
                       {"予選リーグの試合結果と順位、勝敗数や得失点差をリアルタイムに掲載しています。"}
                     </p>
                   </div>
 
                   <div className={styles.inlineGrid}>
-                    {/* <Link href="/resultMatchIndex?bf=tournament"> */}
+                    <Link href="/resultMatchIndex?bf=tournament">
                       <Image src={battleResultTournament} className={styles.buttonPhoto} alt="トーナメント"/>
-                      {/* <div className={styles.linkButton}>
+                      <div className={styles.linkButton}>
                         <p>{"決勝トーナメント結果"}</p>
                         <NavigateNextIcon />
-                      </div> */}
-                    {/* </Link> */}
+                      </div>
+                    </Link>
                     <p className={`${styles.description} ${styles.description2}`}>
-                      {"同じく大会当日には決勝トーナメントの試合結果と順位をトーナメント形式でリアルタイムに掲載していく予定です。"}
-                      {/* {"決勝トーナメントの試合結果と順位をトーナメント形式でリアルタイムに掲載しています。"} */}
+                      {"決勝トーナメントの試合結果と順位をトーナメント形式でリアルタイムに掲載しています。"}
                     </p>
                   </div>
 

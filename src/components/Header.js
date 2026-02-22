@@ -137,16 +137,7 @@ export default function ButtonAppBar() {
               <Link href="/progressAllChart">
                 <ListItemText primary="大会進行表（２日目）" className="default-color"/>
               </Link>
-            {/* <Link href="/progressChart?bf=league">
-              <ListItemText primary="進行表（予選）" className="default-color"/>
-            </Link> */}
           </ListItem>
-          {/* <ListItem key="progressChart2">
-            <ListItemIcon><Subject /></ListItemIcon>
-            <Link href="/progressChart?bf=tournament">
-              <ListItemText primary="進行表（決勝）" className="default-color"/>
-            </Link>
-          </ListItem> */}
         </List>
         <Divider />
         <List>
@@ -158,8 +149,7 @@ export default function ButtonAppBar() {
           </ListItem>
           <ListItem key="resultMatchIndex2">
             <ListItemIcon><EmojiEvents /></ListItemIcon>
-            {/* <Link href="/resultMatchIndex?bf=tournament"> */}
-            <Link href="/underConstruction">
+            <Link href="/resultMatchIndex?bf=tournament">
               <ListItemText primary="大会結果（決勝）" className="default-color"/>
             </Link>
           </ListItem>

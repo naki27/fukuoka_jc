@@ -83,7 +83,7 @@ export default function ButtonAppBar({isMobile}) {
                 <MuiLink href="/resultMatchIndex?bf=league">
                   <p>{"大会結果（予選）"}</p>
                 </MuiLink>
-                <MuiLink href="/underConstruction">
+                <MuiLink href="/resultMatchIndex?bf=tournament">
                   <p>{"大会結果（決勝）"}</p>
                 </MuiLink>
               </Box>
