@@ -300,10 +300,12 @@ export default function Index() {
                     </Link> */}
                     <div className={styles.inlineGrid}>
                       <Image src={photoGallery} className={styles.buttonPhoto} alt="写真館"/>
+                      <p>セキュリティ確保のため、写真館の閲覧は大会配布チラシに掲載のQRコードからのみアクセス可能です。</p>
+                      <p>現在、写真の掲載準備を進めております。公開まで今しばらくお時間をいただきますが、掲載完了次第、公式Instagramにてご案内いたします。</p>
                     </div>
-                    <p className={`${styles.description} ${styles.description2}`}>
+                    {/* <p className={`${styles.description} ${styles.description2}`}>
                       {"大会当日の熱戦の様子や表彰式や観客席など写真で大会の感動を伝えます。大会終了後、掲載まで暫しお時間をいただきます。"}
-                    </p>
+                    </p> */}
                   </div>
                 </Grid2>
               </div>
