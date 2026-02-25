@@ -20,7 +20,7 @@ const matchAllTablesTournamentMale = () => {
     const [cacheBuster, setCacheBuster] = useState(Date.now());
     const [pdfLoaded, setPdfLoaded] = useState(false);
 
-    const basePdfUrl = `https://ijtbgl77pfz64mxz.public.blob.vercel-storage.com/%E6%B1%BA%E5%8B%9D%E3%83%88%E3%83%BC%E3%83%8A%E3%83%A1%E3%83%B3%E3%83%88%E7%B5%84%E3%81%BF%E5%90%88%E3%82%8F%E3%81%9B_%E7%94%B7%E5%AD%90.pdf`;
+    const basePdfUrl = `/pdfs/${encodeURIComponent('決勝トーナメント組み合わせ_男子.pdf')}`;
     const pdfFilePath = `${basePdfUrl}?t=${cacheBuster}`;
 
     pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;

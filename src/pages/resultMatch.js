@@ -50,8 +50,7 @@ const resultMatch = () => {
     const sexName = sexMap[params.sex];
     const battleFormatName = params.battleFormat == "league" ? "予選" : "決勝";
 
-    // cors対策のため、vercel blobを利用（https://vercel.com/fukuokajcs-projects/~/stores/blob/store_IjTBgl77PFZ64Mxz/browser）
-    const basePdfUrl = `https://ijtbgl77pfz64mxz.public.blob.vercel-storage.com/result-match-${params.sex}-${params.age}-${params.battleFormat}.pdf`;
+    const basePdfUrl = `/pdfs/result-match-${params.sex}-${params.age}-${params.battleFormat}.pdf`;
     // キャッシュを回避するため、毎回異なるクエリを付与する
     const pdfFilePath = `${basePdfUrl}?timestamp=${cacheBuster}`;
     pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;

@@ -29,8 +29,8 @@ const venueMap = () => {
     const [pageNumberB, setPageNumberB] = useState(1);
     const [cacheBusterB, setCacheBusterB] = useState(Date.now());
 
-    const pdfA = `https://ijtbgl77pfz64mxz.public.blob.vercel-storage.com/JC%E3%82%B3%E3%83%BC%E3%83%88%E9%85%8D%E7%BD%AE%E5%9B%B3_260123.pdf?t=${cacheBusterA}`;
-    const pdfB = `https://ijtbgl77pfz64mxz.public.blob.vercel-storage.com/JC%E4%BC%9A%E5%A0%B4%E5%91%A8%E8%BE%BA%E8%A6%8B%E5%8F%96%E3%82%8A%E5%9B%B3_260123.pdf?t=${cacheBusterB}`;
+    const pdfA = `/pdfs/${encodeURIComponent('コート配置図.pdf')}?t=${cacheBusterA}`;
+    const pdfB = `/pdfs/${encodeURIComponent('会場周辺見取り図.pdf')}?t=${cacheBusterB}`;
 
     pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 

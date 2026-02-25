@@ -20,7 +20,7 @@ const matchAllTables = () => {
     const [cacheBuster, setCacheBuster] = useState(Date.now());
     const [pdfLoaded, setPdfLoaded] = useState(false);
 
-    const basePdfUrl = `https://ijtbgl77pfz64mxz.public.blob.vercel-storage.com/%E5%A4%A7%E4%BC%9A%E7%B5%84%E5%90%88%E3%81%9B.pdf`;
+    const basePdfUrl = `/pdfs/${encodeURIComponent('大会組合せ.pdf')}`;
     const pdfFilePath = `${basePdfUrl}?t=${cacheBuster}`;
 
     pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;

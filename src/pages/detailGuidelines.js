@@ -20,8 +20,7 @@ const detailGuidelines = () => {
     const [cacheBuster, setCacheBuster] = useState(Date.now());
     const [pdfLoaded, setPdfLoaded] = useState(false);
 
-    // PDF は Vercel Blob に移動済みのため、直接参照する
-    const basePdfUrl = `https://ijtbgl77pfz64mxz.public.blob.vercel-storage.com/%E6%9C%80%E7%B5%82%E7%89%88%EF%BC%88%E4%BF%AE%E6%AD%A3%E7%89%88%EF%BC%89%E3%80%80%E7%AC%AC32%E5%9B%9E%E3%82%B7%E3%82%99%E3%83%A3%E3%83%8F%E3%82%9A%E3%83%B3%E3%82%AB%E3%83%83%E3%83%95%E3%82%9A%E7%A6%8F%E5%B2%A1%E5%A4%A7%E4%BC%9A%E7%B4%B0%E9%83%A8%E8%A6%81%E9%A0%85_26.01.16.pdf`;
+    const basePdfUrl = `/pdfs/${encodeURIComponent('細部要項.pdf')}`;
     const pdfFilePath = `${basePdfUrl}?t=${cacheBuster}`;
 
     pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
