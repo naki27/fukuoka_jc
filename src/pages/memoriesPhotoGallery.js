@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from 'react';
-import { Button, Breadcrumbs, Typography, Container, TextField } from "@mui/material";
+import { Button, Breadcrumbs, Typography, Container, TextField, List, ListItem, ListItemText } from "@mui/material";
 import LockIcon from '@mui/icons-material/Lock';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import styles from "./styles/memoriesPhotoGallery.module.scss";
 
 import H1 from '~/components/H1';
@@ -64,15 +65,44 @@ const memoriesPhotoGallery = () => {
                   </div>
 
                   <div id="body" className={styles.init}>
-                    <p>大会終了後に写真を公開します。</p>
-                    <p>公開までしばらくお待ちください。</p>
-                    {/* <a href="https://photos.app.goo.gl/st3j8SQLDvfP1Anz8" className={styles.photoLink}>
-                      男子はこちら
+                    <div className={styles.notice}>
+                      <H2 title="写真利用規約" />
+                      <div className={styles.noticeText} style={{ textAlign: 'left' }}>
+                        <List dense component="ul" style={{ paddingLeft: 20, listStyleType: 'disc' }}>
+                          <ListItem component="li" style={{ display: 'list-item' }}>
+                            <ListItemText primary="本写真は大会参加者および関係者による個人的利用を目的として公開しています。" />
+                          </ListItem>
+                          <ListItem component="li" style={{ display: 'list-item' }}>
+                            <ListItemText primary="写真の著作権は主催者に帰属します。無断転載、営利利用、二次配布、販売、素材サイトへの登録、AI学習への利用を禁止します。" />
+                          </ListItem>
+                          <ListItem component="li" style={{ display: 'list-item' }}>
+                            <ListItemText primary="本リンクおよびパスワードの第三者への共有は禁止します。" />
+                          </ListItem>
+                          <ListItem component="li" style={{ display: 'list-item' }}>
+                            <ListItemText primary="SNS等へ掲載する場合は、写っているすべての被写体の同意を得たうえで行ってください。未成年の場合は保護者の同意を必要とします。" />
+                          </ListItem>
+                          <ListItem component="li" style={{ display: 'list-item' }}>
+                            <ListItemText primary="写真の加工・改変は個人利用の範囲内に限ります。改変後の再配布は禁止します。" />
+                          </ListItem>
+                          <ListItem component="li" style={{ display: 'list-item' }}>
+                            <ListItemText primary="写真の削除・修正依頼は2026年3月31日までに、理由を明記のうえ大会連絡窓口（fukuoka.beachball.assoc@gmail.com）までご連絡ください。内容確認のうえ削除または非公開対応を行います。" />
+                          </ListItem>
+                          <ListItem component="li" style={{ display: 'list-item' }}>
+                            <ListItemText primary="当リンクは2026年5月31日まで公開予定です。主催者の判断により予告なく変更または終了する場合があります。" />
+                          </ListItem>
+                        </List>
+                      </div>
+                    </div>
+                    <a href="https://photos.app.goo.gl/9W7vTtYcmVD1KA6x6" className={styles.photoLink}>
+                      <PlayArrowIcon className={styles.linkIcon} fontSize="small" />
+                      予選(2026/02/21)はこちら
                     </a>
 
-                    <a href="https://photos.app.goo.gl/M9rJDKDxNpxL4frZA" className={styles.photoLink}>
-                      女子はこちら
-                    </a> */}
+                    <a href="https://photos.app.goo.gl/eN6pvYNGt8NzAtJB6" className={styles.photoLink}>
+                      <PlayArrowIcon className={styles.linkIcon} fontSize="small" />
+                      決勝(2026/02/22)はこちら
+                    </a>
+
                   </div>
                 </Container>
             </Container>
